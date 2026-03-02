@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "ktfcc:crystal_lamb_chop"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"vegetables": 8
+}

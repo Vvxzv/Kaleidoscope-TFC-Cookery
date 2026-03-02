@@ -1,0 +1,24 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:cold_roasted_meat",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "ktfcc:cold_meats"
+		},
+		{
+			"tag": "ktfcc:cold_meats"
+		},
+		{
+			"tag": "ktfcc:cold_meats"
+		},
+		{
+			"tag": "ktfcc:cold_meats"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

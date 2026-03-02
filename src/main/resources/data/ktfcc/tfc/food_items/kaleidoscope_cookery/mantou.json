@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:mantou"
+	},
+	"decay_modifier": 2,
+	"hunger": 6,
+	"saturation": 8,
+	"grain": 1
+}

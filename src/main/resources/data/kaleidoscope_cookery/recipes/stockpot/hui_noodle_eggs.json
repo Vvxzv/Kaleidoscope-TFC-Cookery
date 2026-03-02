@@ -1,0 +1,24 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:hui_noodle",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:raw_mutton"
+		},
+		{
+			"tag": "forge:cooked_eggs"
+		},
+		{
+			"tag": "ktfcc:kelps"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	]
+}

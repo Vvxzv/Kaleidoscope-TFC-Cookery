@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "tfc:ceramic/bowl"
+				}
+			]
+		}
+	],
+	"random_sequence": "ktfcc:blocks/rotten_brown_mushroom_pot_soup"
+}

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,waterlogged=false": {
+      "model": "ktfcc:block/pan",
+      "y": 90
+    },
+    "facing=east,waterlogged=true": {
+      "model": "ktfcc:block/pan",
+      "y": 90
+    },
+    "facing=north,waterlogged=false": {
+      "model": "ktfcc:block/pan"
+    },
+    "facing=north,waterlogged=true": {
+      "model": "ktfcc:block/pan"
+    },
+    "facing=south,waterlogged=false": {
+      "model": "ktfcc:block/pan",
+      "y": 180
+    },
+    "facing=south,waterlogged=true": {
+      "model": "ktfcc:block/pan",
+      "y": 180
+    },
+    "facing=west,waterlogged=false": {
+      "model": "ktfcc:block/pan",
+      "y": 270
+    },
+    "facing=west,waterlogged=true": {
+      "model": "ktfcc:block/pan",
+      "y": 270
+    }
+  }
+}

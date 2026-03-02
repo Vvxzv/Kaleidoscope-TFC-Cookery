@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:kitchenware_racks",
+		"count": 1
+	},
+	"pattern": [
+		"aaa",
+		"bbb"
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:stick"
+		},
+		"b": {
+			"item": "tfc:metal/rod/wrought_iron"
+		}
+	}
+}

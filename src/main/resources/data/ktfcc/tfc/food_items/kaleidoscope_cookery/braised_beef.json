@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:braised_beef"
+	},
+	"decay_modifier": 2,
+	"hunger": 6,
+	"saturation": 8,
+	"vegetables": 1.6,
+	"protein": 3.2
+}

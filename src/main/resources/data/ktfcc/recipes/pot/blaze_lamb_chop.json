@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:blaze_lamb_chop",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:blaze_rod"
+		},
+		{
+			"item": "minecraft:blaze_rod"
+		},
+		{
+			"item": "minecraft:blaze_rod"
+		},
+		{
+			"tag": "forge:raw_mutton"
+		},
+		{
+			"tag": "forge:raw_mutton"
+		},
+		{
+			"tag": "forge:raw_mutton"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

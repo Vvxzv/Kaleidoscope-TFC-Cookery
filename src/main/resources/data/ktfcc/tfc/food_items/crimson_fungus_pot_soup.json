@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "ktfcc:crimson_fungus_pot_soup"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"water": 100,
+	"vegetables": 9
+}

@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:country_style_mixed_vegetables"
+	},
+	"decay_modifier": 2,
+	"hunger": 6,
+	"saturation": 8,
+	"water": 5,
+	"vegetables": 4
+}

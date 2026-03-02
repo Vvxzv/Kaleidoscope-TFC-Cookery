@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:spicy_rabbit_head",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"item": "tfc:food/rabbit"
+		},
+		{
+			"item": "tfc:food/rabbit"
+		},
+		{
+			"item": "tfc:food/rabbit"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

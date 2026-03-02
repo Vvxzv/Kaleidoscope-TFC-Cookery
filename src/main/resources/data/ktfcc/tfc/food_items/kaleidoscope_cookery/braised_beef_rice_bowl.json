@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:braised_beef_rice_bowl"
+	},
+	"decay_modifier": 2,
+	"hunger": 8,
+	"saturation": 10,
+	"grain": 0.8,
+	"vegetables": 1.6,
+	"protein": 1.6
+}

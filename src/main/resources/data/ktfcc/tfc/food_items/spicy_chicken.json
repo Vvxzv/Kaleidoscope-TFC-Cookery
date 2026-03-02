@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "ktfcc:spicy_chicken"
+	},
+	"decay_modifier": 1,
+	"hunger": 20,
+	"saturation": 40,
+	"vegetables": 5,
+	"protein": 8
+}

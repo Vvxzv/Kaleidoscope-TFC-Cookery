@@ -1,0 +1,27 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:dongpo_pork",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:bamboo"
+		},
+		{
+			"item": "minecraft:bamboo"
+		},
+		{
+			"tag": "forge:raw_pork"
+		},
+		{
+			"tag": "forge:raw_pork"
+		},
+		{
+			"tag": "forge:raw_pork"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

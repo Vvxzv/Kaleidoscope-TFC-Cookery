@@ -1,0 +1,27 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "kaleidoscope_cookery:braised_fish_rice_bowl",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		}
+	],
+	"carrier": {
+		"item": "kaleidoscope_cookery:cooked_rice"
+	}
+}

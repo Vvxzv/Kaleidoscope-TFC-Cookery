@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:fruit_basket",
+		"count": 1
+	},
+	"pattern": [
+		" a ",
+		"bcb",
+		"bbb"
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:stick"
+		},
+		"b": {
+			"tag": "minecraft:planks"
+		},
+		"c": {
+			"tag": "forge:chests"
+		}
+	}
+}

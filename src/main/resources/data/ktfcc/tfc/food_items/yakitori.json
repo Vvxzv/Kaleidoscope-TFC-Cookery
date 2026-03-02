@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "ktfcc:yakitori"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"vegetables": 3,
+	"protein": 8
+}

@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:stir_fried_pork_with_peppers"
+	},
+	"decay_modifier": 2,
+	"hunger": 6,
+	"saturation": 8,
+	"vegetables": 2.4,
+	"protein": 3
+}

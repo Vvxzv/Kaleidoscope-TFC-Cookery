@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "ktfcc:spicy_blood_stew"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"vegetables": 4,
+	"protein": 8
+}

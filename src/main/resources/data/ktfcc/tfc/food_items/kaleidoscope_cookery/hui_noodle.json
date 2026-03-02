@@ -1,0 +1,13 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:hui_noodle"
+	},
+	"decay_modifier": 2,
+	"hunger": 8,
+	"saturation": 10,
+	"water": 20,
+	"grain": 2,
+	"vegetables": 1,
+	"protein": 2,
+	"dairy": 0.5
+}

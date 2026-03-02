@@ -1,0 +1,11 @@
+{
+	"type": "kaleidoscope_cookery:chopping_board",
+	"result": {
+		"item": "kaleidoscope_cookery:raw_lamb_chops",
+		"count": 2
+	},
+	"ingredient": {
+		"item": "tfc:food/mutton"
+	},
+	"model_id": "kaleidoscope_cookery:raw_lamb_chops"
+}

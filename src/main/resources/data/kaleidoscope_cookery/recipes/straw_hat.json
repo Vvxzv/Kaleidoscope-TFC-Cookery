@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:straw_hat",
+		"count": 1,
+		"nbt": "{Damage:0}"
+	},
+	"pattern": [
+		" a ",
+		" b ",
+		"aaa"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:straw"
+		},
+		"b": {
+			"tag": "forge:string"
+		}
+	}
+}

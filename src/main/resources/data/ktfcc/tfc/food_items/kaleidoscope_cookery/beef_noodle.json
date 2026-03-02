@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:beef_noodle"
+	},
+	"decay_modifier": 2,
+	"hunger": 12,
+	"saturation": 10,
+	"water": 20,
+	"grain": 2,
+	"protein": 2.5
+}

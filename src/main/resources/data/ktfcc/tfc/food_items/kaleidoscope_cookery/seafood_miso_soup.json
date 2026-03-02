@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:seafood_miso_soup"
+	},
+	"decay_modifier": 2,
+	"hunger": 6,
+	"saturation": 6,
+	"water": 50,
+	"vegetables": 1,
+	"protein": 2
+}

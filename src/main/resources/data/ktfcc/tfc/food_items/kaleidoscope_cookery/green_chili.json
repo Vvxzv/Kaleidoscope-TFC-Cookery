@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:green_chili"
+	},
+	"decay_modifier": 1,
+	"hunger": 2,
+	"saturation": 1,
+	"vegetables": 0.8
+}

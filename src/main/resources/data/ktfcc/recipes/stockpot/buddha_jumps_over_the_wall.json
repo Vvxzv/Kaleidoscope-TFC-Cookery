@@ -1,0 +1,39 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "ktfcc:buddha_jumps_over_the_wall",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:eggs"
+		},
+		{
+			"tag": "forge:eggs"
+		},
+		{
+			"tag": "ktfcc:kelps"
+		},
+		{
+			"tag": "ktfcc:kelps"
+		},
+		{
+			"tag": "tfc:foods/fruits"
+		},
+		{
+			"tag": "tfc:foods/fruits"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "forge:raw_meats"
+		},
+		{
+			"tag": "forge:vegetables"
+		}
+	],
+	"carrier": {
+		"item": "tfc:ceramic/bowl"
+	}
+}

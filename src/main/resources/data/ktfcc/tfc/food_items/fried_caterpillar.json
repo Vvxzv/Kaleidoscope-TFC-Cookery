@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "ktfcc:fried_caterpillar"
+	},
+	"decay_modifier": 1,
+	"hunger": 6,
+	"saturation": 8,
+	"grain": 3,
+	"protein": 6
+}

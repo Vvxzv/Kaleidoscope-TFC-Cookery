@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:chair_acacia",
+		"count": 1
+	},
+	"pattern": [
+		"b  ",
+		"aaa",
+		"b b"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:wood/planks/acacia_slab"
+		},
+		"b": {
+			"item": "tfc:wood/planks/acacia_fence"
+		}
+	}
+}

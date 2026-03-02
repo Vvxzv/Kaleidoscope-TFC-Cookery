@@ -1,0 +1,21 @@
+{
+	"type": "tfc:heating",
+	"ingredient": {
+		"type": "tfc:not_rotten",
+		"ingredient": {
+			"item": "kaleidoscope_cookery:stuffed_dough_food"
+		}
+	},
+	"temperature": 200.0,
+	"result_item": {
+		"stack": {
+			"item": "kaleidoscope_cookery:samsa",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:copy_food"
+			}
+		]
+	}
+}

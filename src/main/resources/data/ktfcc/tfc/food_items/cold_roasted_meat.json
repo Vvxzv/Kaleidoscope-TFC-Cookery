@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "ktfcc:cold_roasted_meat"
+	},
+	"decay_modifier": 1,
+	"hunger": 20,
+	"saturation": 28,
+	"protein": 10
+}

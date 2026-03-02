@@ -1,0 +1,24 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "kaleidoscope_cookery:fish_flavored_shredded_pork_rice_bowl",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:vegetables"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "forge:raw_pork"
+		},
+		{
+			"tag": "forge:crops/chilipepper"
+		}
+	],
+	"carrier": {
+		"item": "kaleidoscope_cookery:cooked_rice"
+	}
+}

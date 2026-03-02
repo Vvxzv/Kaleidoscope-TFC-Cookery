@@ -1,0 +1,21 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:braised_beef_with_potatoes",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "tfc:food/potato"
+		},
+		{
+			"item": "tfc:food/potato"
+		},
+		{
+			"tag": "forge:raw_beef"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	]
+}

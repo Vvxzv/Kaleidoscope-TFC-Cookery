@@ -1,0 +1,36 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:nether_style_sashimi",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:crimson_fungus"
+		},
+		{
+			"item": "minecraft:crimson_fungus"
+		},
+		{
+			"item": "minecraft:warped_fungus"
+		},
+		{
+			"item": "minecraft:warped_fungus"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

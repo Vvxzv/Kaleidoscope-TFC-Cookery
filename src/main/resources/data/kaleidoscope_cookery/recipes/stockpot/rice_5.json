@@ -1,0 +1,26 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:cooked_rice",
+		"count": 5
+	},
+	"ingredients": [
+		{
+			"item": "tfc:food/rice_grain"
+		},
+		{
+			"item": "tfc:food/rice_grain"
+		},
+		{
+			"item": "tfc:food/rice_grain"
+		},
+		{
+			"item": "tfc:food/rice_grain"
+		},
+		{
+			"item": "tfc:food/rice_grain"
+		}
+	],
+	"finished_texture": "kaleidoscope_cookery:stockpot/rice_finished",
+	"finished_bubble_color": 15328219
+}

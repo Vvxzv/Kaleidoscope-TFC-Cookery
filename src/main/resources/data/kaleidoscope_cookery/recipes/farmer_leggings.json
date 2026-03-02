@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:farmer_leggings",
+		"count": 1,
+		"nbt": "{Damage:0}"
+	},
+	"pattern": [
+		"aba",
+		"a a",
+		"a a"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:metal/chain/wrought_iron"
+		},
+		"b": {
+			"item": "minecraft:leather_leggings"
+		}
+	}
+}

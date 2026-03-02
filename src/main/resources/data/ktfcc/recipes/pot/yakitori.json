@@ -1,0 +1,22 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:yakitori",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		[],
+		[],
+		[],
+		[]
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

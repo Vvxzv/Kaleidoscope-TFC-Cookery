@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:lettuce"
+	},
+	"decay_modifier": 1.2,
+	"hunger": 2,
+	"saturation": 0.4,
+	"vegetables": 1
+}

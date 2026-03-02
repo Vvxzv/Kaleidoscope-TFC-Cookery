@@ -1,0 +1,36 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:udon_noodle",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:raw_meats"
+		},
+		{
+			"tag": "forge:raw_meats"
+		},
+		{
+			"tag": "forge:cooked_eggs"
+		},
+		{
+			"tag": "forge:vegetables"
+		},
+		{
+			"tag": "forge:vegetables"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	]
+}

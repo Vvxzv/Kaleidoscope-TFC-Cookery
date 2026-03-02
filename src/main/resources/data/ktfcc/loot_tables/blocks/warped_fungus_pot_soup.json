@@ -1,0 +1,27 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "tfc:ceramic/bowl"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:block_state_property",
+						"block": "ktfcc:warped_fungus_pot_soup",
+						"properties": {
+							"bites": "0"
+						}
+					}
+				}
+			]
+		}
+	],
+	"random_sequence": "ktfcc:blocks/warped_fungus_pot_soup"
+}

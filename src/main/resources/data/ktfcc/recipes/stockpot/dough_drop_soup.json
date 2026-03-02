@@ -1,0 +1,27 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "ktfcc:dough_drop_soup",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:vegetables/tomato"
+		},
+		{
+			"tag": "forge:vegetables/tomato"
+		},
+		{
+			"tag": "forge:flour"
+		},
+		{
+			"tag": "forge:flour"
+		},
+		{
+			"tag": "forge:vegetables"
+		},
+		{
+			"tag": "forge:vegetables"
+		}
+	]
+}

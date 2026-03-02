@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "ktfcc:nether_style_sashimi"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"vegetables": 4,
+	"protein": 8
+}

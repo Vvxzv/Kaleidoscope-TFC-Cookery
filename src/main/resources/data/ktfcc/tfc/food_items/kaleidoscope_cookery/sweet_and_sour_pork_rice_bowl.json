@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:sweet_and_sour_pork_rice_bowl"
+	},
+	"decay_modifier": 2,
+	"hunger": 8,
+	"saturation": 10,
+	"water": 0.8,
+	"fruit": 0.6,
+	"vegetables": 0.6,
+	"protein": 2
+}

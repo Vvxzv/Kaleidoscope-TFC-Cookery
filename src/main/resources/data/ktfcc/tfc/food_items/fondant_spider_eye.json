@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "ktfcc:fondant_spider_eye"
+	},
+	"decay_modifier": 1,
+	"hunger": 8,
+	"saturation": 4,
+	"protein": 3
+}

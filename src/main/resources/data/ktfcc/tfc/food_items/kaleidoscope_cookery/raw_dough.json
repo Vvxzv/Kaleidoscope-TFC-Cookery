@@ -1,0 +1,7 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:raw_dough"
+	},
+	"decay_modifier": 2,
+	"hunger": 1
+}

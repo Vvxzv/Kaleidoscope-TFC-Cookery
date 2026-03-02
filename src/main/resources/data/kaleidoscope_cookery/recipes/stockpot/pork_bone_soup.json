@@ -1,0 +1,18 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:pork_bone_soup",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:bone"
+		},
+		{
+			"tag": "forge:raw_pork"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	]
+}

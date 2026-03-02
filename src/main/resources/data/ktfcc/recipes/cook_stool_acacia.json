@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:cook_stool_acacia",
+		"count": 1
+	},
+	"pattern": [
+		"aaa",
+		"a a"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:wood/planks/acacia"
+		}
+	}
+}

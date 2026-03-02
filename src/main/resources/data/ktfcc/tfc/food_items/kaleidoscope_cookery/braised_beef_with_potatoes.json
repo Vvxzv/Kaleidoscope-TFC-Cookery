@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:braised_beef_with_potatoes"
+	},
+	"decay_modifier": 2,
+	"hunger": 8,
+	"saturation": 10,
+	"water": 20,
+	"vegetables": 2,
+	"protein": 2.5
+}

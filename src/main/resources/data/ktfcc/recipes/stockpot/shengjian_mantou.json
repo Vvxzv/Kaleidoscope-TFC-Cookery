@@ -1,0 +1,21 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "ktfcc:shengjian_mantou",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "kaleidoscope_cookery:stuffed_dough_food"
+		},
+		{
+			"item": "kaleidoscope_cookery:stuffed_dough_food"
+		},
+		{
+			"item": "kaleidoscope_cookery:stuffed_dough_food"
+		},
+		{
+			"item": "kaleidoscope_cookery:stuffed_dough_food"
+		}
+	]
+}

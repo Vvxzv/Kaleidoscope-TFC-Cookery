@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:stir_fried_pork_with_peppers_rice_bowl"
+	},
+	"decay_modifier": 2,
+	"hunger": 8,
+	"saturation": 10,
+	"water": 0.8,
+	"vegetables": 2.4,
+	"protein": 2
+}

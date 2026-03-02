@@ -1,0 +1,33 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:end_style_sashimi",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:chorus_fruit"
+		},
+		{
+			"item": "minecraft:chorus_fruit"
+		},
+		{
+			"item": "minecraft:chorus_fruit"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

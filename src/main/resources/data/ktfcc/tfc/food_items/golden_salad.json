@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "ktfcc:golden_salad"
+	},
+	"decay_modifier": 0,
+	"hunger": 8,
+	"saturation": 40,
+	"water": 40,
+	"fruit": 4,
+	"vegetables": 2
+}

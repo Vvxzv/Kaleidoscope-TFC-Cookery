@@ -1,0 +1,39 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:tundra_style_sashimi",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "minecraft:flowers"
+		},
+		{
+			"tag": "minecraft:flowers"
+		},
+		{
+			"tag": "minecraft:flowers"
+		},
+		{
+			"tag": "minecraft:flowers"
+		},
+		{
+			"tag": "minecraft:flowers"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

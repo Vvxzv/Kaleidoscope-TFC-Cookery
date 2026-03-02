@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:pan_seared_knight_steak",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:bone"
+		},
+		{
+			"item": "minecraft:bone"
+		},
+		{
+			"tag": "tfc:foods/fruits"
+		},
+		{
+			"tag": "tfc:foods/fruits"
+		},
+		{
+			"tag": "forge:raw_beef"
+		},
+		{
+			"tag": "forge:raw_beef"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "ktfcc:fondant_pie"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"grain": 1.5,
+	"vegetables": 4,
+	"protein": 2,
+	"dairy": 1
+}

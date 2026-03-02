@@ -1,0 +1,27 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "tfc:ceramic/bowl"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:block_state_property",
+						"block": "ktfcc:brown_mushroom_pot_soup",
+						"properties": {
+							"bites": "0"
+						}
+					}
+				}
+			]
+		}
+	],
+	"random_sequence": "ktfcc:blocks/brown_mushroom_pot_soup"
+}

@@ -1,0 +1,21 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:seafood_miso_soup",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"item": "tfc:food/dried_kelp"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	]
+}

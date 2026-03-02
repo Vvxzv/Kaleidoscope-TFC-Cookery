@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:delicious_egg_fried_rice"
+	},
+	"decay_modifier": 2,
+	"hunger": 8,
+	"saturation": 10,
+	"grain": 0.8,
+	"vegetables": 2.4,
+	"protein": 2.4,
+	"dairy": 0.5
+}

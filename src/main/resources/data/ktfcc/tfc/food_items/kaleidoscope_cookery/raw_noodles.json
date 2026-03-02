@@ -1,0 +1,8 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:raw_noodles"
+	},
+	"decay_modifier": 2,
+	"hunger": 1,
+	"saturation": 0.5
+}

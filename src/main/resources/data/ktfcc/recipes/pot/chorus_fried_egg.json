@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:chorus_fried_egg",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:chorus_fruit"
+		},
+		{
+			"item": "minecraft:chorus_fruit"
+		},
+		{
+			"item": "minecraft:chorus_fruit"
+		},
+		{
+			"tag": "forge:cooked_eggs"
+		},
+		{
+			"tag": "forge:cooked_eggs"
+		},
+		{
+			"tag": "forge:cooked_eggs"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:donkey_burger"
+	},
+	"decay_modifier": 2,
+	"hunger": 10,
+	"saturation": 16,
+	"grain": 2,
+	"vegetables": 2,
+	"protein": 3
+}

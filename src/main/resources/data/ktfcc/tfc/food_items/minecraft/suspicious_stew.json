@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:suspicious_stew"
+	},
+	"decay_modifier": 4,
+	"hunger": 6,
+	"saturation": 6,
+	"water": 20
+}

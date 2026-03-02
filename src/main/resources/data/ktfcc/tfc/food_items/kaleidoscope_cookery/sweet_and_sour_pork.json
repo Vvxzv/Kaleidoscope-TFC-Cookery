@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:sweet_and_sour_pork"
+	},
+	"decay_modifier": 2,
+	"hunger": 6,
+	"saturation": 8,
+	"fruit": 0.6,
+	"vegetables": 0.6,
+	"protein": 3
+}

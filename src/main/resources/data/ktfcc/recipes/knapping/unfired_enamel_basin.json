@@ -1,0 +1,15 @@
+{
+	"type": "tfc:knapping",
+	"result": {
+		"item": "ktfcc:unfired_enamel_basin",
+		"count": 1
+	},
+	"knapping_type": "tfc:clay",
+	"pattern": [
+		"a   a",
+		"a   a",
+		"a   a",
+		"aaaaa",
+		"     "
+	]
+}

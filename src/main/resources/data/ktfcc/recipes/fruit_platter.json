@@ -1,0 +1,66 @@
+{
+	"type": "tfc:advanced_shapeless_crafting",
+	"result": {
+		"stack": {
+			"item": "ktfcc:fruit_platter",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:meal",
+				"food": {
+					"hunger": 12,
+					"decay_modifier": 3
+				},
+				"portions": [
+					{
+						"nutrient_modifier": 0.8,
+						"water_modifier": 0.8,
+						"saturation_modifier": 0.8
+					}
+				]
+			}
+		]
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
+}

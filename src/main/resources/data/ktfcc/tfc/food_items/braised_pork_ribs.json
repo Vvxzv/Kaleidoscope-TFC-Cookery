@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "ktfcc:braised_pork_ribs"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 24,
+	"protein": 8
+}

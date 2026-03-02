@@ -1,0 +1,22 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"carrier": {
+		"item": "minecraft:bowl"
+	},
+	"ingredients": [
+		{
+			"item": "farmersdelight:ham"
+		}
+	],
+	"result": {
+		"item": "ktfcc:cold_cut_ham_slices"
+	},
+	"stir_fry_count": 3,
+	"time": 200,
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "farmerstfc"
+		}
+	]
+}

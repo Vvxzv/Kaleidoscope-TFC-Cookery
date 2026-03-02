@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"M": {
+			"tag": "forge:magma_block"
+		},
+		"I": {
+			"item": "tfc:metal/rod/wrought_iron"
+		},
+		"R": {
+			"item": "minecraft:redstone_block"
+		}
+	},
+	"pattern": [
+		"IMI",
+		"IRI",
+		"IMI"
+	],
+	"result": {
+		"item": "kaleidoscope_cookery:shawarma_spit"
+	},
+	"show_notification": true
+}

@@ -1,0 +1,18 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:borscht",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:raw_beef"
+		},
+		{
+			"tag": "forge:vegetables/tomato"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	]
+}

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,position=0": {
+      "model": "kaleidoscope_cookery:block/food/braised_pork_ribs/braised_pork_ribs_left_4",
+      "y": 90
+    },
+    "facing=east,position=1": {
+      "model": "kaleidoscope_cookery:block/food/braised_pork_ribs/braised_pork_ribs_right_4",
+      "y": 90
+    },
+    "facing=north,position=0": {
+      "model": "kaleidoscope_cookery:block/food/braised_pork_ribs/braised_pork_ribs_left_4"
+    },
+    "facing=north,position=1": {
+      "model": "kaleidoscope_cookery:block/food/braised_pork_ribs/braised_pork_ribs_right_4"
+    },
+    "facing=south,position=0": {
+      "model": "kaleidoscope_cookery:block/food/braised_pork_ribs/braised_pork_ribs_left_4",
+      "y": 180
+    },
+    "facing=south,position=1": {
+      "model": "kaleidoscope_cookery:block/food/braised_pork_ribs/braised_pork_ribs_right_4",
+      "y": 180
+    },
+    "facing=west,position=0": {
+      "model": "kaleidoscope_cookery:block/food/braised_pork_ribs/braised_pork_ribs_left_4",
+      "y": 270
+    },
+    "facing=west,position=1": {
+      "model": "kaleidoscope_cookery:block/food/braised_pork_ribs/braised_pork_ribs_right_4",
+      "y": 270
+    }
+  }
+}

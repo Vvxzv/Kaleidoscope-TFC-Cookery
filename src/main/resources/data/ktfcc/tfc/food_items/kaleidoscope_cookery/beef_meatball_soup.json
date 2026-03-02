@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:beef_meatball_soup"
+	},
+	"decay_modifier": 2,
+	"hunger": 6,
+	"saturation": 8,
+	"water": 20,
+	"vegetables": 1.5,
+	"protein": 4
+}

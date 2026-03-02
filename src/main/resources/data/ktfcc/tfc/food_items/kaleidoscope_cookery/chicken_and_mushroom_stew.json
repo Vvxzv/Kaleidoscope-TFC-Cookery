@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:chicken_and_mushroom_stew"
+	},
+	"decay_modifier": 2,
+	"hunger": 6,
+	"saturation": 8,
+	"water": 20,
+	"vegetables": 2,
+	"protein": 2
+}

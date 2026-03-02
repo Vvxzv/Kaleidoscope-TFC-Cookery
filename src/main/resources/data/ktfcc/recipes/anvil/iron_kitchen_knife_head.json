@@ -1,0 +1,15 @@
+{
+	"type": "tfc:anvil",
+	"result": {
+		"item": "ktfcc:iron_kitchen_knife_head",
+		"count": 1
+	},
+	"input": {
+		"item": "tfc:metal/ingot/wrought_iron"
+	},
+	"rules": [
+		"hit_last",
+		"upset_second_last",
+		"upset_third_last"
+	]
+}

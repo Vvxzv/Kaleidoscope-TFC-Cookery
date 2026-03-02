@@ -1,0 +1,48 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:bowl"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:block_state_property",
+						"block": "ktfcc:crystal_lamb_chop",
+						"properties": {
+							"bites": "0"
+						}
+					}
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:amethyst_shard"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:block_state_property",
+						"block": "ktfcc:crystal_lamb_chop",
+						"properties": {
+							"bites": "0"
+						}
+					}
+				}
+			]
+		}
+	],
+	"random_sequence": "ktfcc:blocks/crystal_lamb_chop"
+}

@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:stargazy_pie",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:pumpkin_pie"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "ktfcc:pan_seared_knight_steak"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"fruit": 4,
+	"vegetables": 8
+}

@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "ktfcc:dough_drop_soup"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"water": 50,
+	"grain": 2,
+	"vegetables": 5
+}

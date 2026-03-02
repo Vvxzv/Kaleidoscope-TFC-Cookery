@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:crystal_lamb_chop",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "tfc:gem/amethyst"
+		},
+		{
+			"item": "tfc:gem/amethyst"
+		},
+		{
+			"item": "tfc:gem/amethyst"
+		},
+		{
+			"tag": "forge:raw_mutton"
+		},
+		{
+			"tag": "forge:raw_mutton"
+		},
+		{
+			"tag": "forge:raw_mutton"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

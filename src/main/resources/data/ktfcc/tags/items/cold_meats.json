@@ -1,0 +1,10 @@
+{
+	"values": [
+		"tfc:food/horse_meat",
+		"tfc:food/cooked_horse_meat",
+		"tfc:food/beef",
+		"tfc:food/cooked_beef",
+		"kaleidoscope_cookery:raw_cow_offal",
+		"kaleidoscope_cookery:cooked_cow_offal"
+	]
+}

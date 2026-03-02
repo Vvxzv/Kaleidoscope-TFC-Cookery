@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:fried_caterpillar",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "kaleidoscope_cookery:caterpillar"
+		},
+		{
+			"item": "kaleidoscope_cookery:caterpillar"
+		},
+		{
+			"item": "kaleidoscope_cookery:caterpillar"
+		},
+		{
+			"tag": "forge:flour"
+		},
+		{
+			"tag": "forge:flour"
+		},
+		{
+			"tag": "forge:flour"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

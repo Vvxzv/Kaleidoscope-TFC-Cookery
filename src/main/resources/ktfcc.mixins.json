@@ -1,0 +1,36 @@
+{
+  "required" : true,
+  "minVersion" : "0.8",
+  "package" : "net.vvxzv.ktfcc.mixin",
+  "compatibilityLevel" : "JAVA_8",
+  "refmap" : "ktfcc.refmap.json",
+  "mixins" : [
+    "FluidSoupBaseMixin",
+    "ItemUtilsMixin",
+    "block.ChiliRistraBlockMixin",
+    "block.StrungMushroomsBlockMixin",
+    "blockentity.ChoppingBoardBlockEntityMixin",
+    "blockentity.FruitBasketBlockEntityMixin",
+    "blockentity.MillstoneBlockEntityMixin",
+    "blockentity.PotBlockEntityMixin",
+    "ScarecrowEntityMixin",
+    "blockentity.ShawarmaSpitBlockEntityMixin",
+    "blockentity.SteamerBlockEntityMixin",
+    "blockentity.StockpotBlockEntityMixin",
+    "effect.FlatulenceEventMixin",
+    "effect.SatiatedShieldEventMixin",
+    "effect.VigorEffectMixin",
+    "item.BlockItemMixin",
+    "item.SickleItemMixin",
+    "item.WithTooltipsItemMixin"
+  ],
+  "client" : [
+    "ScarecrowHandLayerMixin"
+  ],
+  "injectors" : {
+    "defaultRequire" : 1
+  },
+  "overwrites" : {
+    "requireAnnotations" : true
+  }
+}

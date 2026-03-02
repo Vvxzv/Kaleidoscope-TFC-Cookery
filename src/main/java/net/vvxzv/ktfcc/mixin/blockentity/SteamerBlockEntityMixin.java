@@ -1,0 +1,51 @@
+package net.vvxzv.ktfcc.mixin.blockentity;
+
+import com.github.ysbbbbbb.kaleidoscopecookery.blockentity.kitchen.SteamerBlockEntity;
+import net.dries007.tfc.common.capabilities.food.FoodCapability;
+import net.dries007.tfc.common.capabilities.food.IFood;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
+
+@Mixin(SteamerBlockEntity.class)
+public class SteamerBlockEntityMixin {
+
+    @Inject(
+            method = "placeFood",
+            at = @At("HEAD"),
+            cancellable = true,
+            remap = false
+    )
+    private void placeFood(Level level, LivingEntity user, ItemStack food, CallbackInfoReturnable<Boolean> cir) {
+        IFood iFood = FoodCapability.get(food);
+        if(iFood != null && iFood.isRotten()){
+            cir.setReturnValue(false);
+        }
+    }
+
+    @Inject(
+            method = "cookingTick",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/core/NonNullList;set(ILjava/lang/Object;)Ljava/lang/Object;",
+                    shift = At.Shift.BEFORE
+            ),
+            locals = LocalCapture.CAPTURE_FAILHARD
+    )
+    private void cookingTick(Level level, BlockPos pos, BlockState state, SteamerBlockEntity steamer, CallbackInfo ci, BlockState aboveState, boolean aboveIsSteamer, boolean hasCooking, int i, ItemStack stack, int progress, Container container, ItemStack resultStack) {
+        IFood iFood = FoodCapability.get(stack);
+        IFood resultIFood = FoodCapability.get(resultStack);
+        if(iFood != null && resultIFood != null){
+            resultIFood.setCreationDate(iFood.getCreationDate());
+        }
+    }
+}

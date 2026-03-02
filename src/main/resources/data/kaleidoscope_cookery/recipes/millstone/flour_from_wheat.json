@@ -1,0 +1,13 @@
+{
+	"type": "kaleidoscope_cookery:millstone",
+	"result": {
+		"item": "kaleidoscope_cookery:flour",
+		"count": 1
+	},
+	"ingredient": {
+		"type": "tfc:not_rotten",
+		"ingredient": {
+			"tag": "tfc:foods/flour"
+		}
+	}
+}

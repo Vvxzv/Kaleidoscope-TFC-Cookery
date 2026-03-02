@@ -1,0 +1,36 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:cold_cut_ham_slices",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "ktfcc:foods/pork"
+		},
+		{
+			"tag": "ktfcc:foods/pork"
+		},
+		{
+			"tag": "ktfcc:foods/pork"
+		},
+		{
+			"tag": "ktfcc:foods/pork"
+		},
+		{
+			"tag": "ktfcc:foods/pork"
+		},
+		{
+			"tag": "ktfcc:foods/pork"
+		},
+		{
+			"tag": "ktfcc:foods/pork"
+		},
+		{
+			"tag": "ktfcc:foods/pork"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

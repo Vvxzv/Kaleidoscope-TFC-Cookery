@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:millstone",
+		"count": 1
+	},
+	"pattern": [
+		" a ",
+		"bc ",
+		"ddd"
+	],
+	"key": {
+		"a": {
+			"tag": "minecraft:wooden_fences"
+		},
+		"b": {
+			"item": "minecraft:stick"
+		},
+		"c": {
+			"item": "tfc:handstone"
+		},
+		"d": {
+			"item": "tfc:quern"
+		}
+	}
+}

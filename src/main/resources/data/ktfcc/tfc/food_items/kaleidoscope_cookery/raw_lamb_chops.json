@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:raw_lamb_chops"
+	},
+	"decay_modifier": 3,
+	"hunger": 2,
+	"saturation": 1,
+	"protein": 1.2
+}

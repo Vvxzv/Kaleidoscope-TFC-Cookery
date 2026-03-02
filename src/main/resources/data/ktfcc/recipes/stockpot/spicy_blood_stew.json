@@ -1,0 +1,33 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "ktfcc:spicy_blood_stew",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:raw_pork"
+		},
+		{
+			"tag": "forge:raw_pork"
+		},
+		{
+			"tag": "forge:raw_pork"
+		},
+		{
+			"tag": "forge:raw_pork"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		}
+	]
+}

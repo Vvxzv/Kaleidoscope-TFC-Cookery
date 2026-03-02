@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:raw_meatball"
+	},
+	"decay_modifier": 3,
+	"hunger": 4,
+	"saturation": 1,
+	"vegetables": 1,
+	"protein": 2
+}

@@ -1,0 +1,18 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:tomato_beef_brisket_soup",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "kaleidoscope_cookery:raw_cow_offal"
+		},
+		{
+			"tag": "forge:vegetables/tomato"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	]
+}

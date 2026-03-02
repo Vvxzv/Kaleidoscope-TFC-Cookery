@@ -1,0 +1,18 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:donkey_soup",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "tfc:food/horse_meat"
+		},
+		{
+			"item": "tfc:food/horse_meat"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	]
+}

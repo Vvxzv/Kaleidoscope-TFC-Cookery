@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:braised_fish",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		},
+		{
+			"tag": "ktfcc:foods/raw_fish"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

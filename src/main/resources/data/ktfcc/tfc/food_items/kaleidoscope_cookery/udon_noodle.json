@@ -1,0 +1,13 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:udon_noodle"
+	},
+	"decay_modifier": 2,
+	"hunger": 20,
+	"saturation": 16,
+	"water": 50,
+	"grain": 2.5,
+	"vegetables": 2,
+	"protein": 3.5,
+	"dairy": 0.5
+}

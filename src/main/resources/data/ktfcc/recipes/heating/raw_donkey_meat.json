@@ -1,0 +1,21 @@
+{
+	"type": "tfc:heating",
+	"ingredient": {
+		"type": "tfc:not_rotten",
+		"ingredient": {
+			"item": "kaleidoscope_cookery:raw_donkey_meat"
+		}
+	},
+	"temperature": 200.0,
+	"result_item": {
+		"stack": {
+			"item": "kaleidoscope_cookery:cooked_donkey_meat",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:copy_food"
+			}
+		]
+	}
+}

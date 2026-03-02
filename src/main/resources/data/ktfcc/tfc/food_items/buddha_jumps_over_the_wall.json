@@ -1,0 +1,13 @@
+{
+	"ingredient": {
+		"item": "ktfcc:buddha_jumps_over_the_wall"
+	},
+	"decay_modifier": 1,
+	"hunger": 24,
+	"saturation": 30,
+	"water": 100,
+	"fruit": 2,
+	"vegetables": 4,
+	"protein": 6,
+	"dairy": 1
+}

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:chair_spruce",
+		"count": 1
+	},
+	"pattern": [
+		"b  ",
+		"aaa",
+		"b b"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:wood/planks/spruce_slab"
+		},
+		"b": {
+			"item": "tfc:wood/planks/spruce_fence"
+		}
+	}
+}

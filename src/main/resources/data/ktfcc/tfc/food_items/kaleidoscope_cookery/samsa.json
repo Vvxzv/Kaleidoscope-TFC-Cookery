@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:samsa"
+	},
+	"decay_modifier": 2,
+	"hunger": 6,
+	"saturation": 8,
+	"grain": 1.5,
+	"vegetables": 1.5,
+	"protein": 1.5
+}

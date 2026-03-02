@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:bowl"
+				}
+			]
+		}
+	],
+	"random_sequence": "ktfcc:blocks/rotten_frost_lamb_chop"
+}

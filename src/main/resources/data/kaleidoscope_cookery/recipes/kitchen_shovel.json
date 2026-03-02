@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:kitchen_shovel",
+		"count": 1,
+		"nbt": "{Damage:0}"
+	},
+	"pattern": [
+		" a",
+		"b "
+	],
+	"key": {
+		"a": {
+			"item": "ktfcc:kitchen_shovel_head"
+		},
+		"b": {
+			"item": "minecraft:stick"
+		}
+	}
+}

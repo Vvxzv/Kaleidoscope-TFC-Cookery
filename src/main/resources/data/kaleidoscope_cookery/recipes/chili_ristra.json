@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"C": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "ktfcc:red_pepper"
+			}
+		}
+	},
+	"pattern": [
+		"CC",
+		"CC",
+		"CC"
+	],
+	"result": {
+		"item": "kaleidoscope_cookery:chili_ristra"
+	},
+	"show_notification": true
+}

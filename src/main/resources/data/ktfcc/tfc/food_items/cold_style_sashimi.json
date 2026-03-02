@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "ktfcc:cold_style_sashimi"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"water": 20,
+	"protein": 8
+}

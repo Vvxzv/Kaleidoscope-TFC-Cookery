@@ -1,0 +1,39 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:fondant_pie",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "firmalife:raw_honey"
+		},
+		{
+			"item": "firmalife:raw_honey"
+		},
+		{
+			"item": "firmalife:raw_honey"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:pumpkin_pie"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	},
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "firmalife"
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "kaleidoscope_cookery:stir_fried_pork_with_peppers",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "ktfcc:green_pepper"
+		},
+		{
+			"tag": "ktfcc:green_pepper"
+		},
+		{
+			"tag": "ktfcc:green_pepper"
+		},
+		{
+			"tag": "forge:raw_pork"
+		},
+		{
+			"tag": "forge:raw_pork"
+		},
+		{
+			"tag": "forge:raw_pork"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

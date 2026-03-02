@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "ktfcc:dongpo_pork"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"vegetables": 1.2,
+	"protein": 6
+}

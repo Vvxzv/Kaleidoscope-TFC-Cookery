@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:stockpot",
+		"count": 1
+	},
+	"pattern": [
+		"a a",
+		" b "
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:brick"
+		},
+		"b": {
+			"item": "ktfcc:pan"
+		}
+	}
+}

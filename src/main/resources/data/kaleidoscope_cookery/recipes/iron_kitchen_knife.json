@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:iron_kitchen_knife",
+		"count": 1,
+		"nbt": "{Damage:0}"
+	},
+	"pattern": [
+		" a",
+		"b "
+	],
+	"key": {
+		"a": {
+			"item": "ktfcc:iron_kitchen_knife_head"
+		},
+		"b": {
+			"item": "minecraft:stick"
+		}
+	}
+}

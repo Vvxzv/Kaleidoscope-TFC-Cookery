@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "kaleidoscope_cookery:donkey_burger",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:dough"
+		},
+		{
+			"tag": "forge:dough"
+		},
+		{
+			"item": "tfc:food/horse_meat"
+		},
+		{
+			"item": "tfc:food/horse_meat"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

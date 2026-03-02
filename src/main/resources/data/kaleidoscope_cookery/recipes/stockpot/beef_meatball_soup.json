@@ -1,0 +1,21 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:beef_meatball_soup",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "kaleidoscope_cookery:raw_cow_offal"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_cow_offal"
+		},
+		{
+			"tag": "forge:vegetables"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	]
+}

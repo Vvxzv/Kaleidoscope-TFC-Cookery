@@ -1,0 +1,33 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:desert_style_sashimi",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "tfc:plant/saguaro_fruit"
+		},
+		{
+			"item": "tfc:plant/saguaro_fruit"
+		},
+		{
+			"item": "tfc:plant/saguaro_fruit"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

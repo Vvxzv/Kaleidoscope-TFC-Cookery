@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "ktfcc:desert_style_sashimi"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"fruit": 4,
+	"protein": 8
+}

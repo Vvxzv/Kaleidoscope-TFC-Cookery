@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "ktfcc:frost_lamb_chop",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:blue_ice"
+		},
+		{
+			"item": "minecraft:blue_ice"
+		},
+		{
+			"item": "minecraft:blue_ice"
+		},
+		{
+			"tag": "forge:raw_mutton"
+		},
+		{
+			"tag": "forge:raw_mutton"
+		},
+		{
+			"tag": "forge:raw_mutton"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "ktfcc:stargazy_pie"
+	},
+	"decay_modifier": 1,
+	"hunger": 16,
+	"saturation": 20,
+	"grain": 1,
+	"fruit": 2,
+	"protein": 10
+}
