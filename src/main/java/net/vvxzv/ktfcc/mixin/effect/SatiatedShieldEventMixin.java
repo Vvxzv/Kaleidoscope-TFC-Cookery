@@ -11,11 +11,17 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.vvxzv.ktfcc.Config;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Unique;
 
 @Mixin(SatiatedShieldEvent.class)
 public class SatiatedShieldEventMixin {
+    @Unique
+    private static float modifier(){
+        return (float) Config.satiatedShieldModifier;
+    }
 
     /**
      * @author Vvxzv
@@ -39,13 +45,13 @@ public class SatiatedShieldEventMixin {
                             amount *= 2;
                         }
 
-                        float exhaustionLevel = Math.max(0.0F, (float)amount / 4.0F);
+                        float exhaustionLevel = Math.max(0.0F, (float)amount / modifier());
                         float playerFoodLevel = (float) foodData.getFoodLevel();
                         foodData.addExhaustion(exhaustionLevel);
                         if (GeneralConfig.SATIATED_SHIELD_ABSORB_EXCESS_DAMAGE.get()) {
                             event.setCanceled(true);
                         } else {
-                            float consumedFoodLevel = exhaustionLevel / 4.0F;
+                            float consumedFoodLevel = exhaustionLevel / modifier();
                             if (consumedFoodLevel >= playerFoodLevel) {
                                 float extraDamage;
                                 if (source.is(TagMod.SATIATED_SHIELD_WEAKNESS)) {

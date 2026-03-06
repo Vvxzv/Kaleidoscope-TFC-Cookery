@@ -1,5 +1,6 @@
 package net.vvxzv.ktfcc.common.registry;
 
+import net.dries007.tfc.common.TFCTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,7 +22,9 @@ public class KCreativeTAB {
                         .icon(() -> new ItemStack(KBlocks.PAN.get()))
                         .displayItems((pParameters, pOutput) -> {
                             KItems.ITEMS.getEntries().forEach(item -> {
-                                pOutput.accept(item.get());
+                                if(!(new ItemStack(item.get())).is(TFCTags.Items.FOODS)){
+                                    pOutput.accept(item.get());
+                                }
                             });
                         })
                         .build()

@@ -20,9 +20,8 @@ public class KTFCC {
 
         KBlocks.BLOCKS.register(modEventBus);
         KItems.ITEMS.register(modEventBus);
-        KCreativeTAB.CREATIVE_MODE_TAB.register(modEventBus);
         KBlockEntity.BLOCK_ENTITIES.register(modEventBus);
-
+        KCreativeTAB.CREATIVE_MODE_TAB.register(modEventBus);
         EventHandler.init();
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);

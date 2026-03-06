@@ -7,10 +7,13 @@
 		},
 		"F": {
 			"tag": "forge:magma_block"
+		},
+		"I": {
+			"item": "tfc:wrought_iron_grill"
 		}
 	},
 	"pattern": [
-		"###",
+		"#I#",
 		"#F#",
 		"###"
 	],

@@ -1,5 +1,6 @@
 package net.vvxzv.ktfcc.mixin.blockentity;
 
+import com.github.ysbbbbbb.kaleidoscopecookery.blockentity.BaseBlockEntity;
 import com.github.ysbbbbbb.kaleidoscopecookery.blockentity.kitchen.SteamerBlockEntity;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.food.IFood;
@@ -8,7 +9,10 @@ import net.minecraft.world.Container;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.vvxzv.ktfcc.common.registry.KTags;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -17,7 +21,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(SteamerBlockEntity.class)
-public class SteamerBlockEntityMixin {
+public class SteamerBlockEntityMixin extends BaseBlockEntity {
+
+    public SteamerBlockEntityMixin(BlockEntityType<?> entityType, BlockPos pos, BlockState state) {
+        super(entityType, pos, state);
+    }
 
     @Inject(
             method = "placeFood",
@@ -47,5 +55,15 @@ public class SteamerBlockEntityMixin {
         if(iFood != null && resultIFood != null){
             resultIFood.setCreationDate(iFood.getCreationDate());
         }
+    }
+
+    @Inject(method = "hasHeatSource", at = @At("RETURN"), cancellable = true, remap = false)
+    private void heatSource(Level level, CallbackInfoReturnable<Boolean> cir){
+        BlockState belowState = level.getBlockState(this.worldPosition.below());
+        if(belowState.hasProperty(BlockStateProperties.LIT) && belowState.getValue(BlockStateProperties.LIT)){
+            cir.setReturnValue(true);
+            return;
+        }
+        cir.setReturnValue(belowState.is(KTags.HEAT_SOURCE));
     }
 }

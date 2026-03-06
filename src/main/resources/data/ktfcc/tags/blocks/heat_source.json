@@ -1,0 +1,8 @@
+{
+  "values": [
+    "minecraft:fire",
+    "minecraft:soul_fire",
+    "minecraft:lava",
+    "#forge:magma_block"
+  ]
+}

@@ -208,6 +208,10 @@ dependencies {
     implementation fg.deobf("curse.maven:just-enough-characters-250702:7411324")
     // jei copy
     implementation fg.deobf("curse.maven:jei-copy-recipe-json-1375689:7364314")
+    //oei
+    implementation fg.deobf("curse.maven:one-enough-item-1312660:7268084")
+    implementation fg.deobf("curse.maven:oelib-1319210:7271154")
+    implementation fg.deobf("curse.maven:jupiter-1072905:7704590")
 
 }
 
