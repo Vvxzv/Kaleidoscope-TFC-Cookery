@@ -7,7 +7,7 @@
 	"ingredient": {
 		"type": "tfc:not_rotten",
 		"ingredient": {
-			"item": "tfc:food/rice_flour"
+			"tag": "tfc:foods/flour"
 		}
 	}
 }

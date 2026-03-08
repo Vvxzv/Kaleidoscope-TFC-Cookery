@@ -2,9 +2,9 @@
 	"ingredient": {
 		"item": "ktfcc:oil_splashed_fish"
 	},
-	"decay_modifier": 1,
-	"hunger": 24,
-	"saturation": 32,
-	"vegetables": 3,
-	"protein": 12
+	"decay_modifier": 2,
+	"hunger": 8,
+	"saturation": 6,
+	"vegetables": 1.5,
+	"protein": 1.9
 }

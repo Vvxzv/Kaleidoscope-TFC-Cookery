@@ -78,7 +78,13 @@ public class DecayingFoodBiteOneByTwoBlock extends DecayingFoodBiteBlock{
         Level level = context.getLevel();
         BlockPos leftPos = rightPos.relative(facing.getClockWise());
         IFood food = FoodCapability.get(context.getItemInHand());
-        return level.getBlockState(leftPos).canBeReplaced(context) ? food != null && food.isRotten() ? this.getRottedBlock().defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()) : this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()) : null;
+        if(level.getBlockState(leftPos).canBeReplaced(context)){
+            if(food != null && food.isRotten()){
+                return this.getRottedBlock().defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+            }
+            return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        }
+        return null;
     }
 
     @Override
@@ -120,6 +126,10 @@ public class DecayingFoodBiteOneByTwoBlock extends DecayingFoodBiteBlock{
                     Helpers.spawnItem(level, pos, decaying.getStack());
                 }
             }
+        }
+
+        if (state.hasBlockEntity() && (!state.is(newState.getBlock()) || !newState.hasBlockEntity())) {
+            level.removeBlockEntity(pos);
         }
     }
 }

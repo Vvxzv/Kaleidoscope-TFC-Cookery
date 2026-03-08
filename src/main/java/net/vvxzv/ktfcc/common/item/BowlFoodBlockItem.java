@@ -25,6 +25,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.vvxzv.ktfcc.Config;
 import net.vvxzv.ktfcc.common.block.decay.DecayingFoodBiteBlock;
 import org.jetbrains.annotations.Nullable;
 
@@ -66,6 +67,10 @@ public class BowlFoodBlockItem extends com.github.ysbbbbbb.kaleidoscopecookery.i
         return this.isEdible() ? entity.eat(level, stack) : stack;
     }
 
+    private static boolean hasTooltip(){
+        return Config.foodTooltips;
+    }
+
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         ResourceLocation id = ForgeRegistries.ITEMS.getKey(stack.getItem());
@@ -74,11 +79,13 @@ public class BowlFoodBlockItem extends com.github.ysbbbbbb.kaleidoscopecookery.i
             MutableComponent full = Component.translatable(key).withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC);
             String text = full.getString();
 
-            for(String line : text.split("\n")) {
-                if (!line.isEmpty()) {
-                    tooltip.add(Component.literal(line).withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
-                } else {
-                    tooltip.add(CommonComponents.EMPTY);
+            if(hasTooltip()){
+                for(String line : text.split("\n")) {
+                    if (!line.isEmpty()) {
+                        tooltip.add(Component.literal(line).withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
+                    } else {
+                        tooltip.add(CommonComponents.EMPTY);
+                    }
                 }
             }
         }
@@ -87,6 +94,5 @@ public class BowlFoodBlockItem extends com.github.ysbbbbbb.kaleidoscopecookery.i
             tooltip.add(CommonComponents.space());
             PotionUtils.addPotionTooltip(this.effectInstances, tooltip, 1.0F);
         }
-
     }
 }

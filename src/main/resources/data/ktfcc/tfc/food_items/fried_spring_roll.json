@@ -3,9 +3,9 @@
 		"item": "ktfcc:fried_spring_roll"
 	},
 	"decay_modifier": 1,
-	"hunger": 18,
-	"saturation": 24,
-	"grain": 3,
-	"vegetables": 3,
-	"protein": 6
+	"hunger": 8,
+	"saturation": 8,
+	"grain": 1.9,
+	"vegetables": 1.9,
+	"protein": 2.5
 }

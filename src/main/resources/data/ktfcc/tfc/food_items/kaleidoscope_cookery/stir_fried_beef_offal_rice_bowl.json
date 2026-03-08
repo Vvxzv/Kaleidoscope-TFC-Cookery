@@ -2,9 +2,9 @@
 	"ingredient": {
 		"item": "kaleidoscope_cookery:stir_fried_beef_offal_rice_bowl"
 	},
-	"decay_modifier": 2,
+	"decay_modifier": 2.5,
 	"hunger": 8,
-	"saturation": 10,
+	"saturation": 8,
 	"grain": 0.8,
 	"vegetables": 3.2,
 	"protein": 2.5

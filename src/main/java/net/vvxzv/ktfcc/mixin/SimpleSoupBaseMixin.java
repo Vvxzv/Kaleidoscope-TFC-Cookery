@@ -1,43 +1,54 @@
 package net.vvxzv.ktfcc.mixin;
 
-import com.github.ysbbbbbb.kaleidoscopecookery.crafting.soupbase.FluidSoupBase;
+import com.github.ysbbbbbb.kaleidoscopecookery.crafting.soupbase.SimpleSoupBase;
 import net.dries007.tfc.common.capabilities.Capabilities;
 import net.dries007.tfc.common.items.FluidContainerItem;
 import net.dries007.tfc.util.Helpers;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundSource;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.SoundActions;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandlerItem;
+import org.apache.commons.lang3.function.TriFunction;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(FluidSoupBase.class)
-public abstract class FluidSoupBaseMixin {
+import java.util.function.Predicate;
+
+@Mixin(SimpleSoupBase.class)
+public class SimpleSoupBaseMixin {
     @Final
     @Shadow(remap = false)
-    protected Fluid fluid;
+    protected ResourceLocation name;
 
     @Final
     @Shadow(remap = false)
-    protected Item bucketItem;
+    protected Predicate<ItemStack> soupBasePredicate;
+
+    @Final
+    @Shadow(remap = false)
+    protected Predicate<ItemStack> containerPredicate;
+
+    @Final
+    @Shadow(remap = false)
+    protected TriFunction<Level, LivingEntity, ItemStack, ItemStack> returnContainerFunction;
+
+    @Final
+    @Shadow(remap = false)
+    protected TriFunction<Level, LivingEntity, ItemStack, ItemStack> returnSoupBaseFunction;
 
     @Inject(method = "isSoupBase", at = @At("RETURN"), cancellable = true, remap = false)
     private void isSoupBase(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        if (stack.is(this.bucketItem)) {
+        if (this.soupBasePredicate.test(stack)) {
             cir.setReturnValue(true);
             return;
         }
@@ -54,12 +65,13 @@ public abstract class FluidSoupBaseMixin {
             return;
         }
 
-        cir.setReturnValue(fluidInItem.getFluid().isSame(this.fluid));
+        Fluid fluid = BuiltInRegistries.FLUID.get(this.name);
+        cir.setReturnValue(fluidInItem.getFluid().isSame(fluid));
     }
 
     @Inject(method = "isContainer", at = @At("RETURN"), cancellable = true, remap = false)
     private void isContainer(ItemStack stack, CallbackInfoReturnable<Boolean> cir){
-        if (stack.is(Items.BUCKET)) {
+        if (this.containerPredicate.test(stack)) {
             cir.setReturnValue(true);
             return;
         }
@@ -76,7 +88,8 @@ public abstract class FluidSoupBaseMixin {
             return;
         }
 
-        FluidStack testFluid = new FluidStack(this.fluid, 1000);
+        Fluid fluid = BuiltInRegistries.FLUID.get(this.name);
+        FluidStack testFluid = new FluidStack(fluid, 1000);
         int filled = itemHandler.fill(testFluid, IFluidHandler.FluidAction.SIMULATE);
         cir.setReturnValue(filled == 1000);
     }
@@ -90,7 +103,7 @@ public abstract class FluidSoupBaseMixin {
             return;
         }
 
-        cir.setReturnValue(new ItemStack(Items.BUCKET));
+        cir.setReturnValue(this.returnContainerFunction.apply(level, user, soupBase));
     }
 
     @Inject(method = "getReturnSoupBase", at = @At("RETURN"), cancellable = true, remap = false)
@@ -99,12 +112,13 @@ public abstract class FluidSoupBaseMixin {
             ItemStack filledContainer = container.copy();
             IFluidHandlerItem itemHandler = Helpers.getCapability(filledContainer, Capabilities.FLUID_ITEM);
             if (itemHandler != null){
-                itemHandler.fill(new FluidStack(this.fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
+                Fluid fluid = BuiltInRegistries.FLUID.get(this.name);
+                itemHandler.fill(new FluidStack(fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
                 cir.setReturnValue(filledContainer);
                 return;
             }
         }
 
-        cir.setReturnValue(this.bucketItem.getDefaultInstance());
+        cir.setReturnValue(this.returnSoupBaseFunction.apply(level, user, container));
     }
 }

@@ -2,9 +2,9 @@
 	"ingredient": {
 		"item": "ktfcc:spicy_rabbit_head"
 	},
-	"decay_modifier": 1,
-	"hunger": 16,
-	"saturation": 20,
-	"vegetables": 3,
-	"protein": 6
+	"decay_modifier": 1.5,
+	"hunger": 8,
+	"saturation": 2,
+	"vegetables": 1.3,
+	"protein": 1.3
 }

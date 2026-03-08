@@ -2,11 +2,11 @@
 	"ingredient": {
 		"item": "ktfcc:shengjian_mantou"
 	},
-	"decay_modifier": 1,
-	"hunger": 24,
-	"saturation": 32,
+	"decay_modifier": 2,
+	"hunger": 12,
+	"saturation": 8,
 	"water": 10,
-	"grain": 6,
-	"vegetables": 6,
-	"protein": 6
+	"grain": 1.9,
+	"vegetables": 1.9,
+	"protein": 1.9
 }

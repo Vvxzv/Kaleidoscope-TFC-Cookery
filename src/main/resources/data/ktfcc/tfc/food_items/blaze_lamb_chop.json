@@ -2,8 +2,8 @@
 	"ingredient": {
 		"item": "ktfcc:blaze_lamb_chop"
 	},
-	"decay_modifier": 1,
-	"hunger": 16,
-	"saturation": 20,
-	"vegetables": 8
+	"decay_modifier": 1.5,
+	"hunger": 8,
+	"saturation": 4,
+	"vegetables": 1.9
 }

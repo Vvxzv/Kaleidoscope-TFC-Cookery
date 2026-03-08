@@ -2,9 +2,9 @@
 	"ingredient": {
 		"item": "kaleidoscope_cookery:braised_fish_rice_bowl"
 	},
-	"decay_modifier": 2,
+	"decay_modifier": 2.5,
 	"hunger": 8,
-	"saturation": 10,
+	"saturation": 5,
 	"grain": 0.8,
 	"protein": 4
 }

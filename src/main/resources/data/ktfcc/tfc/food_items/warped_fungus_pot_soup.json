@@ -3,8 +3,8 @@
 		"item": "ktfcc:warped_fungus_pot_soup"
 	},
 	"decay_modifier": 1,
-	"hunger": 16,
-	"saturation": 20,
-	"water": 100,
-	"vegetables": 9
+	"hunger": 6,
+	"saturation": 6,
+	"water": 40,
+	"vegetables": 5.6
 }

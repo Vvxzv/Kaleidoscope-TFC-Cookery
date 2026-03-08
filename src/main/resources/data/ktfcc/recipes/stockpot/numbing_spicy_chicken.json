@@ -11,9 +11,17 @@
 		{
 			"tag": "forge:vegetables/chilipepper"
 		},
-		[],
-		[],
-		[],
-		[]
+		{
+			"tag": "ktfcc:raw_chicken_meat"
+		},
+		{
+			"tag": "ktfcc:raw_chicken_meat"
+		},
+		{
+			"tag": "ktfcc:raw_chicken_meat"
+		},
+		{
+			"tag": "ktfcc:raw_chicken_meat"
+		}
 	]
 }

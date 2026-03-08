@@ -2,9 +2,9 @@
 	"ingredient": {
 		"item": "ktfcc:stuffed_tiger_skin_pepper"
 	},
-	"decay_modifier": 1,
-	"hunger": 16,
-	"saturation": 20,
-	"vegetables": 4,
-	"protein": 6
+	"decay_modifier": 2,
+	"hunger": 8,
+	"saturation": 4,
+	"vegetables": 1.3,
+	"protein": 1.5
 }

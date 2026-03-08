@@ -2,7 +2,7 @@
 	"ingredient": {
 		"item": "kaleidoscope_cookery:red_chili"
 	},
-	"decay_modifier": 0.5,
+	"decay_modifier": 0.8,
 	"hunger": 2,
 	"saturation": 1,
 	"vegetables": 1

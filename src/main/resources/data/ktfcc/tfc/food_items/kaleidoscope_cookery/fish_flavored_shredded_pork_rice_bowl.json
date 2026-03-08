@@ -2,9 +2,9 @@
 	"ingredient": {
 		"item": "kaleidoscope_cookery:fish_flavored_shredded_pork_rice_bowl"
 	},
-	"decay_modifier": 2,
+	"decay_modifier": 2.5,
 	"hunger": 8,
-	"saturation": 10,
+	"saturation": 6,
 	"grain": 0.8,
 	"vegetables": 2.4,
 	"protein": 2

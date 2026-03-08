@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.vvxzv.ktfcc.common.registry.KTags;
+import net.vvxzv.ktfcc.common.registry.KTFCCTags;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -38,6 +38,6 @@ public class PotBlockEntityMixin extends BaseBlockEntity {
             cir.setReturnValue(true);
             return;
         }
-        cir.setReturnValue(belowState.is(KTags.HEAT_SOURCE));
+        cir.setReturnValue(belowState.is(KTFCCTags.HEAT_SOURCE));
     }
 }

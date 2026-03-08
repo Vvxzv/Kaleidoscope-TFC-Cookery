@@ -160,7 +160,7 @@ public class KBlocks {
                     decayingFoodBlockProperties(),
                     KBlocks.ROTTEN_SWEET_AND_SOUR_ENDER_PEARLS,
                     KItems.SWEET_AND_SOUR_ENDER_PEARLS,
-                    4
+                    3
             )
     );
 
@@ -276,7 +276,7 @@ public class KBlocks {
                     decayingFoodBlockProperties(),
                     KBlocks.ROTTEN_DOUGH_DROP_SOUP,
                     KItems.DOUGH_DROP_SOUP,
-                    4
+                    3
             ).setAABB(Block.box(2, 0, 2, 14, 6, 14))
     );
 

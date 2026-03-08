@@ -15,16 +15,29 @@ public class Config {
 
     private static final ForgeConfigSpec.DoubleValue SATIATED_SHIELD_MODIFIER = BUILDER.comment(" ").comment("A damage amount modifier during satiated shield effect. The lower the value, the higher the damage. (default 2)").comment("饱腹代偿时的伤害修改器，值越小伤害越高").defineInRange("satiatedShieldModifier", 2.0, 0.25, 4);
 
+    private static final ForgeConfigSpec.DoubleValue EAT_FOOD_BLOCK_NUTRIENTS_RATIO = BUILDER.comment(" ").comment("Nutrients ratio when eat food block (default 0.8)").comment("食用食物方块时的营养倍率").defineInRange("eatFoodBlockNutrientsRatio", 0.8, 0, 1);
+
+    private static final ForgeConfigSpec.BooleanValue FOOD_TOOLTIP = BUILDER.comment(" ").comment("Turn on or turn off food tooltips").comment("开启或关闭工具提示").define("foodTooltips", true);
+
+    private static final ForgeConfigSpec.BooleanValue FARMERS_DELIGHT_COMPAT = BUILDER.comment(" ").comment("Turn on or turn off Farmer's Delight Compat").comment("开关农夫乐事兼容").define("farmersdelightCompat", true);
+
+
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
     public static double stoveTemperature;
     public static double flatulenceAddFlyMovement;
     public static double satiatedShieldModifier;
+    public static double eatFoodBlockNutrientsRatio;
+    public static boolean foodTooltips;
+    public static boolean farmersdelightCompat;
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event) {
         stoveTemperature = STOVE_TEMPERATURE.get();
         flatulenceAddFlyMovement = FLATULENCE_FLY.get();
         satiatedShieldModifier = SATIATED_SHIELD_MODIFIER.get();
+        eatFoodBlockNutrientsRatio = EAT_FOOD_BLOCK_NUTRIENTS_RATIO.get();
+        foodTooltips = FOOD_TOOLTIP.get();
+        farmersdelightCompat = FARMERS_DELIGHT_COMPAT.get();
     }
 }

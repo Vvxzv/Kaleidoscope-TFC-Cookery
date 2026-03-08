@@ -3,9 +3,9 @@
 		"item": "ktfcc:dough_drop_soup"
 	},
 	"decay_modifier": 1,
-	"hunger": 16,
-	"saturation": 20,
-	"water": 50,
-	"grain": 2,
-	"vegetables": 5
+	"hunger": 8,
+	"saturation": 6,
+	"water": 40,
+	"grain": 1.3,
+	"vegetables": 3.1
 }

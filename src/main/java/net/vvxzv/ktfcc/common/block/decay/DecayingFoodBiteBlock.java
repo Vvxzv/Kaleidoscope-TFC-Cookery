@@ -36,6 +36,7 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.vvxzv.ktfcc.Config;
 import net.vvxzv.ktfcc.common.blockentity.DecayingFoodBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
@@ -148,13 +149,17 @@ public class DecayingFoodBiteBlock extends DecayingFoodBlock{
         return InteractionResult.SUCCESS;
     }
 
+    private static float getRatio() {
+        return (float) Config.eatFoodBlockNutrientsRatio;
+    }
+
     protected FoodData cFoodData(FoodData data) {
-        int hunger = data.hunger() / this.maxBites;
-        float water = data.water() / this.maxBites;
-        float saturation = data.saturation() / this.maxBites;
+        int hunger = data.hunger() / 2;
+        float water = data.water() / 2;
+        float saturation = data.saturation() / 2;
         float[] n = data.nutrients();
         for (int i = 0; i < n.length; i++){
-            n[i] = n[i] / this.maxBites * 1.2F;
+            n[i] *= getRatio();
         }
         return new FoodData(hunger, water, saturation, n[0], n[1], n[2], n[3], n[4], 0.0F);
     }

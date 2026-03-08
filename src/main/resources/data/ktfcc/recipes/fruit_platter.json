@@ -9,14 +9,14 @@
 			{
 				"type": "tfc:meal",
 				"food": {
-					"hunger": 12,
+					"hunger": 6,
 					"decay_modifier": 3
 				},
 				"portions": [
 					{
-						"nutrient_modifier": 0.8,
-						"water_modifier": 0.8,
-						"saturation_modifier": 0.8
+						"nutrient_modifier": 0.6,
+						"water_modifier": 0.6,
+						"saturation_modifier": 0.6
 					}
 				]
 			}

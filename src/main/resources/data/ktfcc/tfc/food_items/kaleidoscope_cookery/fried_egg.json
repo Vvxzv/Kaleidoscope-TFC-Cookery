@@ -2,7 +2,7 @@
 	"ingredient": {
 		"item": "kaleidoscope_cookery:fried_egg"
 	},
-	"decay_modifier": 2,
+	"decay_modifier": 3,
 	"hunger": 3,
 	"saturation": 1,
 	"protein": 1.5,

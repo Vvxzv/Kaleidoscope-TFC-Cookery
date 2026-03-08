@@ -2,10 +2,10 @@
 	"ingredient": {
 		"item": "ktfcc:chorus_fried_egg"
 	},
-	"decay_modifier": 1,
-	"hunger": 12,
-	"saturation": 8,
-	"fruit": 6,
-	"protein": 4.5,
-	"dairy": 1
+	"decay_modifier": 2,
+	"hunger": 10,
+	"saturation": 6,
+	"fruit": 2.5,
+	"protein": 1.9,
+	"dairy": 0.6
 }

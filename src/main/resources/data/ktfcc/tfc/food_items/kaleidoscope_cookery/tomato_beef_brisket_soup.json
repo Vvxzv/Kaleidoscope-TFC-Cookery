@@ -2,10 +2,10 @@
 	"ingredient": {
 		"item": "kaleidoscope_cookery:tomato_beef_brisket_soup"
 	},
-	"decay_modifier": 2,
+	"decay_modifier": 2.5,
 	"hunger": 6,
-	"saturation": 8,
-	"water": 20,
+	"saturation": 4,
+	"water": 30,
 	"vegetables": 2.4,
 	"protein": 2.5
 }

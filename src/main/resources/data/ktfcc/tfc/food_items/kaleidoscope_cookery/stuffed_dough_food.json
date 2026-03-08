@@ -2,7 +2,7 @@
 	"ingredient": {
 		"item": "kaleidoscope_cookery:stuffed_dough_food"
 	},
-	"decay_modifier": 2,
+	"decay_modifier": 3,
 	"hunger": 2,
 	"saturation": 1,
 	"grain": 0.5,

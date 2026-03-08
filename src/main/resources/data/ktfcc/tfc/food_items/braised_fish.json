@@ -2,8 +2,8 @@
 	"ingredient": {
 		"item": "ktfcc:braised_fish"
 	},
-	"decay_modifier": 1,
-	"hunger": 16,
-	"saturation": 20,
-	"protein": 12
+	"decay_modifier": 1.5,
+	"hunger": 12,
+	"saturation": 6,
+	"protein": 3.1
 }
