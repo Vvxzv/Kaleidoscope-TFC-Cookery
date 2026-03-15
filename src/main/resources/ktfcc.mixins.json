@@ -5,9 +5,11 @@
   "compatibilityLevel" : "JAVA_8",
   "refmap" : "ktfcc.refmap.json",
   "mixins" : [
+    "FarmerArmorMaterialMixin",
     "FluidSoupBaseMixin",
     "ItemUtilsMixin",
     "ScarecrowEntityMixin",
+    "SimpleSoupBaseMixin",
     "block.ChiliRistraBlockMixin",
     "block.StrungMushroomsBlockMixin",
     "blockentity.ChoppingBoardBlockEntityMixin",
@@ -26,7 +28,6 @@
     "item.BowlFoodBlockItemMixin",
     "item.FoodWithEffectsItemMixin",
     "item.SickleItemMixin",
-    "SimpleSoupBaseMixin",
     "item.WithTooltipsItemMixin"
   ],
   "client" : [
