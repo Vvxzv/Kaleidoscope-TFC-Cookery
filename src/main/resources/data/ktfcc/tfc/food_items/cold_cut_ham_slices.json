@@ -1,9 +1,0 @@
-{
-	"ingredient": {
-		"item": "ktfcc:cold_cut_ham_slices"
-	},
-	"decay_modifier": 1.5,
-	"hunger": 8,
-	"saturation": 4,
-	"protein": 3.1
-}

@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aa",
+		"aa",
+		"aa"
+	],
+	"key": {
+		"a": {
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "minecraft:brown_mushroom"
+				}
+			]
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:strung_mushrooms",
+		"count": 1
+	}
+}

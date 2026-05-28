@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:fondant_pie"
+	},
+	"decay_modifier": 1,
+	"hunger": 4,
+	"saturation": 3,
+	"grain": 1.3,
+	"fruit": 2,
+	"protein": 1.9,
+	"dairy": 1.25
+}

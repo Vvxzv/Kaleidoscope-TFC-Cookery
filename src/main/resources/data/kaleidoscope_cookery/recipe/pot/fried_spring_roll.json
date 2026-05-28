@@ -1,0 +1,54 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"tag": "c:foods/flour"
+		},
+		{
+			"tag": "c:foods/flour"
+		},
+		{
+			"tag": "c:foods/flour"
+		},
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		{
+			"tag": "c:foods/vegetable"
+		},
+		{
+			"tag": "c:foods/vegetable"
+		},
+		{
+			"tag": "c:foods/vegetable"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:fried_spring_roll",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

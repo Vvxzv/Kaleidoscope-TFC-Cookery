@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "kaleidoscope_cookery:raw_meatball",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "c:foods/raw_meat"
+		},
+		{
+			"tag": "c:foods/raw_meat"
+		},
+		{
+			"tag": "c:foods/vegetable"
+		}
+	]
+}

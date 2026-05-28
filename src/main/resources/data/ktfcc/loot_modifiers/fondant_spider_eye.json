@@ -1,0 +1,12 @@
+{
+	"type": "ktfcc:remove_items",
+	"conditions": [
+		{
+			"condition": "neoforge:loot_table_id",
+			"loot_table_id": "kaleidoscope_cookery:blocks/fondant_spider_eye"
+		}
+	],
+	"targets": [
+		"kaleidoscope_cookery:fondant_spider_eye"
+	]
+}

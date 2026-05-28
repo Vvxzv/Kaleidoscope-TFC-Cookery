@@ -1,0 +1,104 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "kaleidoscope_cookery:raw_dough",
+		"count": 8
+	},
+	"ingredients": [
+		{
+			"type": "tfc:fluid_content",
+			"fluid": {
+				"fluid": "minecraft:water",
+				"amount": 100
+			}
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:flour"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:flour"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:flour"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:flour"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:flour"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:flour"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:flour"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:flour"
+				}
+			]
+		}
+	]
+}

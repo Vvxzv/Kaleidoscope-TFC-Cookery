@@ -1,0 +1,18 @@
+{
+	"type": "kaleidoscope_cookery:millstone",
+	"ingredient": {
+		"type": "neoforge:intersection",
+		"children": [
+			{
+				"type": "tfc:not_rotten"
+			},
+			{
+				"tag": "c:foods/flour"
+			}
+		]
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:flour",
+		"count": 1
+	}
+}

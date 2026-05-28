@@ -1,0 +1,34 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" a ",
+		"bcb",
+		" d "
+	],
+	"key": {
+		"a": {
+			"tag": "kaleidoscope_cookery:straw_hat"
+		},
+		"b": {
+			"item": "minecraft:stick"
+		},
+		"c": {
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:pumpkin"
+				}
+			]
+		},
+		"d": {
+			"tag": "kaleidoscope_cookery:straw_bale"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:scarecrow",
+		"count": 1
+	}
+}

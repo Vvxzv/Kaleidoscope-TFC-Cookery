@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"a",
+		"b"
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:brick"
+		},
+		"b": {
+			"item": "tfc:metal/sheet/wrought_iron"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:stockpot_lid",
+		"count": 1
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:red_mushroom"
+	},
+	"decay_modifier": 2,
+	"hunger": 2,
+	"vegetables": 1,
+	"edible": false
+}

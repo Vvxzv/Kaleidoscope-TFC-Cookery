@@ -1,0 +1,31 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
+		{
+			"item": "minecraft:brown_mushroom"
+		},
+		{
+			"item": "minecraft:brown_mushroom"
+		},
+		{
+			"item": "minecraft:brown_mushroom"
+		},
+		{
+			"item": "minecraft:brown_mushroom"
+		},
+		{
+			"item": "minecraft:brown_mushroom"
+		},
+		{
+			"item": "minecraft:brown_mushroom"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:brown_mushroom_pot_soup",
+		"count": 1
+	},
+	"soup_base": "minecraft:water",
+	"carrier": {
+		"item": "tfc:ceramic/vessel"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"ingredient": {
+		"item": "minecraft:cocoa_beans"
+	},
+	"decay_modifier": 0.25,
+	"edible": false
+}

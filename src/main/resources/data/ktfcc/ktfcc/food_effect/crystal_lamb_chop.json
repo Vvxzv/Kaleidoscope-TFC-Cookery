@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:crystal_lamb_chop"
+	},
+	"effects": [
+		{
+			"id": "minecraft:haste",
+			"duration": 6000,
+			"amplifier": 0
+		}
+	]
+}

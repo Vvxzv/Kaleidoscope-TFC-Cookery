@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:cold_style_sashimi"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:mustard",
+			"duration": 6000,
+			"amplifier": 0
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
+		{
+			"item": "tfc:food/carrot"
+		},
+		{
+			"item": "tfc:food/carrot"
+		},
+		[
+			{
+				"item": "tfc:food/mutton"
+			},
+			{
+				"item": "tfc:food/chevon"
+			},
+			{
+				"item": "kaleidoscope_cookery:raw_lamb_chops"
+			}
+		],
+		{
+			"item": "tfc:powder/salt"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:lamb_and_radish_soup",
+		"count": 1
+	}
+}

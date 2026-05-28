@@ -1,0 +1,26 @@
+{
+	"type": "tfc:heating",
+	"ingredient": {
+		"type": "neoforge:intersection",
+		"children": [
+			{
+				"type": "tfc:not_rotten"
+			},
+			{
+				"item": "kaleidoscope_cookery:raw_cut_small_meats"
+			}
+		]
+	},
+	"temperature": 200,
+	"result_item": {
+		"stack": {
+			"id": "kaleidoscope_cookery:cooked_cut_small_meats",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:copy_food"
+			}
+		]
+	}
+}

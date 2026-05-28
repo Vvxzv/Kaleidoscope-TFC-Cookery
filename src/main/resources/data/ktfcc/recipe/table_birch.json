@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aaa",
+		"b b"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:wood/planks/birch_slab"
+		},
+		"b": {
+			"item": "tfc:wood/fence/birch"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:table_birch",
+		"count": 1
+	}
+}

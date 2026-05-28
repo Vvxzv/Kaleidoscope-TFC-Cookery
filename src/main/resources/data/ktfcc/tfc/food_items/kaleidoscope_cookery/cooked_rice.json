@@ -1,9 +1,0 @@
-{
-	"ingredient": {
-		"item": "kaleidoscope_cookery:cooked_rice"
-	},
-	"decay_modifier": 1,
-	"hunger": 3,
-	"saturation": 2,
-	"grain": 1
-}

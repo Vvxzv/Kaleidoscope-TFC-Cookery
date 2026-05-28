@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aaa",
+		"a a"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:wood/planks/birch"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:cook_stool_birch",
+		"count": 1
+	}
+}

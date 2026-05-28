@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:numbing_spicy_chicken"
+	},
+	"effects": [
+		{
+			"id": "minecraft:strength",
+			"duration": 2400,
+			"amplifier": 0
+		}
+	]
+}

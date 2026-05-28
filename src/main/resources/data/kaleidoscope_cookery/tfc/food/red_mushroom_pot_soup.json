@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:red_mushroom_pot_soup"
+	},
+	"decay_modifier": 1,
+	"hunger": 4,
+	"saturation": 2,
+	"water": 40,
+	"vegetables": 5.6
+}

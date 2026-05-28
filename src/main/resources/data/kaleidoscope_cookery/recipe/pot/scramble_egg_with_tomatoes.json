@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"tag": "c:foods/cooked_eggs"
+		},
+		{
+			"tag": "c:foods/cooked_eggs"
+		},
+		{
+			"tag": "c:foods/cooked_eggs"
+		},
+		{
+			"item": "tfc:food/tomato"
+		},
+		{
+			"item": "tfc:food/tomato"
+		},
+		{
+			"item": "tfc:food/tomato"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:scramble_egg_with_tomatoes",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

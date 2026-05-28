@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:stuffed_tiger_skin_pepper"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:warmth",
+			"duration": 1600,
+			"amplifier": 0
+		}
+	]
+}

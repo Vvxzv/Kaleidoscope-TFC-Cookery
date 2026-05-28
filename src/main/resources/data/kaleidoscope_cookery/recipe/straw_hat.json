@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" a ",
+		" b ",
+		"aaa"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:straw"
+		},
+		"b": {
+			"tag": "c:strings"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:straw_hat",
+		"count": 1
+	}
+}

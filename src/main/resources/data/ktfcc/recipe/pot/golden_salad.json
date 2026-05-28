@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"item": "minecraft:golden_apple"
+		},
+		{
+			"item": "minecraft:golden_apple"
+		},
+		{
+			"item": "minecraft:golden_carrot"
+		},
+		{
+			"item": "minecraft:golden_carrot"
+		},
+		{
+			"item": "minecraft:glistering_melon_slice"
+		},
+		{
+			"item": "minecraft:glistering_melon_slice"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:golden_salad",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

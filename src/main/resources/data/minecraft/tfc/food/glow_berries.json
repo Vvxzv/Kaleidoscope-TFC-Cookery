@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "minecraft:glow_berries"
+	},
+	"decay_modifier": 5,
+	"hunger": 4,
+	"saturation": 0.2,
+	"water": 5,
+	"fruit": 0.5
+}

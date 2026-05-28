@@ -1,0 +1,27 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"tag": "c:vegetables/chilipepper"
+		},
+		{
+			"tag": "c:vegetables/chilipepper"
+		},
+		{
+			"tag": "c:dough"
+		},
+		{
+			"tag": "c:dough"
+		},
+		{
+			"item": "tfc:food/horse_meat"
+		},
+		{
+			"item": "tfc:food/horse_meat"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:donkey_burger",
+		"count": 1
+	}
+}

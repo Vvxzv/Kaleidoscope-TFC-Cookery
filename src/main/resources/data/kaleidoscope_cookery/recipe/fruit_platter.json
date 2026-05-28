@@ -1,0 +1,99 @@
+{
+	"type": "tfc:advanced_shapeless_crafting",
+	"ingredients": [
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/fruit"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/fruit"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/fruit"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/fruit"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/fruit"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/fruit"
+				}
+			]
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	],
+	"primary_ingredient": {
+		"item": "minecraft:bowl"
+	},
+	"result": {
+		"stack": {
+			"id": "kaleidoscope_cookery:fruit_platter",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:meal",
+				"food": {
+					"decay_modifier": 3,
+					"hunger": 4
+				},
+				"portions": [
+					{
+						"nutrient_modifier": 0.6,
+						"saturation_modifier": 0.6,
+						"water_modifier": 0.6
+					}
+				]
+			}
+		]
+	}
+}

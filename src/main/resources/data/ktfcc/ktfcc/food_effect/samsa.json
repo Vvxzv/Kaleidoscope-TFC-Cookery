@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:samsa"
+	},
+	"effects": [
+		{
+			"id": "minecraft:haste",
+			"duration": 2000,
+			"amplifier": 0
+		}
+	]
+}

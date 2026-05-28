@@ -1,0 +1,26 @@
+{
+	"type": "tfc:heating",
+	"ingredient": {
+		"type": "neoforge:intersection",
+		"children": [
+			{
+				"type": "tfc:not_rotten"
+			},
+			{
+				"item": "kaleidoscope_cookery:raw_meatball"
+			}
+		]
+	},
+	"temperature": 200,
+	"result_item": {
+		"stack": {
+			"id": "kaleidoscope_cookery:cooked_meatball",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:copy_food"
+			}
+		]
+	}
+}

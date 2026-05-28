@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:fried_caterpillar"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:flatulence",
+			"duration": 200,
+			"amplifier": 0
+		}
+	]
+}

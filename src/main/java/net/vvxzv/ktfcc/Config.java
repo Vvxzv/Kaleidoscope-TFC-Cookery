@@ -1,43 +1,35 @@
 package net.vvxzv.ktfcc;
 
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.config.ModConfigEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.config.ModConfigEvent;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
-@Mod.EventBusSubscriber(modid = KTFCC.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@SuppressWarnings("removal")
+@EventBusSubscriber(modid = KaleidoscopeTFCCookery.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class Config {
-    private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
+    private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
-    private static final ForgeConfigSpec.DoubleValue STOVE_TEMPERATURE = BUILDER.comment(" ").comment("The stove provides the highest temperature that can be reached by a cluster of heat sources. (default 450)").comment("炉灶提供群峦热源可达到的最高温度（默认450）").defineInRange("stoveTemperature", 450.0, 200, 2000);
+    private static final ModConfigSpec.DoubleValue STOVE_TEMPERATURE = BUILDER.comment(" ").comment("The stove provides the highest temperature that can be reached by a cluster of heat sources. (default 450)").comment("炉灶提供群峦热源可达到的最高温度（默认450）").defineInRange("stoveTemperature", 450.0, 200, 2000);
 
-    private static final ForgeConfigSpec.DoubleValue FLATULENCE_FLY = BUILDER.comment(" ").comment("A value about flatulence effect add movement when shift key down. (default 0)").comment("在胀气效果下，当玩家下蹲时给玩家加的移动速度").defineInRange("flatulenceAddFlyMovement", 0, 0, 0.75);
+    private static final ModConfigSpec.DoubleValue FLATULENCE_FLY = BUILDER.comment(" ").comment("A value about flatulence effect add movement when shift key down. (default 0)").comment("在胀气效果下，当玩家下蹲时给玩家加的移动速度").defineInRange("flatulenceAddFlyMovement", 0, 0, 0.75);
 
-    private static final ForgeConfigSpec.DoubleValue SATIATED_SHIELD_MODIFIER = BUILDER.comment(" ").comment("A damage amount modifier during satiated shield effect. The lower the value, the higher the damage. (default 2)").comment("饱腹代偿时的伤害修改器，值越小伤害越高").defineInRange("satiatedShieldModifier", 2.0, 0.25, 4);
+    private static final ModConfigSpec.BooleanValue FOOD_TOOLTIP = BUILDER.comment(" ").comment("Turn on or turn off food tooltips").comment("开启或关闭食物tooltip").define("foodTooltips", true);
 
-    private static final ForgeConfigSpec.DoubleValue EAT_FOOD_BLOCK_NUTRIENTS_RATIO = BUILDER.comment(" ").comment("Nutrients ratio when eat food block (default 0.8)").comment("食用食物方块时的营养倍率").defineInRange("eatFoodBlockNutrientsRatio", 0.8, 0, 1);
+    private static final ModConfigSpec.BooleanValue FARMERS_DELIGHT_COMPAT = BUILDER.comment(" ").comment("Turn on or turn off Farmer's Delight Compat").comment("开关农夫乐事兼容").define("farmersDelightCompat", true);
 
-    private static final ForgeConfigSpec.BooleanValue FOOD_TOOLTIP = BUILDER.comment(" ").comment("Turn on or turn off food tooltips").comment("开启或关闭工具提示").define("foodTooltips", true);
-
-    private static final ForgeConfigSpec.BooleanValue FARMERS_DELIGHT_COMPAT = BUILDER.comment(" ").comment("Turn on or turn off Farmer's Delight Compat").comment("开关农夫乐事兼容").define("farmersdelightCompat", true);
-
-
-    static final ForgeConfigSpec SPEC = BUILDER.build();
+    static final ModConfigSpec SPEC = BUILDER.build();
 
     public static double stoveTemperature;
     public static double flatulenceAddFlyMovement;
-    public static double satiatedShieldModifier;
-    public static double eatFoodBlockNutrientsRatio;
     public static boolean foodTooltips;
-    public static boolean farmersdelightCompat;
+    public static boolean farmersDelightCompat;
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event) {
         stoveTemperature = STOVE_TEMPERATURE.get();
         flatulenceAddFlyMovement = FLATULENCE_FLY.get();
-        satiatedShieldModifier = SATIATED_SHIELD_MODIFIER.get();
-        eatFoodBlockNutrientsRatio = EAT_FOOD_BLOCK_NUTRIENTS_RATIO.get();
         foodTooltips = FOOD_TOOLTIP.get();
-        farmersdelightCompat = FARMERS_DELIGHT_COMPAT.get();
+        farmersDelightCompat = FARMERS_DELIGHT_COMPAT.get();
     }
 }

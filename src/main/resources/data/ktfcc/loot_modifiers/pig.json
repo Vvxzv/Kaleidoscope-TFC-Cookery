@@ -1,7 +1,10 @@
 {
-  "type": "kaleidoscope_cookery:addition",
-  "conditions": [],
-  "loot_table_add": "kaleidoscope_cookery:pig",
-  "loot_table_id": "tfc:entities/pig",
-  "loot_table_type": "minecraft:entity"
+	"type": "neoforge:add_table",
+	"conditions": [
+		{
+			"condition": "neoforge:loot_table_id",
+			"loot_table_id": "tfc:entities/pig"
+		}
+	],
+	"table": "kaleidoscope_cookery:pig"
 }

@@ -1,0 +1,54 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"item": "minecraft:blaze_rod"
+		},
+		{
+			"item": "minecraft:blaze_rod"
+		},
+		{
+			"item": "minecraft:blaze_rod"
+		},
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_lamb_chops"
+			},
+			{
+				"item": "tfc:food/mutton"
+			},
+			{
+				"item": "tfc:food/chevon"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_lamb_chops"
+			},
+			{
+				"item": "tfc:food/mutton"
+			},
+			{
+				"item": "tfc:food/chevon"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_lamb_chops"
+			},
+			{
+				"item": "tfc:food/mutton"
+			},
+			{
+				"item": "tfc:food/chevon"
+			}
+		]
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:blaze_lamb_chop",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

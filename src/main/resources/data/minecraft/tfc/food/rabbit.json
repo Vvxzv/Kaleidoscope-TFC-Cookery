@@ -1,0 +1,8 @@
+{
+	"ingredient": {
+		"item": "minecraft:rabbit"
+	},
+	"decay_modifier": 3,
+	"hunger": 4,
+	"protein": 0.5
+}

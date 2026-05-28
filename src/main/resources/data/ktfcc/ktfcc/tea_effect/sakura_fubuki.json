@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:sakura_fubuki"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:hinder",
+			"duration": 2400,
+			"amplifier": 0
+		}
+	]
+}

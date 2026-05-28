@@ -1,0 +1,42 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"item": "minecraft:bamboo"
+		},
+		{
+			"item": "minecraft:bamboo"
+		},
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		]
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:dongpo_pork",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

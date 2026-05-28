@@ -1,0 +1,9 @@
+{
+  "format_version": "1.21.6",
+  "credit": "Made with Blockbench",
+  "parent": "ktfcc:block/tea_tree_stage_1/tea_tree_2",
+  "textures": {
+  "1": "ktfcc:block/tea_tree_0",
+  "particle": "ktfcc:item/tea_tree"
+  }
+}

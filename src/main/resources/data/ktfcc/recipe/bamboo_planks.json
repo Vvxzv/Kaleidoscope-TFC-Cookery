@@ -1,0 +1,28 @@
+{
+	"type": "tfc:advanced_shapeless_crafting",
+	"ingredients": [
+		{
+			"tag": "c:tools/saw"
+		},
+		{
+			"item": "minecraft:bamboo_block"
+		}
+	],
+	"primary_ingredient": {
+		"tag": "c:tools/saw"
+	},
+	"result": {
+		"stack": {
+			"id": "minecraft:bamboo_planks",
+			"count": 2
+		},
+		"modifiers": []
+	},
+	"remainder": {
+		"modifiers": [
+			{
+				"type": "tfc:damage_crafting_remainder"
+			}
+		]
+	}
+}

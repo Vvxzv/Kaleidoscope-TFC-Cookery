@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "minecraft:clay_ball",
+		"count": 2
+	},
+	"ingredients": [
+		{
+			"item": "ktfcc:unfired_cup"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:country_style_mixed_vegetables"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:preservation",
+			"duration": 1800,
+			"amplifier": 0
+		}
+	]
+}

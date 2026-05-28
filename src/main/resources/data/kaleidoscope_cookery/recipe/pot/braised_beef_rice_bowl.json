@@ -1,0 +1,29 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_cow_offal"
+			},
+			{
+				"item": "tfc:food/beef"
+			},
+			{
+				"item": "tfc:food/bison"
+			}
+		],
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:braised_beef_rice_bowl",
+		"count": 1
+	},
+	"carrier": {
+		"item": "kaleidoscope_cookery:cooked_rice"
+	}
+}

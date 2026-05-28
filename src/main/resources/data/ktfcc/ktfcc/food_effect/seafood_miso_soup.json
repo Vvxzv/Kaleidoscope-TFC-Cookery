@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:seafood_miso_soup"
+	},
+	"effects": [
+		{
+			"id": "minecraft:water_breathing",
+			"duration": 1200,
+			"amplifier": 0
+		}
+	]
+}

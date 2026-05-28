@@ -1,0 +1,17 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:golden_salad"
+	},
+	"effects": [
+		{
+			"id": "minecraft:resistance",
+			"duration": 2000,
+			"amplifier": 0
+		},
+		{
+			"id": "minecraft:regeneration",
+			"duration": 200,
+			"amplifier": 1
+		}
+	]
+}

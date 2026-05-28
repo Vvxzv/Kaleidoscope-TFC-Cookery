@@ -1,0 +1,39 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"item": "firmalife:food/raw_honey"
+		},
+		{
+			"item": "firmalife:food/raw_honey"
+		},
+		{
+			"item": "firmalife:food/raw_honey"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:pumpkin_pie"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:fondant_pie",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	},
+	"conditions": [
+		{
+			"type": "neoforge:mod_loaded",
+			"modid": "firmalife"
+		}
+	]
+}

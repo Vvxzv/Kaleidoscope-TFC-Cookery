@@ -1,0 +1,12 @@
+{
+	"type": "ktfcc:remove_items",
+	"conditions": [
+		{
+			"condition": "neoforge:loot_table_id",
+			"loot_table_id": "kaleidoscope_cookery:blocks/tundra_style_sashimi"
+		}
+	],
+	"targets": [
+		"kaleidoscope_cookery:tundra_style_sashimi"
+	]
+}

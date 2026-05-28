@@ -1,7 +1,6 @@
 package net.vvxzv.ktfcc.mixin;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.crafting.soupbase.SimpleSoupBase;
-import net.dries007.tfc.common.capabilities.Capabilities;
 import net.dries007.tfc.common.items.FluidContainerItem;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -11,9 +10,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandlerItem;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import net.vvxzv.ktfcc.common.utils.Utils;
 import org.apache.commons.lang3.function.TriFunction;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -27,74 +27,48 @@ import java.util.function.Predicate;
 @Mixin(SimpleSoupBase.class)
 public class SimpleSoupBaseMixin {
     @Final
-    @Shadow(remap = false)
+    @Shadow
     protected ResourceLocation name;
 
     @Final
-    @Shadow(remap = false)
+    @Shadow
     protected Predicate<ItemStack> soupBasePredicate;
 
     @Final
-    @Shadow(remap = false)
+    @Shadow
     protected Predicate<ItemStack> containerPredicate;
 
     @Final
-    @Shadow(remap = false)
+    @Shadow
     protected TriFunction<Level, LivingEntity, ItemStack, ItemStack> returnContainerFunction;
 
     @Final
-    @Shadow(remap = false)
+    @Shadow
     protected TriFunction<Level, LivingEntity, ItemStack, ItemStack> returnSoupBaseFunction;
 
-    @Inject(method = "isSoupBase", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(method = "isSoupBase", at = @At("RETURN"), cancellable = true)
     private void isSoupBase(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         if (this.soupBasePredicate.test(stack)) {
             cir.setReturnValue(true);
             return;
         }
 
-        IFluidHandlerItem itemHandler = Helpers.getCapability(stack, Capabilities.FLUID_ITEM);
-        if (itemHandler == null) {
-            cir.setReturnValue(false);
-            return;
-        }
-
-        FluidStack fluidInItem = itemHandler.drain(1000, IFluidHandler.FluidAction.SIMULATE);
-        if (fluidInItem.isEmpty()) {
-            cir.setReturnValue(false);
-            return;
-        }
-
         Fluid fluid = BuiltInRegistries.FLUID.get(this.name);
-        cir.setReturnValue(fluidInItem.getFluid().isSame(fluid));
+        cir.setReturnValue(Utils.isSameFluidInItem(stack, fluid, 1000));
     }
 
-    @Inject(method = "isContainer", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(method = "isContainer", at = @At("RETURN"), cancellable = true)
     private void isContainer(ItemStack stack, CallbackInfoReturnable<Boolean> cir){
         if (this.containerPredicate.test(stack)) {
             cir.setReturnValue(true);
             return;
         }
 
-        IFluidHandlerItem itemHandler = Helpers.getCapability(stack, Capabilities.FLUID_ITEM);
-        if (itemHandler == null) {
-            cir.setReturnValue(false);
-            return;
-        }
-
-        FluidStack fluidInItem = itemHandler.drain(1000, IFluidHandler.FluidAction.SIMULATE);
-        if (!fluidInItem.isEmpty()) {
-            cir.setReturnValue(false);
-            return;
-        }
-
         Fluid fluid = BuiltInRegistries.FLUID.get(this.name);
-        FluidStack testFluid = new FluidStack(fluid, 1000);
-        int filled = itemHandler.fill(testFluid, IFluidHandler.FluidAction.SIMULATE);
-        cir.setReturnValue(filled == 1000);
+        cir.setReturnValue(Utils.matchFluidStack(stack, fluid, 1000));
     }
 
-    @Inject(method = "getReturnContainer", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(method = "getReturnContainer", at = @At("RETURN"), cancellable = true)
     private void getReturnContainer(Level level, LivingEntity user, ItemStack soupBase, CallbackInfoReturnable<ItemStack> cir){
         Item item = soupBase.getItem();
 
@@ -106,14 +80,14 @@ public class SimpleSoupBaseMixin {
         cir.setReturnValue(this.returnContainerFunction.apply(level, user, soupBase));
     }
 
-    @Inject(method = "getReturnSoupBase", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(method = "getReturnSoupBase", at = @At("RETURN"), cancellable = true)
     private void getReturnSoupBase(Level level, LivingEntity user, ItemStack container, CallbackInfoReturnable<ItemStack> cir){
         if(container.getItem() instanceof FluidContainerItem){
             ItemStack filledContainer = container.copy();
-            IFluidHandlerItem itemHandler = Helpers.getCapability(filledContainer, Capabilities.FLUID_ITEM);
-            if (itemHandler != null){
+            IFluidHandler handler = filledContainer.getCapability(Capabilities.FluidHandler.ITEM);
+            if (handler != null){
                 Fluid fluid = BuiltInRegistries.FLUID.get(this.name);
-                itemHandler.fill(new FluidStack(fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
+                handler.fill(new FluidStack(fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
                 cir.setReturnValue(filledContainer);
                 return;
             }

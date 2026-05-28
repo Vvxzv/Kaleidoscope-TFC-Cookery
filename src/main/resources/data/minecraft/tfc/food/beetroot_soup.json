@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:beetroot_soup"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 6,
+	"vegetables": 3
+}

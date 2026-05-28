@@ -1,0 +1,14 @@
+{
+	"type": "tfc:heating",
+	"ingredient": {
+		"item": "ktfcc:unfired_cup"
+	},
+	"temperature": 1399,
+	"result_item": {
+		"stack": {
+			"id": "kaleidoscope_cookery:empty_cup",
+			"count": 1
+		},
+		"modifiers": []
+	}
+}

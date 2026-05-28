@@ -1,0 +1,56 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		{
+			"item": "minecraft:bone"
+		},
+		{
+			"item": "minecraft:bone"
+		},
+		{
+			"item": "minecraft:bone"
+		},
+		{
+			"item": "minecraft:bone"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:braised_pork_ribs",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

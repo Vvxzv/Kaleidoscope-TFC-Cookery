@@ -1,0 +1,7 @@
+{
+	"ingredient": {
+		"item": "ktfcc:tea_leaves/biluochun"
+	},
+	"decay_modifier": 1.5,
+	"edible": false
+}

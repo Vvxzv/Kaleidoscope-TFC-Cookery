@@ -1,0 +1,14 @@
+{
+	"type": "tfc:welding",
+	"first_input": {
+		"item": "kaleidoscope_cookery:iron_kitchen_knife"
+	},
+	"result": {
+		"count": 1,
+		"id": "kaleidoscope_cookery:diamond_kitchen_knife"
+	},
+	"second_input": {
+		"item": "tfc:powder/diamond"
+	},
+	"tier": 5
+}

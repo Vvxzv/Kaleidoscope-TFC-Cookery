@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"item": "kaleidoscope_cookery:raw_cow_offal"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_cow_offal"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "c:foods/vegetable"
+		},
+		{
+			"tag": "c:foods/vegetable"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:stir_fried_beef_offal_rice_bowl",
+		"count": 1
+	},
+	"carrier": {
+		"item": "kaleidoscope_cookery:cooked_rice"
+	}
+}

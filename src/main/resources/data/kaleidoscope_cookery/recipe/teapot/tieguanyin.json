@@ -1,0 +1,12 @@
+{
+	"type": "kaleidoscope_cookery:teapot",
+	"ingredient": {
+		"item": "ktfcc:tea/tieguanyin"
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:tieguanyin",
+		"count": 1
+	},
+	"tea_fluid": "minecraft:water",
+	"time": 240
+}

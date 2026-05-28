@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:desert_style_sashimi"
+	},
+	"decay_modifier": 3,
+	"hunger": 4,
+	"saturation": 1,
+	"fruit": 1.3,
+	"protein": 2.5
+}

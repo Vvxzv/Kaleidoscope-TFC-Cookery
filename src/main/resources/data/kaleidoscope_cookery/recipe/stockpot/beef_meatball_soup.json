@@ -1,0 +1,26 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
+		[
+			{
+				"item": "tfc:food/beef"
+			},
+			{
+				"item": "kaleidoscope_cookery:raw_cow_offal"
+			},
+			{
+				"item": "tfc:food/bison"
+			}
+		],
+		{
+			"tag": "c:foods/vegetable"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:beef_meatball_soup",
+		"count": 1
+	}
+}

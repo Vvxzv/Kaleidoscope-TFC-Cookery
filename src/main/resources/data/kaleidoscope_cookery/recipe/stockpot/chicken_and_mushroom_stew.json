@@ -1,0 +1,26 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
+		[
+			{
+				"tag": "ktfcc:raw_chicken_type"
+			},
+			{
+				"item": "kaleidoscope_cookery:raw_cut_small_meats"
+			}
+		],
+		{
+			"tag": "c:mushrooms"
+		},
+		{
+			"tag": "c:mushrooms"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:chicken_and_mushroom_stew",
+		"count": 1
+	}
+}

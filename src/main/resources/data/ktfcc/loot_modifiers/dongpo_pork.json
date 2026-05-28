@@ -1,0 +1,12 @@
+{
+	"type": "ktfcc:remove_items",
+	"conditions": [
+		{
+			"condition": "neoforge:loot_table_id",
+			"loot_table_id": "kaleidoscope_cookery:blocks/dongpo_pork"
+		}
+	],
+	"targets": [
+		"kaleidoscope_cookery:dongpo_pork"
+	]
+}

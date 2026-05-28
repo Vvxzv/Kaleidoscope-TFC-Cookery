@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:borscht"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:flatulence",
+			"duration": 3600,
+			"amplifier": 0
+		}
+	]
+}

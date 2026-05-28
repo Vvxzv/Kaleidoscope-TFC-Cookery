@@ -1,0 +1,8 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:suspicious_stir_fry_rice_bowl"
+	},
+	"decay_modifier": 4,
+	"hunger": 5,
+	"saturation": 3
+}

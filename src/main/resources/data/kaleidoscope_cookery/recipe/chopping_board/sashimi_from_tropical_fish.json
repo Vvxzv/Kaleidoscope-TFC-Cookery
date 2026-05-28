@@ -1,0 +1,12 @@
+{
+	"type": "kaleidoscope_cookery:chopping_board",
+	"cut_count": 4,
+	"ingredient": {
+		"item": "tfc:food/tropical_fish"
+	},
+	"model_id": "kaleidoscope_cookery:tropical_fish",
+	"result": {
+		"id": "kaleidoscope_cookery:sashimi",
+		"count": 2
+	}
+}

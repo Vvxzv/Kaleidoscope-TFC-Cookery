@@ -1,0 +1,23 @@
+{
+	"type": "tfc:barrel_sealed",
+	"duration": 43200,
+	"input_fluid": {
+		"fluid": "minecraft:water",
+		"amount": 1
+	},
+	"input_item": {
+		"type": "neoforge:intersection",
+		"children": [
+			{
+				"type": "tfc:not_rotten"
+			},
+			{
+				"item": "ktfcc:tea_leaves/biluochun"
+			}
+		]
+	},
+	"output_item": {
+		"id": "ktfcc:tea/black",
+		"count": 1
+	}
+}

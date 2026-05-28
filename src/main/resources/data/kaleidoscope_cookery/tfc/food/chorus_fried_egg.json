@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:chorus_fried_egg"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 3,
+	"fruit": 2.5,
+	"protein": 1.9,
+	"dairy": 0.6
+}

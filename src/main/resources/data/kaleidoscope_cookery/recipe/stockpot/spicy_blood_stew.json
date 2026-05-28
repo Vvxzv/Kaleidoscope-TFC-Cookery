@@ -1,0 +1,56 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:spicy_blood_stew",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

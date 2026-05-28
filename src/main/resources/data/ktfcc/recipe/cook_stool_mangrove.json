@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aaa",
+		"a a"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:wood/planks/mangrove"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:cook_stool_mangrove",
+		"count": 1
+	}
+}

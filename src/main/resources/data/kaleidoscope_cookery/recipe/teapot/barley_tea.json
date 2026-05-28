@@ -1,0 +1,20 @@
+{
+	"type": "kaleidoscope_cookery:teapot",
+	"ingredient": {
+		"type": "neoforge:intersection",
+		"children": [
+			{
+				"type": "tfc:not_rotten"
+			},
+			{
+				"item": "tfc:food/barley_grain"
+			}
+		]
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:barley_tea",
+		"count": 1
+	},
+	"tea_fluid": "minecraft:water",
+	"time": 240
+}

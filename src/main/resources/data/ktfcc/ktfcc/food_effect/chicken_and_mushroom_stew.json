@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:chicken_and_mushroom_stew"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:warmth",
+			"duration": 9600,
+			"amplifier": 0
+		}
+	]
+}

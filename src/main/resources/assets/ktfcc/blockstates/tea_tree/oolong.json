@@ -1,0 +1,40 @@
+{
+  "variants" : {
+    "lifecycle=healthy,stage=0" : {
+      "model" : "ktfcc:block/tea_tree_stage_0/tea_tree_0"
+    },
+    "lifecycle=healthy,stage=1" : {
+      "model" : "ktfcc:block/tea_tree_stage_1/tea_tree_0"
+    },
+    "lifecycle=healthy,stage=2" : {
+      "model" : "ktfcc:block/tea_tree_stage_2/tea_tree_0"
+    },
+    "lifecycle=dormant,stage=0" : {
+      "model" : "ktfcc:block/tea_tree_stage_0/tea_tree_dormant"
+    },
+    "lifecycle=dormant,stage=1" : {
+      "model" : "ktfcc:block/tea_tree_stage_1/tea_tree_dormant"
+    },
+    "lifecycle=dormant,stage=2" : {
+      "model" : "ktfcc:block/tea_tree_stage_2/tea_tree_dormant"
+    },
+    "lifecycle=fruiting,stage=0" : {
+      "model" : "ktfcc:block/tea_tree_stage_0/tea_tree_2"
+    },
+    "lifecycle=fruiting,stage=1" : {
+      "model" : "ktfcc:block/tea_tree_stage_1/tea_tree_2"
+    },
+    "lifecycle=fruiting,stage=2" : {
+      "model" : "ktfcc:block/tea_tree_stage_2/tea_tree_2"
+    },
+    "lifecycle=flowering,stage=0" : {
+      "model" : "ktfcc:block/tea_tree_stage_0/tea_tree_1"
+    },
+    "lifecycle=flowering,stage=1" : {
+      "model" : "ktfcc:block/tea_tree_stage_1/tea_tree_1"
+    },
+    "lifecycle=flowering,stage=2" : {
+      "model" : "ktfcc:block/tea_tree_stage_2/tea_tree_1"
+    }
+  }
+}

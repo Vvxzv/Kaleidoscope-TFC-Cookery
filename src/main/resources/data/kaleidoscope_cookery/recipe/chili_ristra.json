@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aa",
+		"aa",
+		"aa"
+	],
+	"key": {
+		"a": {
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "ktfcc:red_pepper"
+				}
+			]
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:chili_ristra",
+		"count": 1
+	}
+}

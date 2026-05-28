@@ -1,0 +1,14 @@
+{
+	"type": "tfc:welding",
+	"first_input": {
+		"item": "ktfcc:pan"
+	},
+	"result": {
+		"count": 1,
+		"id": "kaleidoscope_cookery:pot"
+	},
+	"second_input": {
+		"item": "minecraft:brick"
+	},
+	"tier": 3
+}

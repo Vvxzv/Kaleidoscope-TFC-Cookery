@@ -1,0 +1,17 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:stargazy_pie"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:flatulence",
+			"duration": 700,
+			"amplifier": 0
+		},
+		{
+			"id": "minecraft:unluck",
+			"duration": 3600,
+			"amplifier": 0
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:barley_tea"
+	},
+	"effects": [
+		{
+			"id": "minecraft:speed",
+			"duration": 2400,
+			"amplifier": 0
+		}
+	]
+}

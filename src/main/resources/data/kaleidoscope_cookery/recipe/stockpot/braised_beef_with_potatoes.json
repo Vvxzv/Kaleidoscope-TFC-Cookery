@@ -1,0 +1,29 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
+		{
+			"item": "tfc:food/potato"
+		},
+		{
+			"item": "tfc:food/potato"
+		},
+		[
+			{
+				"item": "tfc:food/beef"
+			},
+			{
+				"item": "kaleidoscope_cookery:raw_cow_offal"
+			},
+			{
+				"item": "tfc:food/bison"
+			}
+		],
+		{
+			"item": "tfc:powder/salt"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:braised_beef_with_potatoes",
+		"count": 1
+	}
+}

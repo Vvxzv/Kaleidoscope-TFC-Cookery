@@ -1,25 +1,19 @@
 package net.vvxzv.ktfcc.mixin;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.crafting.soupbase.FluidSoupBase;
-import net.dries007.tfc.common.capabilities.Capabilities;
 import net.dries007.tfc.common.items.FluidContainerItem;
-import net.dries007.tfc.util.Helpers;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.SoundActions;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandlerItem;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import net.vvxzv.ktfcc.common.utils.Utils;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -28,60 +22,34 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(FluidSoupBase.class)
 public abstract class FluidSoupBaseMixin {
     @Final
-    @Shadow(remap = false)
+    @Shadow
     protected Fluid fluid;
 
     @Final
-    @Shadow(remap = false)
+    @Shadow
     protected Item bucketItem;
 
-    @Inject(method = "isSoupBase", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(method = "isSoupBase", at = @At("RETURN"), cancellable = true)
     private void isSoupBase(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         if (stack.is(this.bucketItem)) {
             cir.setReturnValue(true);
             return;
         }
 
-        IFluidHandlerItem itemHandler = Helpers.getCapability(stack, Capabilities.FLUID_ITEM);
-        if (itemHandler == null) {
-            cir.setReturnValue(false);
-            return;
-        }
-
-        FluidStack fluidInItem = itemHandler.drain(1000, IFluidHandler.FluidAction.SIMULATE);
-        if (fluidInItem.isEmpty()) {
-            cir.setReturnValue(false);
-            return;
-        }
-
-        cir.setReturnValue(fluidInItem.getFluid().isSame(this.fluid));
+        cir.setReturnValue(Utils.isSameFluidInItem(stack, this.fluid, 1000));
     }
 
-    @Inject(method = "isContainer", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(method = "isContainer", at = @At("RETURN"), cancellable = true)
     private void isContainer(ItemStack stack, CallbackInfoReturnable<Boolean> cir){
         if (stack.is(Items.BUCKET)) {
             cir.setReturnValue(true);
             return;
         }
 
-        IFluidHandlerItem itemHandler = Helpers.getCapability(stack, Capabilities.FLUID_ITEM);
-        if (itemHandler == null) {
-            cir.setReturnValue(false);
-            return;
-        }
-
-        FluidStack fluidInItem = itemHandler.drain(1000, IFluidHandler.FluidAction.SIMULATE);
-        if (!fluidInItem.isEmpty()) {
-            cir.setReturnValue(false);
-            return;
-        }
-
-        FluidStack testFluid = new FluidStack(this.fluid, 1000);
-        int filled = itemHandler.fill(testFluid, IFluidHandler.FluidAction.SIMULATE);
-        cir.setReturnValue(filled == 1000);
+        cir.setReturnValue(Utils.matchFluidStack(stack, this.fluid, 1000));
     }
 
-    @Inject(method = "getReturnContainer", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(method = "getReturnContainer", at = @At("RETURN"), cancellable = true)
     private void getReturnContainer(Level level, LivingEntity user, ItemStack soupBase, CallbackInfoReturnable<ItemStack> cir){
         Item item = soupBase.getItem();
 
@@ -93,13 +61,13 @@ public abstract class FluidSoupBaseMixin {
         cir.setReturnValue(new ItemStack(Items.BUCKET));
     }
 
-    @Inject(method = "getReturnSoupBase", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(method = "getReturnSoupBase", at = @At("RETURN"), cancellable = true)
     private void getReturnSoupBase(Level level, LivingEntity user, ItemStack container, CallbackInfoReturnable<ItemStack> cir){
-        if(container.getItem() instanceof FluidContainerItem){
+        if(container.getItem() instanceof FluidContainerItem) {
             ItemStack filledContainer = container.copy();
-            IFluidHandlerItem itemHandler = Helpers.getCapability(filledContainer, Capabilities.FLUID_ITEM);
-            if (itemHandler != null){
-                itemHandler.fill(new FluidStack(this.fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
+            IFluidHandler handler = filledContainer.getCapability(Capabilities.FluidHandler.ITEM);
+            if (handler != null){
+                handler.fill(new FluidStack(this.fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
                 cir.setReturnValue(filledContainer);
                 return;
             }

@@ -1,0 +1,12 @@
+{
+	"type": "ktfcc:remove_items",
+	"conditions": [
+		{
+			"condition": "neoforge:loot_table_id",
+			"loot_table_id": "kaleidoscope_cookery:blocks/spicy_chicken"
+		}
+	],
+	"targets": [
+		"kaleidoscope_cookery:spicy_chicken"
+	]
+}

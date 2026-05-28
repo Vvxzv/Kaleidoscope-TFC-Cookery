@@ -1,0 +1,33 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"tag": "c:foods/raw_fish"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:oil_splashed_fish",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

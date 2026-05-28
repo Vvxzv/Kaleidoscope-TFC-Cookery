@@ -27,3 +27,6 @@ StartupEvents.postInit(event => {
     )
 })
 ```
+
+## 修改茶效果
+可以使用数据包的形式进行修改。具体操作就是覆盖```data/ktfcc/ktfcc/tea_effect/```和```data/ktfcc/ktfcc/food_effect/```里的内容。

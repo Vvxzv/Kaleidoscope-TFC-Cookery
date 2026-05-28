@@ -1,0 +1,18 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
+		{
+			"item": "minecraft:pufferfish"
+		},
+		{
+			"tag": "ktfcc:kelps"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:pufferfish_soup",
+		"count": 1
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:frost_lamb_chop"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:tundra_strider",
+			"duration": 1600,
+			"amplifier": 0
+		}
+	]
+}

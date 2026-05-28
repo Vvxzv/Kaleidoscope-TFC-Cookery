@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:warped_fungus"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"vegetables": 1,
+	"edible": false
+}

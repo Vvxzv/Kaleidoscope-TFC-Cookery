@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" a",
+		"b "
+	],
+	"key": {
+		"a": {
+			"item": "ktfcc:kitchen_shovel_head"
+		},
+		"b": {
+			"item": "minecraft:stick"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:kitchen_shovel",
+		"count": 1
+	}
+}

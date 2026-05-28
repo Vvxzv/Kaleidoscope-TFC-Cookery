@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:flower_tea"
+	},
+	"effects": [
+		{
+			"id": "minecraft:regeneration",
+			"duration": 400,
+			"amplifier": 0
+		}
+	]
+}

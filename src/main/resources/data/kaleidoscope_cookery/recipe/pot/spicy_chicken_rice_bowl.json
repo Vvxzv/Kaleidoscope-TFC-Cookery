@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "ktfcc:raw_chicken_type"
+		},
+		{
+			"tag": "ktfcc:raw_chicken_type"
+		},
+		{
+			"tag": "ktfcc:raw_chicken_type"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:spicy_chicken_rice_bowl",
+		"count": 1
+	},
+	"carrier": {
+		"item": "kaleidoscope_cookery:cooked_rice"
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
+		{
+			"item": "tfc:food/rabbit"
+		},
+		{
+			"tag": "c:mushrooms"
+		},
+		{
+			"tag": "c:mushrooms"
+		},
+		{
+			"item": "tfc:powder/salt"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:wild_mushroom_rabbit_soup",
+		"count": 1
+	}
+}

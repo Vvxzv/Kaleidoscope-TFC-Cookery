@@ -1,0 +1,31 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
+		{
+			"item": "tfc:food/rice_grain"
+		},
+		{
+			"item": "tfc:food/rice_grain"
+		},
+		{
+			"item": "tfc:food/rice_grain"
+		},
+		{
+			"item": "tfc:food/rice_grain"
+		},
+		{
+			"item": "tfc:food/rice_grain"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:cooked_rice",
+		"count": 5
+	},
+	"soup_base": "minecraft:water",
+	"carrier": {
+		"item": "minecraft:bowl"
+	},
+	"time": 500,
+	"finished_bubble_color": 15328219,
+	"finished_texture": "kaleidoscope_cookery:stockpot/rice_finished"
+}

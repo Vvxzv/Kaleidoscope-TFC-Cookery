@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:sweet_and_sour_ender_pearls"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:flatulence",
+			"duration": 700,
+			"amplifier": 0
+		}
+	]
+}

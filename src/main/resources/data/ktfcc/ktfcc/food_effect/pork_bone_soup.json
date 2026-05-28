@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:pork_bone_soup"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:vigor",
+			"duration": 6000,
+			"amplifier": 0
+		}
+	]
+}

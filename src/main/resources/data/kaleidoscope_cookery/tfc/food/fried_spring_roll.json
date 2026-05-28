@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:fried_spring_roll"
+	},
+	"decay_modifier": 1,
+	"hunger": 4,
+	"saturation": 4,
+	"grain": 1.9,
+	"vegetables": 1.9,
+	"protein": 2.5
+}

@@ -1,0 +1,40 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
+		{
+			"item": "minecraft:egg"
+		},
+		{
+			"item": "minecraft:egg"
+		},
+		{
+			"tag": "ktfcc:kelps"
+		},
+		{
+			"tag": "ktfcc:kelps"
+		},
+		{
+			"tag": "c:foods/fruit"
+		},
+		{
+			"tag": "c:foods/fruit"
+		},
+		{
+			"tag": "c:foods/raw_fish"
+		},
+		{
+			"tag": "c:foods/raw_meat"
+		},
+		{
+			"tag": "c:foods/vegetable"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:buddha_jumps_over_the_wall",
+		"count": 1
+	},
+	"soup_base": "minecraft:water",
+	"carrier": {
+		"item": "tfc:ceramic/vessel"
+	}
+}
