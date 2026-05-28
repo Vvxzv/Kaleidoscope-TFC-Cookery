@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:golden_apple"
+	},
+	"decay_modifier": 0,
+	"hunger": 4,
+	"saturation": 20,
+	"fruit": 1
+}

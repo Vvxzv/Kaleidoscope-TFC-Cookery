@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:fried_spring_roll"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:warmth",
+			"duration": 1600,
+			"amplifier": 0
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"type": "ktfcc:remove_items",
+	"conditions": [
+		{
+			"condition": "forge:loot_table_id",
+			"loot_table_id": "kaleidoscope_cookery:blocks/cold_cut_ham_slices"
+		}
+	],
+	"targets": [
+		"kaleidoscope_cookery:cold_cut_ham_slices"
+	]
+}

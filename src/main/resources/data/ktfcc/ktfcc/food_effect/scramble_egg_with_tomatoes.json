@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:scramble_egg_with_tomatoes"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:vigor",
+			"duration": 1800,
+			"amplifier": 0
+		}
+	]
+}

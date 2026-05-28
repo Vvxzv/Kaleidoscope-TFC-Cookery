@@ -1,0 +1,13 @@
+{
+	"type": "kaleidoscope_cookery:teapot",
+	"ingredient": {
+		"item": "ktfcc:tea/biluochun"
+	},
+	"ingredient_count": 12,
+	"result": {
+		"item": "kaleidoscope_cookery:biluochun",
+		"count": 1
+	},
+	"tea_fluid": "minecraft:water",
+	"time": 240
+}

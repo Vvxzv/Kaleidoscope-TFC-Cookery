@@ -1,7 +1,30 @@
 {
-	"conditions": [
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:crimson_fungus_pot_soup",
+		"count": 1
+	},
+	"ingredients": [
 		{
-			"type": "forge:false"
+			"item": "minecraft:crimson_fungus"
+		},
+		{
+			"item": "minecraft:crimson_fungus"
+		},
+		{
+			"item": "minecraft:crimson_fungus"
+		},
+		{
+			"item": "minecraft:crimson_fungus"
+		},
+		{
+			"item": "minecraft:crimson_fungus"
+		},
+		{
+			"item": "minecraft:crimson_fungus"
 		}
-	]
+	],
+	"carrier": {
+		"item": "tfc:ceramic/vessel"
+	}
 }

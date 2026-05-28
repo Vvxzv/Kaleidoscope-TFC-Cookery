@@ -1,7 +1,27 @@
 {
-	"conditions": [
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:four_joy_meatball_soup",
+		"count": 1
+	},
+	"ingredients": [
 		{
-			"type": "forge:false"
+			"item": "kaleidoscope_cookery:raw_meatball"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_meatball"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_meatball"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_meatball"
+		},
+		{
+			"tag": "forge:vegetables"
+		},
+		{
+			"tag": "forge:vegetables"
 		}
 	]
 }

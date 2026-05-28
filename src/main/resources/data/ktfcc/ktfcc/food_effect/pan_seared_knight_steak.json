@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:pan_seared_knight_steak"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:satiated_shield",
+			"duration": 1800,
+			"amplifier": 0
+		}
+	]
+}

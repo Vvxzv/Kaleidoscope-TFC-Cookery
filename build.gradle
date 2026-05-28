@@ -187,13 +187,13 @@ dependencies {
     // firmalife
     implementation fg.deobf("curse.maven:firmalife-453394:7602336")
     //kaleidoscope-cookery
-    implementation fg.deobf("curse.maven:kaleidoscope-cookery-1309203:7473809")
+    implementation fg.deobf("curse.maven:kaleidoscope-cookery-1309203:7966280")
     // JEI
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jeiVersion}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jeiVersion}"))
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jeiVersion}"))
     // jade
-    runtimeOnly fg.deobf("curse.maven:jade-324717:6271651")
+    implementation fg.deobf("curse.maven:jade-324717:6271651")
     // kubejs
     implementation fg.deobf("curse.maven:kubejs-238086:5853326")
     implementation fg.deobf("curse.maven:architectury-api-419699:5137938")
@@ -208,11 +208,6 @@ dependencies {
     implementation fg.deobf("curse.maven:just-enough-characters-250702:7411324")
     // jei copy
     implementation fg.deobf("curse.maven:jei-copy-recipe-json-1375689:7364314")
-    //oei
-    implementation fg.deobf("curse.maven:one-enough-item-1312660:7268084")
-    implementation fg.deobf("curse.maven:oelib-1319210:7271154")
-    implementation fg.deobf("curse.maven:jupiter-1072905:7704590")
-
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

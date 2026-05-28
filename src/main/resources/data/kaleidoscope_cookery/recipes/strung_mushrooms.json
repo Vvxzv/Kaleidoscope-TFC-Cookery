@@ -1,27 +1,20 @@
 {
 	"type": "minecraft:crafting_shaped",
-	"category": "misc",
-	"key": {
-		"M": {
-			"type": "tfc:not_rotten",
-			"ingredient": {
-				"item": "minecraft:brown_mushroom"
-			}
-		}
+	"result": {
+		"item": "kaleidoscope_cookery:strung_mushrooms",
+		"count": 1
 	},
 	"pattern": [
-		"MM",
-		"MM",
-		"MM"
+		"aa",
+		"aa",
+		"aa"
 	],
-	"result": {
-		"item": "kaleidoscope_cookery:strung_mushrooms"
-	},
-	"show_notification": true,
-	"conditions": [
-		{
-			"type": "forge:mod_loaded",
-			"modid": "farmerstfc"
+	"key": {
+		"a": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:strung_mushrooms"
+			}
 		}
-	]
+	}
 }

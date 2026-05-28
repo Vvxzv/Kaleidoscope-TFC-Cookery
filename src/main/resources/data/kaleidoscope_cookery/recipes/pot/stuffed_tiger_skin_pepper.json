@@ -1,7 +1,36 @@
 {
-	"conditions": [
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "kaleidoscope_cookery:stuffed_tiger_skin_pepper",
+		"count": 1
+	},
+	"ingredients": [
 		{
-			"type": "forge:false"
+			"tag": "ktfcc:green_pepper"
+		},
+		{
+			"tag": "ktfcc:green_pepper"
+		},
+		{
+			"tag": "ktfcc:green_pepper"
+		},
+		{
+			"tag": "ktfcc:green_pepper"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_cut_small_meats"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_cut_small_meats"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_cut_small_meats"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_cut_small_meats"
 		}
-	]
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
 }

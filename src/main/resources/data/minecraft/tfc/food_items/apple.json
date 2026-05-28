@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:apple"
+	},
+	"decay_modifier": 1.7,
+	"hunger": 4,
+	"saturation": 0.4,
+	"fruit": 1
+}

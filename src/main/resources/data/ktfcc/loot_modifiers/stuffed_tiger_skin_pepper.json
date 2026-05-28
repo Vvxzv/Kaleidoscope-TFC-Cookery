@@ -1,0 +1,12 @@
+{
+	"type": "ktfcc:remove_items",
+	"conditions": [
+		{
+			"condition": "forge:loot_table_id",
+			"loot_table_id": "kaleidoscope_cookery:blocks/stuffed_tiger_skin_pepper"
+		}
+	],
+	"targets": [
+		"kaleidoscope_cookery:stuffed_tiger_skin_pepper"
+	]
+}

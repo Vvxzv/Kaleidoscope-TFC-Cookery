@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:wild_mushroom_rabbit_soup"
+	},
+	"effects": [
+		{
+			"id": "minecraft:speed",
+			"duration": 9600,
+			"amplifier": 0
+		}
+	]
+}

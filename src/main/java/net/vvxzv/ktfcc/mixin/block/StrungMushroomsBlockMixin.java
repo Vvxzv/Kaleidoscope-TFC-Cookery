@@ -16,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(StrungMushroomsBlock.class)
 public class StrungMushroomsBlockMixin {
+
     @ModifyArg(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;<init>(Lnet/minecraft/world/level/ItemLike;I)V"),index = 1)
     private int setMushroom(int pCount){
         return 2;

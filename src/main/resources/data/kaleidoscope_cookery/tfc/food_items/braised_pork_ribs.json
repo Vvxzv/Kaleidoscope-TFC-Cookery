@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:braised_pork_ribs"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 4,
+	"protein": 2.5
+}

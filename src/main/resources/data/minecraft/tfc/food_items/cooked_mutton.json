@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:cooked_mutton"
+	},
+	"decay_modifier": 2.25,
+	"hunger": 4,
+	"saturation": 2,
+	"protein": 2.5
+}

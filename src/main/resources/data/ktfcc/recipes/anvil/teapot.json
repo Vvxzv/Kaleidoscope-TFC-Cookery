@@ -1,0 +1,16 @@
+{
+	"type": "tfc:anvil",
+	"result": {
+		"item": "kaleidoscope_cookery:teapot",
+		"count": 1
+	},
+	"input": {
+		"item": "tfc:metal/double_sheet/copper"
+	},
+	"rules": [
+		"bend_last",
+		"bend_second_last",
+		"hit_third_last"
+	],
+	"tier": 1
+}

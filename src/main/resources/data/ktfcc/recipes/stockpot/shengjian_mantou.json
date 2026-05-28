@@ -1,7 +1,7 @@
 {
 	"type": "kaleidoscope_cookery:stockpot",
 	"result": {
-		"item": "ktfcc:shengjian_mantou",
+		"item": "kaleidoscope_cookery:shengjian_mantou",
 		"count": 1
 	},
 	"ingredients": [

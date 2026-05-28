@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:stove",
+		"count": 1
+	},
+	"pattern": [
+		"aaa",
+		"aba"
+	],
+	"key": {
+		"a": {
+			"tag": "forge:cobblestone"
+		},
+		"b": {
+			"item": "tfc:thatch"
+		}
+	}
+}

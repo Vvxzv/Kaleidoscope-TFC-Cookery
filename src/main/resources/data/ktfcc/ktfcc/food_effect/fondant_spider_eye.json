@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:fondant_spider_eye"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:flatulence",
+			"duration": 700,
+			"amplifier": 0
+		}
+	]
+}

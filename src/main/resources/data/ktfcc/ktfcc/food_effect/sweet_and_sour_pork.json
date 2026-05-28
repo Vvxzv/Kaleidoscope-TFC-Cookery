@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:sweet_and_sour_pork"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:vigor",
+			"duration": 1800,
+			"amplifier": 0
+		}
+	]
+}

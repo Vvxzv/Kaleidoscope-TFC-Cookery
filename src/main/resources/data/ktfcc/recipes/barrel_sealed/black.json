@@ -1,0 +1,22 @@
+{
+	"type": "tfc:barrel_sealed",
+	"duration": 36000,
+	"output_item": {
+		"item": "ktfcc:tea/black",
+		"count": 1
+	},
+	"input_item": {
+		"ingredient": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "ktfcc:tea_leaves/biluochun"
+			}
+		}
+	},
+	"input_fluid": {
+		"ingredient": {
+			"fluid": "minecraft:water"
+		},
+		"amount": 1
+	}
+}

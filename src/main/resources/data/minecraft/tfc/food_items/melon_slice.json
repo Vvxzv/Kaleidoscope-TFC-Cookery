@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:melon_slice"
+	},
+	"decay_modifier": 2.75,
+	"hunger": 4,
+	"saturation": 0.4,
+	"fruit": 0.75
+}

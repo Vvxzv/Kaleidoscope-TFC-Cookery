@@ -1,7 +1,30 @@
 {
-	"conditions": [
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "kaleidoscope_cookery:fondant_spider_eye",
+		"count": 1
+	},
+	"ingredients": [
 		{
-			"type": "forge:false"
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:spider_eye"
+		},
+		{
+			"item": "minecraft:spider_eye"
+		},
+		{
+			"item": "minecraft:spider_eye"
 		}
-	]
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
 }

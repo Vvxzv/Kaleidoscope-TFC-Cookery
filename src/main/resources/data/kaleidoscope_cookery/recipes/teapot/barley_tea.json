@@ -1,0 +1,16 @@
+{
+	"type": "kaleidoscope_cookery:teapot",
+	"ingredient": {
+		"type": "tfc:not_rotten",
+		"ingredient": {
+			"item": "tfc:food/barley_grain"
+		}
+	},
+	"ingredient_count": 12,
+	"result": {
+		"item": "kaleidoscope_cookery:barley_tea",
+		"count": 1
+	},
+	"tea_fluid": "minecraft:water",
+	"time": 240
+}

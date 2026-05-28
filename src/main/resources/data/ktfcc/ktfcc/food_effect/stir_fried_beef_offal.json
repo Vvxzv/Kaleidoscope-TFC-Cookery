@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:stir_fried_beef_offal"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:vigor",
+			"duration": 1800,
+			"amplifier": 0
+		}
+	]
+}

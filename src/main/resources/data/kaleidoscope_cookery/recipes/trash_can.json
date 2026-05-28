@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "kaleidoscope_cookery:trash_can",
+		"count": 1
+	},
+	"pattern": [
+		"aba",
+		" a "
+	],
+	"key": {
+		"a": {
+			"item": "tfc:metal/sheet/cast_iron"
+		},
+		"b": {
+			"item": "tfc:composter"
+		}
+	}
+}

@@ -7,14 +7,15 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import net.dries007.tfc.compat.jei.JEIIntegration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.vvxzv.ktfcc.KTFCC;
+import net.vvxzv.ktfcc.KaleidoscopeTFCCookery;
+import org.jetbrains.annotations.NotNull;
 
 @JeiPlugin
-public class JEIPlugin implements IModPlugin {;
+public class JEIPlugin implements IModPlugin {
+
     @Override
-    @SuppressWarnings("removal")
-    public ResourceLocation getPluginUid() {
-        return new ResourceLocation(KTFCC.MODID, "jei_plugin");
+    public @NotNull ResourceLocation getPluginUid() {
+        return ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "jei_plugin");
     }
 
     @Override

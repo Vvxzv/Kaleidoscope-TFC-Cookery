@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class FarmerArmorMaterialMixin {
 
     @Inject(method = "getDefenseForType", at = @At("RETURN"), cancellable = true)
-    public void getDefenseForType(ArmorItem.Type type, CallbackInfoReturnable<Integer> cir) {
+    private void getDefenseForType(ArmorItem.Type type, CallbackInfoReturnable<Integer> cir) {
         int b;
         switch (type) {
             case HELMET -> b = 1;

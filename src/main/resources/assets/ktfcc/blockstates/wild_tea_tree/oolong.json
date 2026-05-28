@@ -1,0 +1,10 @@
+{
+  "variants" : {
+    "mature=true" : {
+      "model" : "ktfcc:block/tea_tree_stage_1/tea_tree_2"
+    },
+    "mature=false" : {
+      "model" : "ktfcc:block/tea_tree_stage_0/tea_tree_dormant"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:mushroom_stew"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 2,
+	"vegetables": 2
+}

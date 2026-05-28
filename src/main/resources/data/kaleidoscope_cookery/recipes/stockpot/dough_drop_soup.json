@@ -1,7 +1,27 @@
 {
-	"conditions": [
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:dough_drop_soup",
+		"count": 1
+	},
+	"ingredients": [
 		{
-			"type": "forge:false"
+			"tag": "forge:vegetables/tomato"
+		},
+		{
+			"tag": "forge:vegetables/tomato"
+		},
+		{
+			"tag": "forge:flour"
+		},
+		{
+			"tag": "forge:flour"
+		},
+		{
+			"tag": "forge:vegetables"
+		},
+		{
+			"tag": "forge:vegetables"
 		}
 	]
 }

@@ -1,7 +1,30 @@
 {
-	"conditions": [
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:red_mushroom_pot_soup",
+		"count": 1
+	},
+	"ingredients": [
 		{
-			"type": "forge:false"
+			"item": "minecraft:red_mushroom"
+		},
+		{
+			"item": "minecraft:red_mushroom"
+		},
+		{
+			"item": "minecraft:red_mushroom"
+		},
+		{
+			"item": "minecraft:red_mushroom"
+		},
+		{
+			"item": "minecraft:red_mushroom"
+		},
+		{
+			"item": "minecraft:red_mushroom"
 		}
-	]
+	],
+	"carrier": {
+		"item": "tfc:ceramic/vessel"
+	}
 }

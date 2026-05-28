@@ -3,6 +3,12 @@
     "minecraft:fire",
     "minecraft:soul_fire",
     "minecraft:lava",
-    "#forge:magma_block"
+    "minecraft:magma_block",
+    "tfc:rock/magma/granite",
+    "tfc:rock/magma/diorite",
+    "tfc:rock/magma/rhyolite",
+    "tfc:rock/magma/basalt",
+    "tfc:rock/magma/andesite",
+    "tfc:rock/magma/dacite"
   ]
 }

@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(VigorEffect.class)
 public class VigorEffectMixin {
+
     @Inject(method = "applyEffectTick", at = @At("HEAD"))
     private void applyEffectTick(LivingEntity livingEntity, int amplifier, CallbackInfo ci) {
         if (livingEntity instanceof Player player) {

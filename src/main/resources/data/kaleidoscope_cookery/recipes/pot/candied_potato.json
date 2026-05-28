@@ -1,7 +1,30 @@
 {
-	"conditions": [
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "kaleidoscope_cookery:candied_potato",
+		"count": 1
+	},
+	"ingredients": [
 		{
-			"type": "forge:false"
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "tfc:food/potato"
+		},
+		{
+			"item": "tfc:food/potato"
+		},
+		{
+			"item": "tfc:food/potato"
+		},
+		{
+			"item": "tfc:food/potato"
 		}
-	]
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
 }

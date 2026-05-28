@@ -5,7 +5,7 @@
 		"count": 2
 	},
 	"ingredient": {
-		"tag": "ktfcc:raw_ribbit_type"
+		"item": "tfc:food/rabbit"
 	},
 	"model_id": "kaleidoscope_cookery:raw_rabbit"
 }

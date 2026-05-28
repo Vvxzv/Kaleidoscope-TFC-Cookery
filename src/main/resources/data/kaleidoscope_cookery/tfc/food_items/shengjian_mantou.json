@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:shengjian_mantou"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 3,
+	"water": 10,
+	"grain": 1.9,
+	"vegetables": 1.9,
+	"protein": 1.9
+}

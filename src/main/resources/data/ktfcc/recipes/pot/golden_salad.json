@@ -1,7 +1,7 @@
 {
 	"type": "kaleidoscope_cookery:pot",
 	"result": {
-		"item": "ktfcc:golden_salad",
+		"item": "kaleidoscope_cookery:golden_salad",
 		"count": 1
 	},
 	"ingredients": [

@@ -5,7 +5,7 @@
 		"count": 2
 	},
 	"ingredient": {
-		"tag": "ktfcc:cooked_ribbit_type"
+		"item": "tfc:food/cooked_rabbit"
 	},
 	"model_id": "kaleidoscope_cookery:cooked_rabbit"
 }

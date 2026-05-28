@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:braised_beef_with_potatoes"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:warmth",
+			"duration": 9600,
+			"amplifier": 0
+		}
+	]
+}

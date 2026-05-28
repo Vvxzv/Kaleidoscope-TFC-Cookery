@@ -1,0 +1,8 @@
+{
+	"ingredient": {
+		"item": "minecraft:brown_mushroom"
+	},
+	"decay_modifier": 2,
+	"hunger": 2,
+	"vegetables": 1
+}

@@ -1,0 +1,38 @@
+{
+	"type": "ktfcc:composite",
+	"modifiers": [
+		{
+			"type": "ktfcc:remove_items",
+			"conditions": [
+				{
+					"condition": "forge:loot_table_id",
+					"loot_table_id": "kaleidoscope_cookery:blocks/buddha_jumps_over_the_wall"
+				}
+			],
+			"targets": [
+				"kaleidoscope_cookery:buddha_jumps_over_the_wall",
+				"minecraft:flower_pot"
+			]
+		},
+		{
+			"type": "ktfcc:add_item",
+			"conditions": [
+				{
+					"condition": "forge:loot_table_id",
+					"loot_table_id": "kaleidoscope_cookery:blocks/buddha_jumps_over_the_wall"
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:block_state_property",
+						"block": "kaleidoscope_cookery:buddha_jumps_over_the_wall",
+						"properties": {
+							"bites": "0"
+						}
+					}
+				}
+			],
+			"item": "tfc:ceramic/vessel"
+		}
+	]
+}

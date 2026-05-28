@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:chorus_fruit"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 1,
+	"fruit": 2
+}

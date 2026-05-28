@@ -1,7 +1,39 @@
 {
-	"conditions": [
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "kaleidoscope_cookery:cold_style_sashimi",
+		"count": 1
+	},
+	"ingredients": [
 		{
-			"type": "forge:false"
+			"item": "tfc:wood/sapling/spruce"
+		},
+		{
+			"item": "minecraft:snowball"
+		},
+		{
+			"item": "minecraft:snowball"
+		},
+		{
+			"item": "minecraft:snowball"
+		},
+		{
+			"item": "minecraft:snowball"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
+		},
+		{
+			"item": "kaleidoscope_cookery:sashimi"
 		}
-	]
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
 }

@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:blaze_lamb_chop"
+	},
+	"effects": [
+		{
+			"id": "minecraft:strength",
+			"duration": 1600,
+			"amplifier": 0
+		}
+	]
+}

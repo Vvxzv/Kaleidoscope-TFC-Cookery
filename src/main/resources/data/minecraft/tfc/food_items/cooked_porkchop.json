@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "minecraft:cooked_porkchop"
+	},
+	"decay_modifier": 1.5,
+	"hunger": 4,
+	"saturation": 2,
+	"protein": 2.5
+}

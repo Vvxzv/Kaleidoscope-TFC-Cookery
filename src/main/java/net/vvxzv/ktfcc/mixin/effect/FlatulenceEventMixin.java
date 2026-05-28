@@ -10,6 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
@@ -17,19 +18,11 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 public class FlatulenceEventMixin {
     @Unique
     private static double getMovement() {
-        return Config.flatulenceAddFlyMovement - 0.75;
+        return Config.flatulenceAddFlyMovement;
     }
 
-    @Inject(
-            method = "onShiftKeyPressed",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/client/player/LocalPlayer;addDeltaMovement(Lnet/minecraft/world/phys/Vec3;)V",
-                    shift = At.Shift.AFTER
-            ),
-            locals = LocalCapture.CAPTURE_FAILHARD
-    )
-    private static void onShiftKeyPressed(InputEvent.Key event, CallbackInfo ci, KeyMapping keyShift, LocalPlayer player) {
-        player.addDeltaMovement(new Vec3(0, getMovement(), 0));
+    @Redirect(method = "onShiftKeyPressed", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;addDeltaMovement(Lnet/minecraft/world/phys/Vec3;)V"))
+    private static void onShiftKeyPressed(LocalPlayer instance, Vec3 vec3) {
+        instance.addDeltaMovement(new Vec3(0, getMovement(), 0));
     }
 }

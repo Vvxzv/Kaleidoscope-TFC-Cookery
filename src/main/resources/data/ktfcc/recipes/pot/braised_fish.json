@@ -1,7 +1,7 @@
 {
 	"type": "kaleidoscope_cookery:pot",
 	"result": {
-		"item": "ktfcc:braised_fish",
+		"item": "kaleidoscope_cookery:braised_fish",
 		"count": 1
 	},
 	"ingredients": [

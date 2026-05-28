@@ -1,0 +1,38 @@
+{
+	"type": "ktfcc:composite",
+	"modifiers": [
+		{
+			"type": "ktfcc:remove_items",
+			"conditions": [
+				{
+					"condition": "forge:loot_table_id",
+					"loot_table_id": "kaleidoscope_cookery:blocks/brown_mushroom_pot_soup"
+				}
+			],
+			"targets": [
+				"kaleidoscope_cookery:brown_mushroom_pot_soup",
+				"minecraft:flower_pot"
+			]
+		},
+		{
+			"type": "ktfcc:add_item",
+			"conditions": [
+				{
+					"condition": "forge:loot_table_id",
+					"loot_table_id": "kaleidoscope_cookery:blocks/brown_mushroom_pot_soup"
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:block_state_property",
+						"block": "kaleidoscope_cookery:brown_mushroom_pot_soup",
+						"properties": {
+							"bites": "0"
+						}
+					}
+				}
+			],
+			"item": "tfc:ceramic/vessel"
+		}
+	]
+}

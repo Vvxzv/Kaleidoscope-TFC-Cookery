@@ -1,0 +1,10 @@
+{
+	"type": "kaleidoscope_cookery:steamer",
+	"result": {
+		"item": "ktfcc:tea/tieguanyin",
+		"count": 1
+	},
+	"ingredient": {
+		"item": "ktfcc:tea_leaves/oolong"
+	}
+}

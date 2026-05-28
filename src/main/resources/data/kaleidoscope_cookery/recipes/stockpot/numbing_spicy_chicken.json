@@ -1,7 +1,27 @@
 {
-	"conditions": [
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:numbing_spicy_chicken",
+		"count": 1
+	},
+	"ingredients": [
 		{
-			"type": "forge:false"
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "ktfcc:raw_chicken_meat"
+		},
+		{
+			"tag": "ktfcc:raw_chicken_meat"
+		},
+		{
+			"tag": "ktfcc:raw_chicken_meat"
+		},
+		{
+			"tag": "ktfcc:raw_chicken_meat"
 		}
 	]
 }

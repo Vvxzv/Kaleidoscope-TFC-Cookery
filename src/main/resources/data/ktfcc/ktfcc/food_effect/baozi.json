@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:baozi"
+	},
+	"effects": [
+		{
+			"id": "minecraft:absorption",
+			"duration": 1600,
+			"amplifier": 0
+		}
+	]
+}

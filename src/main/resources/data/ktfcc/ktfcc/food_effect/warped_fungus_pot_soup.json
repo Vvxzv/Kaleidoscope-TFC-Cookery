@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:warped_fungus_pot_soup"
+	},
+	"effects": [
+		{
+			"id": "minecraft:fire_resistance",
+			"duration": 2400,
+			"amplifier": 0
+		}
+	]
+}

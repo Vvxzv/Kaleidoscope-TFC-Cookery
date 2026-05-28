@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:stir_fried_beef_offal_rice_bowl"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:satiated_shield",
+			"duration": 3600,
+			"amplifier": 0
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:spicy_blood_stew"
+	},
+	"effects": [
+		{
+			"id": "minecraft:strength",
+			"duration": 1600,
+			"amplifier": 0
+		}
+	]
+}

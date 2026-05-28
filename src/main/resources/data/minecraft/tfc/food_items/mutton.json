@@ -1,0 +1,8 @@
+{
+	"ingredient": {
+		"item": "minecraft:mutton"
+	},
+	"decay_modifier": 3,
+	"hunger": 4,
+	"protein": 1.5
+}

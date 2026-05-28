@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:braised_fish"
+	},
+	"effects": [
+		{
+			"id": "minecraft:water_breathing",
+			"duration": 3600,
+			"amplifier": 0
+		}
+	]
+}

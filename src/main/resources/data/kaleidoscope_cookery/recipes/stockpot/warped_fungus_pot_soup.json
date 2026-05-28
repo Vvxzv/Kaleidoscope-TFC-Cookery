@@ -1,7 +1,30 @@
 {
-	"conditions": [
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:warped_fungus_pot_soup",
+		"count": 1
+	},
+	"ingredients": [
 		{
-			"type": "forge:false"
+			"item": "minecraft:warped_fungus"
+		},
+		{
+			"item": "minecraft:warped_fungus"
+		},
+		{
+			"item": "minecraft:warped_fungus"
+		},
+		{
+			"item": "minecraft:warped_fungus"
+		},
+		{
+			"item": "minecraft:warped_fungus"
+		},
+		{
+			"item": "minecraft:warped_fungus"
 		}
-	]
+	],
+	"carrier": {
+		"item": "tfc:ceramic/vessel"
+	}
 }

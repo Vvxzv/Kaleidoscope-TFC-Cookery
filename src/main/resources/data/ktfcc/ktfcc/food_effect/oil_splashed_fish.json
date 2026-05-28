@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:oil_splashed_fish"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:warmth",
+			"duration": 1600,
+			"amplifier": 0
+		}
+	]
+}

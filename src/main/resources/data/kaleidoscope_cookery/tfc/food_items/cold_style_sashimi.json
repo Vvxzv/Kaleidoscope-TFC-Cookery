@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:cold_style_sashimi"
+	},
+	"decay_modifier": 3,
+	"hunger": 4,
+	"saturation": 1,
+	"water": 10,
+	"protein": 2.5
+}

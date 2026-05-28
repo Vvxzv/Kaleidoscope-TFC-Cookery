@@ -6,10 +6,10 @@
 	},
 	"knapping_type": "tfc:clay",
 	"pattern": [
+		"     ",
 		"a   a",
 		"a   a",
 		"a   a",
-		"aaaaa",
-		"     "
+		"aaaaa"
 	]
 }

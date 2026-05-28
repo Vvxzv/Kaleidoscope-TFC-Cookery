@@ -1,0 +1,10 @@
+{
+	"type": "kaleidoscope_cookery:steamer",
+	"result": {
+		"item": "ktfcc:tea/biluochun",
+		"count": 1
+	},
+	"ingredient": {
+		"item": "ktfcc:tea_leaves/biluochun"
+	}
+}

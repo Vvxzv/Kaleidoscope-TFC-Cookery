@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:braised_beef_rice_bowl"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:satiated_shield",
+			"duration": 3600,
+			"amplifier": 0
+		}
+	]
+}

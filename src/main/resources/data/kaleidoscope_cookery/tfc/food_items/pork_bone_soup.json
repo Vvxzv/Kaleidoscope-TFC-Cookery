@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:pork_bone_soup"
+	},
+	"decay_modifier": 1.5,
+	"hunger": 4,
+	"saturation": 2,
+	"water": 30,
+	"protein": 2.5
+}

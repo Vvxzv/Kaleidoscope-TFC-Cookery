@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:fearsome_thick_soup"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:sulfur",
+			"duration": 9600,
+			"amplifier": 0
+		}
+	]
+}

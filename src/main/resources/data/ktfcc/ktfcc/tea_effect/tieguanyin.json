@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:tieguanyin"
+	},
+	"effects": [
+		{
+			"id": "minecraft:resistance",
+			"duration": 2400,
+			"amplifier": 0
+		}
+	]
+}

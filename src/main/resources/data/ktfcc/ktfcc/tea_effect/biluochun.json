@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:biluochun"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:projectile_dodge",
+			"duration": 2400,
+			"amplifier": 0
+		}
+	]
+}

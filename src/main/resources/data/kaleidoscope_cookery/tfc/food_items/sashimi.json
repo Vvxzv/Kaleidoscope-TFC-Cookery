@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:sashimi"
+	},
+	"decay_modifier": 4,
+	"hunger": 4,
+	"saturation": 0.4,
+	"protein": 0.8
+}

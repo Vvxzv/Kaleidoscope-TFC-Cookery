@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:lamb_and_radish_soup"
+	},
+	"effects": [
+		{
+			"id": "kaleidoscope_cookery:tundra_strider",
+			"duration": 6000,
+			"amplifier": 0
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+	"feature": "ktfcc:wild_tea_tree/oolong_patch",
+	"placement": [
+		{
+			"type": "minecraft:rarity_filter",
+			"chance": 80
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"type": "minecraft:heightmap",
+			"heightmap": "WORLD_SURFACE_WG"
+		},
+		{
+			"type": "tfc:climate",
+			"min_temperature": -8,
+			"max_temperature": 35,
+			"min_rainfall": 160,
+			"max_rainfall": 320,
+			"min_forest": "edge",
+			"max_forest": "normal"
+		}
+	]
+}
