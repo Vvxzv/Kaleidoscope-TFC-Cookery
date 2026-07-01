@@ -1,9 +1,7 @@
 package net.vvxzv.ktfcc.common.block;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.crop.CropBlock;
 import net.dries007.tfc.common.blocks.crop.WildCropBlock;
-import net.dries007.tfc.common.blocks.plant.fruit.StationaryBerryBushBlock;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.calendar.Month;
 import net.minecraft.core.BlockPos;
@@ -26,7 +24,7 @@ public class WildTeaTreeBlock extends WildCropBlock {
 
     public static boolean isMature(LevelAccessor level) {
         int month = Calendars.get(level).getCalendarMonthOfYear().ordinal();
-        return month >= Month.MARCH.ordinal() && month <= Month.MAY.ordinal();
+        return month >= Month.JULY.ordinal() && month <= Month.OCTOBER.ordinal();
     }
 
     @Override

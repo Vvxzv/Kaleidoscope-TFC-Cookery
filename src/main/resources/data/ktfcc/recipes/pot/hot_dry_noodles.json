@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "kaleidoscope_cookery:hot_dry_noodles",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		}
+	],
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

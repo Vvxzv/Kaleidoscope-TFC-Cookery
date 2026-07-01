@@ -40,6 +40,8 @@ public class Blocks {
             )
     );
 
+    public static final RegistryObject<Block> WILD_MUGWORT = registerBlock("wild_mugwort",  WildMugwortBlock::new);
+
     public static final Map<Tea, RegistryObject<Block>> TEA_TREES = Helpers.mapOfKeys(
             Tea.class,
             Tea::isHasTree,
@@ -52,6 +54,14 @@ public class Blocks {
                                     "tea_tree/" + tea.name().toLowerCase(Locale.ROOT)
                             )
                     )
+            )
+    );
+
+    public static final RegistryObject<Block> MUGWORT = registerBlock(
+            "mugwort",
+            () -> new MugwortBlock(
+                    Items.MUGWORT_LEAVES,
+                    ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "mugwort")
             )
     );
 

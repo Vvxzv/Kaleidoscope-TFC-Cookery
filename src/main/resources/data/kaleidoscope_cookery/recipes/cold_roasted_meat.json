@@ -1,0 +1,30 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "kaleidoscope_cookery:cold_roasted_meat",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/cooked_beef"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/cooked_beef"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/cooked_beef"
+			}
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
+}

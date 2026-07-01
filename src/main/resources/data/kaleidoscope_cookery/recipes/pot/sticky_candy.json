@@ -1,0 +1,15 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"result": {
+		"item": "kaleidoscope_cookery:sticky_candy",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"tag": "tfc:foods/flour"
+		}
+	]
+}

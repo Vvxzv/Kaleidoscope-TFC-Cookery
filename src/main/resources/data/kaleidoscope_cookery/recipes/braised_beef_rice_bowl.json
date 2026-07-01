@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "kaleidoscope_cookery:braised_beef_rice_bowl",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:braised_beef"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:cooked_rice"
+			}
+		}
+	]
+}

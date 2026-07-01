@@ -13,11 +13,22 @@
   "item.ktfcc.tea.oolong": "乌龙茶叶",
   "item.ktfcc.tea.biluochun": "碧螺春茶叶",
   "item.ktfcc.tea.black": "红茶叶",
+  "item.ktfcc.raw_qingtuan": "生青团",
+  "item.ktfcc.raw_dumpling": "生饺子",
+  "item.ktfcc.zongzi_leaves": "粽子叶",
+  "item.ktfcc.mugwort_leaves": "艾草叶",
+  "item.ktfcc.dish.grain": "煸炒干谷",
+  "item.ktfcc.dish.fruit": "杂炒果糊",
+  "item.ktfcc.dish.vegetables": "清炒时蔬",
+  "item.ktfcc.dish.protein": "农家炒肉",
+  "item.ktfcc.dish.dairy": "奶糊",
 
   "block.ktfcc.wild_tea_tree.oolong": "野生的乌龙茶树",
   "block.ktfcc.wild_tea_tree.biluochun": "野生的绿茶树",
   "block.ktfcc.tea_tree.oolong": "乌龙茶树",
   "block.ktfcc.tea_tree.biluochun": "绿茶树",
+  "block.ktfcc.mugwort": "艾草",
+  "block.ktfcc.wild_mugwort": "野生艾草",
 
   "tooltip.ktfcc.caterpillar": "收获卷心菜时概率掉落",
 
@@ -26,9 +37,12 @@
   "ktfcc.stove.fuel": "燃料：",
   "ktfcc.tea_tree.can_cut": "可以使用剪刀采集茶树枝",
   "ktfcc.tea_tree.can_pick": "可采集茶树叶",
+  "ktfcc.mugwort.can_cut": "可以使用剪刀采集艾草枝",
+  "ktfcc.mugwort.can_pick": "可以采集艾草",
 
   "ktfcc.tooltip.food_trait.shawarma_cooked": "沙威玛烤制",
   "ktfcc.tooltip.food_trait.cellar_preserved": "保存于地窖",
   "ktfcc.tooltip.food_trait.cellar_preserved_2": "保存于地窖",
-  "ktfcc.tooltip.food_trait.cellar_preserved_3": "保存于地窖"
+  "ktfcc.tooltip.food_trait.cellar_preserved_3": "保存于地窖",
+  "ktfcc.tooltip.can_place_on_wooden_bowl": "可放置在木碗方块上"
 }

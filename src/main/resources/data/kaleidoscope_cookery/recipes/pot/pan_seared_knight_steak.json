@@ -9,13 +9,13 @@
 			"item": "minecraft:bone"
 		},
 		{
-			"item": "minecraft:bone"
-		},
-		{
 			"tag": "tfc:foods/fruits"
 		},
 		{
 			"tag": "tfc:foods/fruits"
+		},
+		{
+			"tag": "forge:raw_beef"
 		},
 		{
 			"tag": "forge:raw_beef"

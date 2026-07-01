@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ktfcc:mugwort"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "ktfcc:wild_mugwort",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "mature": "true"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ktfcc:mugwort_leaves"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ktfcc:blocks/wild_mugwort"
+}

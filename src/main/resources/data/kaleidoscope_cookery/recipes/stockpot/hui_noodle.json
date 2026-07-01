@@ -1,0 +1,24 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:hui_noodle",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "forge:raw_mutton"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		},
+		{
+			"tag": "forge:cooked_eggs"
+		},
+		{
+			"tag": "tfc:foods/vegetables"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "ktfcc:raw_dumpling",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "kaleidoscope_cookery:stuffed_dough_food"
+		}
+	]
+}

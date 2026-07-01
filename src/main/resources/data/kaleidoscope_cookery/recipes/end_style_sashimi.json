@@ -1,0 +1,54 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "kaleidoscope_cookery:end_style_sashimi",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:chorus_fruit"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:chorus_fruit"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:chorus_fruit"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:sashimi"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:sashimi"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:sashimi"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:sashimi"
+			}
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
+}

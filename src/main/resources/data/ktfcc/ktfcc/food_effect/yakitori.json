@@ -1,7 +1,5 @@
 {
-	"ingredient": {
-		"item": "kaleidoscope_cookery:yakitori"
-	},
+	"ingredient": [],
 	"effects": [
 		{
 			"id": "kaleidoscope_cookery:satiated_shield",

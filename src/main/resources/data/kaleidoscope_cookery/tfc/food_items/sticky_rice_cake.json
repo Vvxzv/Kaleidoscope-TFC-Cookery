@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:sticky_rice_cake"
+	},
+	"decay_modifier": 1.5,
+	"hunger": 4,
+	"saturation": 2.5,
+	"grain": 1.2
+}

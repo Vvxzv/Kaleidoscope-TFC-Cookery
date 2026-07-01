@@ -66,7 +66,7 @@ minecraft {
     // However, it must be at "META-INF/accesstransformer.cfg" in the final mod jar to be loaded by Forge.
     // This default location is a best practice to automatically put the file in the right place in the final jar.
     // See https://docs.minecraftforge.net/en/latest/advanced/accesstransformers/ for more information.
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
@@ -187,7 +187,7 @@ dependencies {
     // firmalife
     implementation fg.deobf("curse.maven:firmalife-453394:7602336")
     //kaleidoscope-cookery
-    implementation fg.deobf("curse.maven:kaleidoscope-cookery-1309203:7966280")
+    implementation fg.deobf("curse.maven:kaleidoscope-cookery-1309203:8266769")
     // JEI
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jeiVersion}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jeiVersion}"))

@@ -13,7 +13,7 @@
 		"a": {
 			"type": "tfc:not_rotten",
 			"ingredient": {
-				"item": "kaleidoscope_cookery:strung_mushrooms"
+				"item": "minecraft:brown_mushroom"
 			}
 		}
 	}

@@ -1,0 +1,48 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "kaleidoscope_cookery:nether_style_sashimi",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:crimson_fungus"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:warped_fungus"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:sashimi"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:sashimi"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:sashimi"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "kaleidoscope_cookery:sashimi"
+			}
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:qingtuan"
+	},
+	"decay_modifier": 1,
+	"hunger": 4,
+	"saturation": 1.2,
+	"grain": 1,
+	"protein": 1.2,
+	"dairy": 0.6
+}

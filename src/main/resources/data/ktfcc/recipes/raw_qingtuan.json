@@ -1,0 +1,33 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "ktfcc:raw_qingtuan",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/flour"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:egg"
+			}
+		},
+		{
+			"item": "ktfcc:mugwort_leaves"
+		},
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"fluid": "minecraft:water"
+				},
+				"amount": 100
+			}
+		}
+	]
+}

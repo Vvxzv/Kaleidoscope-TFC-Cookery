@@ -1,0 +1,36 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:laba_congee",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "tfc:food/rice_grain"
+		},
+		{
+			"item": "tfc:food/rye_grain"
+		},
+		{
+			"item": "tfc:food/wheat_grain"
+		},
+		{
+			"item": "tfc:food/green_bean"
+		},
+		{
+			"item": "tfc:food/soybean"
+		},
+		{
+			"item": "tfc:food/maize_grain"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		}
+	]
+}

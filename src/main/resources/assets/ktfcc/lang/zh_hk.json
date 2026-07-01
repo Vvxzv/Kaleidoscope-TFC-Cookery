@@ -7,6 +7,28 @@
   "item.ktfcc.unfired_cup": "未燒制的茶杯",
   "item.ktfcc.kitchen_shovel_head": "鍋铲頭",
   "item.ktfcc.iron_kitchen_knife_head": "鐵菜刀頭",
+  "item.ktfcc.tea_leaves.oolong": "烏龍茶樹葉",
+  "item.ktfcc.tea_leaves.biluochun": "綠茶樹葉",
+  "item.ktfcc.tea.tieguanyin": "鐵觀音茶葉",
+  "item.ktfcc.tea.oolong": "烏龍茶葉",
+  "item.ktfcc.tea.biluochun": "碧螺春茶葉",
+  "item.ktfcc.tea.black": "紅茶葉",
+  "item.ktfcc.raw_qingtuan": "生青團",
+  "item.ktfcc.raw_dumpling": "生餃子",
+  "item.ktfcc.zongzi_leaves": "粽子葉",
+  "item.ktfcc.mugwort_leaves": "艾草葉",
+  "item.ktfcc.dish.grain": "煸炒乾穀",
+  "item.ktfcc.dish.fruit": "雜炒果糊",
+  "item.ktfcc.dish.vegetables": "清炒時蔬",
+  "item.ktfcc.dish.protein": "農家炒肉",
+  "item.ktfcc.dish.dairy": "奶糊",
+
+  "block.ktfcc.wild_tea_tree.oolong": "野生的烏龍茶樹",
+  "block.ktfcc.wild_tea_tree.biluochun": "野生的綠茶樹",
+  "block.ktfcc.tea_tree.oolong": "烏龍茶樹",
+  "block.ktfcc.tea_tree.biluochun": "綠茶樹",
+  "block.ktfcc.mugwort": "艾草",
+  "block.ktfcc.wild_mugwort": "野生艾草",
 
   "tooltip.ktfcc.caterpillar": "收穫捲心菜時概率掉落",
 
@@ -15,9 +37,12 @@
   "ktfcc.stove.fuel": "燃料：",
   "ktfcc.tea_tree.can_cut": "可以使用剪刀採集茶樹枝",
   "ktfcc.tea_tree.can_pick": "可採集茶樹葉",
+  "ktfcc.mugwort.can_cut": "可以使用剪刀採集艾草枝",
+  "ktfcc.mugwort.can_pick": "可以採集艾草",
 
   "ktfcc.tooltip.food_trait.shawarma_cooked": "沙威瑪烤製",
   "ktfcc.tooltip.food_trait.cellar_preserved": "保存於地窖",
   "ktfcc.tooltip.food_trait.cellar_preserved_2": "保存於地窖",
-  "ktfcc.tooltip.food_trait.cellar_preserved_3": "保存於地窖"
+  "ktfcc.tooltip.food_trait.cellar_preserved_3": "保存於地窖",
+  "ktfcc.tooltip.can_place_on_wooden_bowl": "可放置在木碗方塊上"
 }

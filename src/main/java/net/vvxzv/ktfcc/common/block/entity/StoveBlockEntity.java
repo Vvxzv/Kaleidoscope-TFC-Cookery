@@ -84,6 +84,18 @@ public class StoveBlockEntity extends TFCBlockEntity {
         return false;
     }
 
+    public boolean extinguish(Level level, BlockPos pos, BlockState state) {
+        boolean isStoveLit = state.getValue(BlockStateProperties.LIT);
+        if(isStoveLit) {
+            level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.LIT, false));
+            this.maxTemperature = 0;
+            this.burntTick = 0;
+            return true;
+        }
+
+        return false;
+    }
+
     private ItemStack burnFuel(long calendarTick) {
         ItemStack stack = this.getFuel();
         Fuel fuel = Fuel.get(stack);

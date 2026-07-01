@@ -12,13 +12,7 @@
 			"tag": "forge:mushrooms"
 		},
 		{
-			"tag": "forge:mushrooms"
-		},
-		{
 			"item": "tfc:powder/salt"
 		}
-	],
-	"carrier": {
-		"item": "minecraft:bowl"
-	}
+	]
 }

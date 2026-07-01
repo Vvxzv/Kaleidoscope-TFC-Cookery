@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:sticky_candy"
+	},
+	"decay_modifier": 1,
+	"hunger": 4,
+	"saturation": 3,
+	"grain": 1
+}

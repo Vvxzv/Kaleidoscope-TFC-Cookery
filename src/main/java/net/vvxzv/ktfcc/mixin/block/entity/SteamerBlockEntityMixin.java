@@ -16,7 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.vvxzv.ktfcc.common.registry.Tags;
+import net.vvxzv.ktfcc.common.utils.AllTags;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -64,6 +64,6 @@ public class SteamerBlockEntityMixin extends BaseBlockEntity {
             cir.setReturnValue(true);
             return;
         }
-        cir.setReturnValue(belowState.is(Tags.HEAT_SOURCE));
+        cir.setReturnValue(belowState.is(AllTags.Blocks.HEAT_SOURCE));
     }
 }
