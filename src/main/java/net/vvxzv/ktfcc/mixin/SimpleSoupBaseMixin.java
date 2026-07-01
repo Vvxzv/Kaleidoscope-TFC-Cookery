@@ -2,7 +2,6 @@ package net.vvxzv.ktfcc.mixin;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.crafting.soupbase.SimpleSoupBase;
 import net.dries007.tfc.common.items.FluidContainerItem;
-import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;

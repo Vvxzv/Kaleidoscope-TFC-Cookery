@@ -1,6 +1,8 @@
 package net.vvxzv.ktfcc.common.registry;
 
+import net.dries007.tfc.common.component.food.Nutrient;
 import net.dries007.tfc.util.Helpers;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -44,5 +46,18 @@ public class Items {
     public static final Map<Tea, DeferredItem<Item>> TEA_LEAVES = Helpers.mapOf(
             Tea.class,
             (tea) -> registerItem("tea/" + tea.name().toLowerCase(Locale.ROOT))
+    );
+
+    public static final DeferredItem<Item> MUGWORT_LEAVES = registerItem("mugwort_leaves");
+
+    public static final DeferredItem<Item> RAW_QINGTUAN = registerItem("raw_qingtuan");
+
+    public static final DeferredItem<Item> RAW_DUMPLING = registerItem("raw_dumpling");
+
+    public static final DeferredItem<Item> ZONGZI_LEAVES = registerItem("zongzi_leaves");
+
+    public static final Map<Nutrient, DeferredItem<Item>> DISHES = Helpers.mapOf(
+            Nutrient.class,
+            nutrient -> registerItem("dish/" + nutrient.name().toLowerCase(Locale.ROOT))
     );
 }

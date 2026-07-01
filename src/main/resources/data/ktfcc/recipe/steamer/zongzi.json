@@ -1,0 +1,10 @@
+{
+	"type": "kaleidoscope_cookery:steamer",
+	"ingredient": {
+		"item": "kaleidoscope_cookery:raw_zongzi"
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:zongzi",
+		"count": 1
+	}
+}

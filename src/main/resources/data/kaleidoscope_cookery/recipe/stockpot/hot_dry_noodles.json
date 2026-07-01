@@ -1,0 +1,30 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		},
+		{
+			"item": "kaleidoscope_cookery:raw_noodles"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:hot_dry_noodles",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

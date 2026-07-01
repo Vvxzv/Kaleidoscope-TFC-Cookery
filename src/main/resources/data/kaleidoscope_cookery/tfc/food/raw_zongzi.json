@@ -1,0 +1,7 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:raw_zongzi"
+	},
+	"decay_modifier": 4.5,
+	"edible": false
+}

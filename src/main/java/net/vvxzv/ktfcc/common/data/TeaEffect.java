@@ -27,7 +27,7 @@ public record TeaEffect(Ingredient ingredient, List<MobEffectInstance> mobEffect
 
     public static final StreamCodec<RegistryFriendlyByteBuf, TeaEffect> STREAM_CODEC = StreamCodec.composite(
             Ingredient.CONTENTS_STREAM_CODEC, c -> c.ingredient,
-            ByteBufCodecs.collection(ArrayList::new, MobEffectInstance.STREAM_CODEC), TeaEffect::mobEffects,
+            ByteBufCodecs.collection(ArrayList::new, MobEffectInstance.STREAM_CODEC), c -> c.mobEffects,
             TeaEffect::new
     );
 

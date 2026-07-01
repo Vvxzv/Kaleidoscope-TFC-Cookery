@@ -5,16 +5,16 @@
 			"tag": "c:vegetables/chilipepper"
 		},
 		{
-			"tag": "c:vegetables/chilipepper"
-		},
-		{
-			"tag": "c:dough"
-		},
-		{
 			"tag": "c:dough"
 		},
 		{
 			"item": "tfc:food/horse_meat"
+		},
+		{
+			"tag": "c:vegetables/chilipepper"
+		},
+		{
+			"tag": "c:dough"
 		},
 		{
 			"item": "tfc:food/horse_meat"

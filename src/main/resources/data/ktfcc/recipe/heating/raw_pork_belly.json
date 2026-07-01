@@ -1,15 +1,7 @@
 {
 	"type": "tfc:heating",
 	"ingredient": {
-		"type": "neoforge:intersection",
-		"children": [
-			{
-				"type": "tfc:not_rotten"
-			},
-			{
-				"item": "kaleidoscope_cookery:raw_pork_belly"
-			}
-		]
+		"item": "kaleidoscope_cookery:raw_pork_belly"
 	},
 	"temperature": 200,
 	"result_item": {

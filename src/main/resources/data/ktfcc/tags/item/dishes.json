@@ -1,0 +1,9 @@
+{
+	"values": [
+		"ktfcc:dish/grain",
+		"ktfcc:dish/fruit",
+		"ktfcc:dish/vegetables",
+		"ktfcc:dish/protein",
+		"ktfcc:dish/dairy"
+	]
+}

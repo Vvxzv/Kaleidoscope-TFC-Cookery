@@ -1,9 +1,11 @@
 package net.vvxzv.ktfcc.compat.jei;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModBlocks;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.PlateRegistry;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
+import mezz.jei.api.runtime.IJeiRuntime;
 import net.dries007.tfc.compat.jei.JEIIntegration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;

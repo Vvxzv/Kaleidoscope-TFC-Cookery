@@ -1,0 +1,12 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:laba_congee"
+	},
+	"decay_modifier": 1.5,
+	"hunger": 4,
+	"saturation": 3,
+	"water": 25,
+	"grain": 3,
+	"vegetables": 1.5,
+	"protein": 2.5
+}

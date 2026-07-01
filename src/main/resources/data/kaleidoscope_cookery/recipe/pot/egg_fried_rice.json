@@ -1,0 +1,21 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"tag": "c:eggs"
+		},
+		{
+			"tag": "c:eggs"
+		},
+		{
+			"item": "tfc:food/cooked_rice"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:egg_fried_rice",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

@@ -1,5 +1,8 @@
 package net.vvxzv.ktfcc;
 
+import com.github.ysbbbbbb.kaleidoscopecookery.block.decoration.PlateBlock;
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.component.TFCComponents;
 import net.dries007.tfc.common.component.food.FoodCapability;
 import net.dries007.tfc.common.component.food.IFood;
 import net.dries007.tfc.util.data.DataManager;
@@ -24,9 +27,13 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddReloadListenerEvent;
+import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
+import net.vvxzv.ktfcc.common.block.entity.DecayingFoodBlockEntity;
 import net.vvxzv.ktfcc.common.block.entity.StoveBlockEntity;
 import net.vvxzv.ktfcc.common.data.DataManagers;
+import net.vvxzv.ktfcc.common.data.Plate;
+import net.vvxzv.ktfcc.common.utils.Decaying;
 import net.vvxzv.ktfcc.compat.firmalife.FLEventHandler;
 
 public class NeoForgeEventHandler {
@@ -37,6 +44,8 @@ public class NeoForgeEventHandler {
         bus.addListener(NeoForgeEventHandler::onFireStart);
         bus.addListener(NeoForgeEventHandler::addFuelToStove);
         bus.addListener(NeoForgeEventHandler::cancelPlaceRottenBlockItem);
+        bus.addListener(NeoForgeEventHandler::setPlate);
+        bus.addListener(NeoForgeEventHandler::plateTooltip);
 
         if(ModList.get().isLoaded("firmalife")) {
             FLEventHandler.init(bus);
@@ -71,15 +80,14 @@ public class NeoForgeEventHandler {
         if(blockEntity instanceof StoveBlockEntity stove) {
             Player player = event.getPlayer();
             if(player != null) {
+                float p = stove.getFuelFillPercentage();
+                player.displayClientMessage(
+                        Component.translatable("ktfcc.stove.fuel")
+                                .append(Component.literal(p*100 + "%").withStyle(ChatFormatting.GRAY)),
+                        true
+                );
+
                 ItemStack stack = player.getMainHandItem();
-                if(stack.isEmpty()) {
-                    float p = stove.getFuelFillPercentage();
-                    player.displayClientMessage(
-                            Component.translatable("ktfcc.stove.fuel")
-                                    .append(Component.literal(p*100 + "%").withStyle(ChatFormatting.GRAY)),
-                            true
-                    );
-                }
                 if(stove.addFuel(stack)) {
                     if(!player.isCreative()) {
                         stack.shrink(1);
@@ -117,6 +125,46 @@ public class NeoForgeEventHandler {
                     event.setCanceled(true);
                 }
             }
+        }
+    }
+
+    public static void setPlate(UseItemOnBlockEvent event) {
+        if(event.getHand() != InteractionHand.MAIN_HAND) return;
+
+        Player player = event.getPlayer();
+        if(player == null) return;
+
+        Level level = event.getLevel();
+
+        BlockState state = level.getBlockState(event.getPos());
+        if(state.is(TFCBlocks.WOODEN_BOWL.get())) {
+            ItemStack stack = player.getMainHandItem();
+            ItemStack plateItem = Plate.getPlateItem(stack);
+            if(plateItem != null && plateItem.getItem() instanceof BlockItem blockItem) {
+                if(blockItem.getBlock() instanceof PlateBlock plateBlock) {
+                    BlockState newState = plateBlock.defaultBlockState();
+                    level.setBlockAndUpdate(event.getPos(), newState.setValue(plateBlock.getServingsProperty(), 1));
+                    BlockEntity blockEntity = level.getBlockEntity(event.getPos());
+                    if(blockEntity instanceof Decaying decaying) {
+                        decaying.setStack(stack);
+                    }
+                    stack.shrink(1);
+                    event.setCancellationResult(ItemInteractionResult.SUCCESS);
+                    event.setCanceled(true);
+                }
+            }
+        }
+    }
+
+    public static void plateTooltip(ItemTooltipEvent event) {
+        ItemStack stack = event.getItemStack();
+        if (stack.isEmpty()) return;
+
+        ItemStack plateItem = Plate.getPlateItem(stack);
+        if(plateItem != null) {
+            event.getToolTip().add(Component.literal(" "));
+            event.getToolTip().add(Component.translatable("ktfcc.tooltip.can_place_on_wooden_bowl").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+            event.getToolTip().add(Component.literal(" "));
         }
     }
 }

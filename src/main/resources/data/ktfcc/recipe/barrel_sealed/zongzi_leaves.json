@@ -1,0 +1,15 @@
+{
+	"type": "tfc:barrel_sealed",
+	"duration": 20,
+	"input_fluid": {
+		"fluid": "tfc:lye",
+		"amount": 10
+	},
+	"input_item": {
+		"tag": "ktfcc:lotus"
+	},
+	"output_item": {
+		"id": "ktfcc:zongzi_leaves",
+		"count": 1
+	}
+}

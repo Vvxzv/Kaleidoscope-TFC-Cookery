@@ -42,6 +42,10 @@ public class FoodBiteBlockMixin extends FoodBlock implements EntityBlock {
     @Shadow
     protected IntegerProperty bites;
 
+    @Final
+    @Shadow
+    protected FoodProperties foodProperties;
+
     @Override
     public @Nullable BlockEntity newBlockEntity(@NotNull BlockPos pPos, @NotNull BlockState pState) {
         return new DecayingFoodBlockEntity(pPos, pState);
@@ -67,9 +71,9 @@ public class FoodBiteBlockMixin extends FoodBlock implements EntityBlock {
         return instance.addEffect(mobEffectInstance);
     }
 
-    @Redirect(method = "eat", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/food/FoodData;eat(Lnet/minecraft/world/food/FoodProperties;)V"))
-    private void eatAddApplyEffect(FoodData instance, FoodProperties foodProperties, Level level, BlockPos pos, BlockState state, Player player) {
-        FoodProperties newFoodProperties = foodProperties;
+    @Redirect(method = "eat", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/food/FoodData;eat(IF)V"))
+    private void eatAddApplyEffect(FoodData instance, int foodLevelModifier, float saturationLevelModifier, Level level, BlockPos pos, BlockState state, Player player) {
+        FoodProperties newFoodProperties = this.foodProperties;
         ItemStack stack = new ItemStack(this.asItem());
         FoodEffect foodEffect = FoodEffect.get(stack);
         if(foodEffect != null) {

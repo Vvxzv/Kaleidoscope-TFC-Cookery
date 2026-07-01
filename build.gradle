@@ -143,7 +143,8 @@ dependencies {
     implementation "curse.maven:firmalife-453394:8028300"
 
     // kaleidoscope cookery
-    implementation "curse.maven:kaleidoscope-cookery-1309203:7966281"
+    //implementation "curse.maven:kaleidoscope-cookery-1309203:7966281"
+    implementation "curse.maven:kaleidoscope-cookery-1309203:8231456"
 
     //JEI
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")

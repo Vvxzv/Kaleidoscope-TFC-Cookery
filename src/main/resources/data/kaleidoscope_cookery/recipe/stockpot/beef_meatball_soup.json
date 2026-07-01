@@ -12,6 +12,17 @@
 				"item": "tfc:food/bison"
 			}
 		],
+		[
+			{
+				"item": "tfc:food/beef"
+			},
+			{
+				"item": "kaleidoscope_cookery:raw_cow_offal"
+			},
+			{
+				"item": "tfc:food/bison"
+			}
+		],
 		{
 			"tag": "c:foods/vegetable"
 		},

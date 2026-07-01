@@ -1,0 +1,45 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "kaleidoscope_cookery:cold_roasted_meat",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "minecraft:cooked_beef"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "minecraft:cooked_beef"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "minecraft:cooked_beef"
+				}
+			]
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
+}

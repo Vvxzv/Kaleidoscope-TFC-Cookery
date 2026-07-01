@@ -2,15 +2,6 @@
 	"type": "kaleidoscope_cookery:pot",
 	"ingredients": [
 		{
-			"item": "firmalife:food/raw_honey"
-		},
-		{
-			"item": "firmalife:food/raw_honey"
-		},
-		{
-			"item": "firmalife:food/raw_honey"
-		},
-		{
 			"item": "minecraft:sugar"
 		},
 		{
@@ -29,11 +20,5 @@
 	},
 	"carrier": {
 		"item": "minecraft:bowl"
-	},
-	"conditions": [
-		{
-			"type": "neoforge:mod_loaded",
-			"modid": "firmalife"
-		}
-	]
+	}
 }

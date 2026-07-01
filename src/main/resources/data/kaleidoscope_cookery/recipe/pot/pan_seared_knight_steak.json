@@ -5,14 +5,22 @@
 			"item": "minecraft:bone"
 		},
 		{
-			"item": "minecraft:bone"
-		},
-		{
 			"tag": "c:foods/fruit"
 		},
 		{
 			"tag": "c:foods/fruit"
 		},
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_cow_offal"
+			},
+			{
+				"item": "tfc:food/beef"
+			},
+			{
+				"item": "tfc:food/bison"
+			}
+		],
 		[
 			{
 				"item": "kaleidoscope_cookery:raw_cow_offal"

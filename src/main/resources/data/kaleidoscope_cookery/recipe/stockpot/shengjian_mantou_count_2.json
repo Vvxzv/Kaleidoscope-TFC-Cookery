@@ -1,7 +1,15 @@
 {
-	"neoforge:conditions": [
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
 		{
-			"type": "neoforge:false"
+			"item": "kaleidoscope_cookery:stuffed_dough_food"
+		},
+		{
+			"item": "kaleidoscope_cookery:stuffed_dough_food"
 		}
-	]
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:shengjian_mantou",
+		"count": 2
+	}
 }

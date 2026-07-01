@@ -17,5 +17,8 @@ public class ClientEventHandler {
     public static void clientSetupEvent(FMLClientSetupEvent event) {
         Blocks.TEA_TREES.forEach((tea, block) -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
         Blocks.WILD_TEA_TREES.forEach((tea, block) -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
+
+        ItemBlockRenderTypes.setRenderLayer(Blocks.MUGWORT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(Blocks.WILD_MUGWORT.get(), RenderType.cutout());
     }
 }

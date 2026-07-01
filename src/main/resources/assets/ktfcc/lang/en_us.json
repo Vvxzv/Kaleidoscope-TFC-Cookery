@@ -13,11 +13,22 @@
   "item.ktfcc.tea.oolong": "Oolong Tea Leaves",
   "item.ktfcc.tea.biluochun": "Biluochun Tea Leaves",
   "item.ktfcc.tea.black": "Black Tea Leaves",
+  "item.ktfcc.raw_qingtuan": "Raw Qingtuan",
+  "item.ktfcc.raw_dumpling": "Raw Dumpling",
+  "item.ktfcc.zongzi_leaves": "Zongzi Leaves",
+  "item.ktfcc.mugwort_leaves": "Mugwort Leaves",
+  "item.ktfcc.dish.grain": "Grain Dish",
+  "item.ktfcc.dish.fruit": "Fruit Dish",
+  "item.ktfcc.dish.vegetables": "Vegetables Dish",
+  "item.ktfcc.dish.protein": "Protein Dish",
+  "item.ktfcc.dish.dairy": "Dairy Dish",
 
   "block.ktfcc.wild_tea_tree.oolong": "Wild Oolong Tea Tree",
   "block.ktfcc.wild_tea_tree.biluochun": "Wild Biluochun Tea Tree",
   "block.ktfcc.tea_tree.oolong": "Oolong Tea Tree",
   "block.ktfcc.tea_tree.biluochun": "Biluochun Tea Tree",
+  "block.ktfcc.mugwort": "Mugwort",
+  "block.ktfcc.wild_mugwort": "Wild Mugwort",
 
   "tooltip.ktfcc.caterpillar": "Chance to drop when harvesting cabbage",
 
@@ -26,16 +37,21 @@
   "config.jade.plugin_ktfcc.decaying": "Decaying",
   "config.jade.plugin_ktfcc.stove": "Stove",
   "config.jade.plugin_ktfcc.tea_tree": "Tea Tree",
+  "config.jade.plugin_ktfcc.mugwort": "Mugwort",
 
   "ktfcc.stove.fuel": "Fuel: ",
   "ktfcc.tea_tree.can_cut": "Use scissors to collect tea tree branches",
   "ktfcc.tea_tree.can_pick": "Can pick tea tree leaves",
+  "ktfcc.mugwort.can_cut": "Use scissors to collect mugwort branches",
+  "ktfcc.mugwort.can_pick": "Can pick mugwort",
 
   "ktfcc.tooltip.food_trait.shawarma_cooked": "Shawarma Cooked",
   "ktfcc.tooltip.food_trait.cellar_preserved": "Cellar Preserved",
   "ktfcc.tooltip.food_trait.cellar_preserved_2": "Cellar Preserved",
   "ktfcc.tooltip.food_trait.cellar_preserved_3": "Cellar Preserved",
+  "ktfcc.tooltip.can_place_on_wooden_bowl": "Can place on Wooden Bowl block",
 
   "tfc.recipe.barrel.ktfcc.barrel_sealed.oolong": "Oolong Tea",
-  "tfc.recipe.barrel.ktfcc.barrel_sealed.black": "Black Tea"
+  "tfc.recipe.barrel.ktfcc.barrel_sealed.black": "Black Tea",
+  "tfc.recipe.barrel.ktfcc.barrel_sealed.zongzi_leaves": "Zongzi Leaves"
 }

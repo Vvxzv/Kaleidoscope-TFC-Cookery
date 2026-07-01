@@ -5,22 +5,13 @@
 			"tag": "c:foods/raw_fish"
 		},
 		{
-			"item": "kaleidoscope_cookery:sashimi"
-		},
-		{
-			"item": "kaleidoscope_cookery:sashimi"
-		},
-		{
-			"item": "kaleidoscope_cookery:sashimi"
-		},
-		{
-			"item": "kaleidoscope_cookery:sashimi"
-		},
-		{
-			"item": "kaleidoscope_cookery:sashimi"
+			"tag": "ktfcc:chilipepper"
 		},
 		{
 			"tag": "ktfcc:chilipepper"
+		},
+		{
+			"item": "tfc:powder/salt"
 		}
 	],
 	"result": {

@@ -1,0 +1,18 @@
+{
+	"type": "tfc:heating",
+	"ingredient": {
+		"item": "kaleidoscope_cookery:raw_bamboo_tube_rice"
+	},
+	"temperature": 200,
+	"result_item": {
+		"stack": {
+			"id": "kaleidoscope_cookery:bamboo_tube_rice",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:copy_food"
+			}
+		]
+	}
+}

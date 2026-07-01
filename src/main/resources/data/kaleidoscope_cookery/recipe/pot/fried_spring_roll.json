@@ -4,28 +4,6 @@
 		{
 			"tag": "c:foods/flour"
 		},
-		{
-			"tag": "c:foods/flour"
-		},
-		{
-			"tag": "c:foods/flour"
-		},
-		[
-			{
-				"item": "kaleidoscope_cookery:raw_pork_belly"
-			},
-			{
-				"item": "tfc:food/pork"
-			}
-		],
-		[
-			{
-				"item": "kaleidoscope_cookery:raw_pork_belly"
-			},
-			{
-				"item": "tfc:food/pork"
-			}
-		],
 		[
 			{
 				"item": "kaleidoscope_cookery:raw_pork_belly"
@@ -35,13 +13,7 @@
 			}
 		],
 		{
-			"tag": "c:foods/vegetable"
-		},
-		{
-			"tag": "c:foods/vegetable"
-		},
-		{
-			"tag": "c:foods/vegetable"
+			"tag": "c:mushrooms"
 		}
 	],
 	"result": {

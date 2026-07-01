@@ -1,0 +1,10 @@
+{
+	"type": "kaleidoscope_cookery:steamer",
+	"ingredient": {
+		"item": "ktfcc:raw_dumpling"
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:dumpling",
+		"count": 1
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"tag": "c:foods/raw_fish"
+		},
+		{
+			"tag": "c:foods/raw_fish"
+		},
+		{
+			"item": "minecraft:pumpkin_pie"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:stargazy_pie",
+		"count": 1
+	},
+	"carrier": {
+		"item": "minecraft:bowl"
+	}
+}

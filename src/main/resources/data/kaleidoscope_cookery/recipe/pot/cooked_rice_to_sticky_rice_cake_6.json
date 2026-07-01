@@ -1,0 +1,27 @@
+{
+	"type": "kaleidoscope_cookery:pot",
+	"ingredients": [
+		{
+			"item": "tfc:food/cooked_rice"
+		},
+		{
+			"item": "tfc:food/cooked_rice"
+		},
+		{
+			"item": "tfc:food/cooked_rice"
+		},
+		{
+			"item": "tfc:food/cooked_rice"
+		},
+		{
+			"item": "tfc:food/cooked_rice"
+		},
+		{
+			"item": "tfc:food/cooked_rice"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:sticky_rice_cake",
+		"count": 6
+	}
+}

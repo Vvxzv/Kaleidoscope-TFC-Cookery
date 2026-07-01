@@ -1,0 +1,10 @@
+{
+  "variants" : {
+    "mature=true" : {
+      "model" : "ktfcc:block/wild_mugwort"
+    },
+    "mature=false" : {
+      "model" : "ktfcc:block/wild_mugwort"
+    }
+  }
+}

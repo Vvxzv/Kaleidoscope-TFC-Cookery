@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:hot_dry_noodles"
+	},
+	"decay_modifier": 1.5,
+	"hunger": 4,
+	"saturation": 3,
+	"grain": 3,
+	"vegetables": 3
+}

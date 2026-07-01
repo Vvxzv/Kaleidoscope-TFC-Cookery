@@ -1,36 +1,28 @@
 {
 	"type": "kaleidoscope_cookery:pot",
 	"ingredients": [
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
 		{
-			"tag": "c:mushrooms"
+			"tag": "ktfcc:chilipepper"
 		},
 		{
-			"tag": "c:mushrooms"
+			"tag": "ktfcc:chilipepper"
 		},
-		[
-			{
-				"item": "kaleidoscope_cookery:raw_pork_belly"
-			},
-			{
-				"item": "tfc:food/pork"
-			}
-		],
-		[
-			{
-				"item": "kaleidoscope_cookery:raw_pork_belly"
-			},
-			{
-				"item": "tfc:food/pork"
-			}
-		],
-		[
-			{
-				"item": "kaleidoscope_cookery:raw_pork_belly"
-			},
-			{
-				"item": "tfc:food/pork"
-			}
-		],
 		{
 			"tag": "ktfcc:chilipepper"
 		}

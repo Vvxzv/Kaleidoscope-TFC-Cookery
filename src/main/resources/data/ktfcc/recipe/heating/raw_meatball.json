@@ -1,15 +1,7 @@
 {
 	"type": "tfc:heating",
 	"ingredient": {
-		"type": "neoforge:intersection",
-		"children": [
-			{
-				"type": "tfc:not_rotten"
-			},
-			{
-				"item": "kaleidoscope_cookery:raw_meatball"
-			}
-		]
+		"item": "kaleidoscope_cookery:raw_meatball"
 	},
 	"temperature": 200,
 	"result_item": {

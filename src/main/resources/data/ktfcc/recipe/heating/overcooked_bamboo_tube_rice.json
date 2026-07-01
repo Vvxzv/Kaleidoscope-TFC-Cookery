@@ -1,0 +1,7 @@
+{
+	"type": "tfc:heating",
+	"ingredient": {
+		"item": "kaleidoscope_cookery:bamboo_tube_rice"
+	},
+	"temperature": 900
+}

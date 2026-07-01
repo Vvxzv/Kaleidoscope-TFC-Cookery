@@ -1,0 +1,7 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:raw_bamboo_tube_rice"
+	},
+	"decay_modifier": 4.5,
+	"edible": false
+}

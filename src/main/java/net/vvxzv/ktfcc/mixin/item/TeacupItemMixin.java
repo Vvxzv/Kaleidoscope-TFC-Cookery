@@ -18,11 +18,17 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
 
 @Mixin(TeacupItem.class)
 public class TeacupItemMixin {
+
+    @Inject(method = "finishUsingItem", at = @At("HEAD"))
+    private void addFoodData(ItemStack stack, Level level, LivingEntity entity, CallbackInfoReturnable<ItemStack> cir) {
+        entity.eat(level, new ItemStack(stack.getItem()));
+    }
 
     @Redirect(method = "finishUsingItem", at = @At(value = "INVOKE", target = "Lcom/github/ysbbbbbb/kaleidoscopecookery/item/TeacupItem;addTeaEffect(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)V"))
     private void addEffect(TeacupItem instance, Level level, LivingEntity entity) {

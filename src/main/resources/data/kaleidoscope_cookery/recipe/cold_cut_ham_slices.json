@@ -1,0 +1,100 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "kaleidoscope_cookery:cold_cut_ham_slices",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:cooked_pork_belly"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:cooked_pork_belly"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:cooked_pork_belly"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:cooked_pork_belly"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:cooked_pork_belly"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:cooked_pork_belly"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:cooked_pork_belly"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:cooked_pork_belly"
+				}
+			]
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
+}

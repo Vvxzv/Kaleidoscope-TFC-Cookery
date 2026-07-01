@@ -10,26 +10,30 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemStackHandler;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(MillstoneBlockEntity.class)
 public class MillstoneBlockEntityMixin extends BaseBlockEntity {
 
-    @Shadow(remap = false)
+    @Shadow
     private ItemStack input;
 
-    @Shadow(remap = false)
-    private ItemStack output;
+    @Final
+    @Shadow
+    private ItemStackHandler outputs;
 
-    @Shadow(remap = false)
+    @Shadow
     private int progress;
 
-    @Shadow(remap = false)
+    @Shadow
     private float rotSpeedTick;
 
     public MillstoneBlockEntityMixin(BlockEntityType<?> entityType, BlockPos pos, BlockState state) {
@@ -62,26 +66,21 @@ public class MillstoneBlockEntityMixin extends BaseBlockEntity {
         }
     }
 
-    @Inject(
-            method = "tick",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/world/item/crafting/RecipeManager$CachedCheck;getRecipeFor(Lnet/minecraft/world/item/crafting/RecipeInput;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;",
-                    shift = At.Shift.BEFORE
-            ),
-            cancellable = true
-    )
-    private void addQuernRecipeHandle(Level level, CallbackInfo ci){
-        if (!this.input.isEmpty() && this.output.isEmpty() && this.progress <= 0) {
+    @ModifyArg(method = "tick", at = @At(value = "INVOKE", target = "Ljava/util/Optional;ifPresentOrElse(Ljava/util/function/Consumer;Ljava/lang/Runnable;)V"), index = 1)
+    private Runnable addQuernRecipe(Runnable emptyAction) {
+        if(this.level != null) {
             QuernRecipe recipe = QuernRecipe.getRecipe(this.input);
             if(recipe != null) {
-                this.output = recipe.assemble(this.input);
-                int outputCount = Math.min(recipe.getResultItem(level.registryAccess()).getCount() * this.input.getCount(), this.output.getMaxStackSize());
-                this.output.setCount(outputCount);
-                this.input = ItemStack.EMPTY;
-                this.refresh();
-                ci.cancel();
+                return () -> {
+                    ItemStack result = recipe.assemble(this.input);
+                    for(int i = 0; i < this.input.getCount(); ++i) {
+                        ItemHandlerHelper.insertItemStacked(this.outputs, result.copy(), false);
+                    }
+                    this.input = ItemStack.EMPTY;
+                    this.refresh();
+                };
             }
         }
+        return emptyAction;
     }
 }

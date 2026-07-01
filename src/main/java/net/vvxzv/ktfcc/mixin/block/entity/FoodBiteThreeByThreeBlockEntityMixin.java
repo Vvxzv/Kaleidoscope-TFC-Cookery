@@ -32,17 +32,18 @@ public class FoodBiteThreeByThreeBlockEntityMixin extends BaseBlockEntity implem
         this.stack = ItemStack.EMPTY;
     }
 
+    @Override
     public void loadAdditional(@NotNull CompoundTag nbt, HolderLookup.@NotNull Provider provider) {
         super.loadAdditional(nbt, provider);
         this.stack = ItemStack.parseOptional(provider, nbt.getCompound("item"));
     }
 
+    @Override
     public void saveAdditional(@NotNull CompoundTag nbt, HolderLookup.@NotNull Provider provider) {
         super.saveAdditional(nbt, provider);
         if (!this.stack.isEmpty()) {
             nbt.put("item", this.stack.save(provider));
         }
-
     }
 
     @Override

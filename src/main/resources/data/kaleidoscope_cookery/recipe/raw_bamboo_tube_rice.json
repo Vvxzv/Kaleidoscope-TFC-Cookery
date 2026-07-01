@@ -1,0 +1,34 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "kaleidoscope_cookery:raw_bamboo_tube_rice",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "tfc:bamboo"
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/rice_grain"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/raw_meat"
+				}
+			]
+		}
+	]
+}

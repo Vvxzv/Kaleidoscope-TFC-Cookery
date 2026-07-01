@@ -1,0 +1,34 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "kaleidoscope_cookery:raw_zongzi",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "ktfcc:zongzi_leaves"
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/rice_grain"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/raw_meat"
+				}
+			]
+		}
+	]
+}

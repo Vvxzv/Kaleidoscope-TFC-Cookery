@@ -27,7 +27,7 @@ public record FoodEffect(Ingredient ingredient, List<MobEffectInstance> mobEffec
 
     public static final StreamCodec<RegistryFriendlyByteBuf, FoodEffect> STREAM_CODEC = StreamCodec.composite(
             Ingredient.CONTENTS_STREAM_CODEC, c -> c.ingredient,
-            ByteBufCodecs.collection(ArrayList::new, MobEffectInstance.STREAM_CODEC), FoodEffect::mobEffects,
+            ByteBufCodecs.collection(ArrayList::new, MobEffectInstance.STREAM_CODEC), c -> c.mobEffects,
             FoodEffect::new
     );
 

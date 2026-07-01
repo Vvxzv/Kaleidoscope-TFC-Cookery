@@ -4,14 +4,11 @@ import net.dries007.tfc.util.Helpers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.*;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.vvxzv.ktfcc.KaleidoscopeTFCCookery;
-import net.vvxzv.ktfcc.common.block.PanBlock;
-import net.vvxzv.ktfcc.common.block.Tea;
-import net.vvxzv.ktfcc.common.block.TeaTreeBlock;
-import net.vvxzv.ktfcc.common.block.WildTeaTreeBlock;
+import net.vvxzv.ktfcc.common.block.*;
 
 import java.util.Locale;
 import java.util.Map;
@@ -42,7 +39,9 @@ public class Blocks {
             )
     );
 
-    public static final Map<Tea, DeferredBlock<Block>> TEA_TREES = Helpers.mapOf(
+    public static final DeferredBlock<Block> WILD_MUGWORT = registerBlock("wild_mugwort",  WildMugwortBlock::new);
+
+    public static final Map<Tea, DeferredBlock<TeaTreeBlock>> TEA_TREES = Helpers.mapOf(
             Tea.class,
             Tea::isHasTree,
             (tea) -> registerBlock(
@@ -57,4 +56,11 @@ public class Blocks {
             )
     );
 
+    public static final DeferredBlock<Block> MUGWORT = registerBlock(
+            "mugwort",
+            () -> new MugwortBlock(
+                    Items.MUGWORT_LEAVES,
+                    ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "mugwort")
+            )
+    );
 }

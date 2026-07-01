@@ -1,0 +1,62 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "kaleidoscope_cookery:desert_style_sashimi",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "tfc:plant/saguaro_fruit"
+		},
+		{
+			"item": "tfc:plant/saguaro_fruit"
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:sashimi"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:sashimi"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:sashimi"
+				}
+			]
+		},
+		{
+			"type": "neoforge:intersection",
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "kaleidoscope_cookery:sashimi"
+				}
+			]
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
+}

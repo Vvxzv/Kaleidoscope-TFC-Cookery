@@ -1,0 +1,10 @@
+{
+	"type": "kaleidoscope_cookery:steamer",
+	"ingredient": {
+		"item": "ktfcc:raw_qingtuan"
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:qingtuan",
+		"count": 1
+	}
+}

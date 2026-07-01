@@ -2,10 +2,10 @@
 	"type": "kaleidoscope_cookery:stockpot",
 	"ingredients": [
 		{
-			"item": "minecraft:egg"
+			"tag": "c:eggs"
 		},
 		{
-			"item": "minecraft:egg"
+			"tag": "c:eggs"
 		},
 		{
 			"tag": "ktfcc:kelps"

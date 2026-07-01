@@ -2,16 +2,16 @@
 	"type": "kaleidoscope_cookery:stockpot",
 	"ingredients": [
 		{
-			"item": "tfc:food/tomato"
-		},
-		{
-			"item": "tfc:food/tomato"
-		},
-		{
 			"tag": "c:foods/flour"
 		},
 		{
 			"tag": "c:foods/flour"
+		},
+		{
+			"tag": "c:foods/vegetable"
+		},
+		{
+			"tag": "c:foods/vegetable"
 		},
 		{
 			"tag": "c:foods/vegetable"

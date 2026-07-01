@@ -7,6 +7,8 @@
 		}
 	],
 	"targets": [
+		"minecraft:warped_fungus",
+		"minecraft:crimson_fungus",
 		"kaleidoscope_cookery:nether_style_sashimi"
 	]
 }

@@ -1,5 +1,5 @@
 {
-	"type": "kaleidoscope_cookery:pot",
+	"type": "kaleidoscope_cookery:stockpot",
 	"ingredients": [
 		[
 			{
@@ -25,17 +25,6 @@
 				"item": "tfc:food/pork"
 			}
 		],
-		[
-			{
-				"item": "kaleidoscope_cookery:raw_pork_belly"
-			},
-			{
-				"item": "tfc:food/pork"
-			}
-		],
-		{
-			"tag": "ktfcc:chilipepper"
-		},
 		{
 			"tag": "ktfcc:chilipepper"
 		},
@@ -49,8 +38,5 @@
 	"result": {
 		"id": "kaleidoscope_cookery:spicy_blood_stew",
 		"count": 1
-	},
-	"carrier": {
-		"item": "minecraft:bowl"
 	}
 }

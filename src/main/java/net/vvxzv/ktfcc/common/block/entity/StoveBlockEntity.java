@@ -13,7 +13,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.vvxzv.ktfcc.common.registry.BlockEntities;
@@ -63,13 +62,10 @@ public class StoveBlockEntity extends TFCBlockEntity {
     }
 
     private void heatAbove(Level level, BlockPos pos, float temperature) {
-        BlockEntity above = level.getBlockEntity(pos.above());
-        if (above != null) {
-            IHeatConsumer heat = level.getCapability(BlockCapabilities.HEAT, pos.above(), Direction.DOWN);
-            if(heat != null) {
-                float currentTemp = heat.getTemperature();
-                heat.setTemperature(HeatCapability.adjustTempTowards(currentTemp, temperature));
-            }
+        IHeatConsumer heat = level.getCapability(BlockCapabilities.HEAT, pos.above(), Direction.DOWN);
+        if(heat != null) {
+            float currentTemp = heat.getTemperature();
+            heat.setTemperature(HeatCapability.adjustTempTowards(currentTemp, temperature, 2));
         }
     }
 
@@ -84,6 +80,18 @@ public class StoveBlockEntity extends TFCBlockEntity {
                 level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.LIT, true));
                 return true;
             }
+        }
+
+        return false;
+    }
+
+    public boolean extinguish(Level level, BlockPos pos, BlockState state) {
+        boolean isStoveLit = state.getValue(BlockStateProperties.LIT);
+        if(isStoveLit) {
+            level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.LIT, false));
+            this.maxTemperature = 0;
+            this.burntTick = 0;
+            return true;
         }
 
         return false;

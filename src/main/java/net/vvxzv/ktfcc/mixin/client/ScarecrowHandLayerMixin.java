@@ -25,6 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ScarecrowHandLayer.class)
 public class ScarecrowHandLayerMixin {
+
     @Final
     @Shadow(remap = false)
     private BlockRenderDispatcher blockRenderer;
