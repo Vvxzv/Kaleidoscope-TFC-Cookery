@@ -50,8 +50,12 @@
   "ktfcc.tooltip.food_trait.cellar_preserved_2": "Cellar Preserved",
   "ktfcc.tooltip.food_trait.cellar_preserved_3": "Cellar Preserved",
   "ktfcc.tooltip.can_place_on_wooden_bowl": "Can place on Wooden Bowl block",
+  "ktfcc.tooltip.pick_fruit": "Right click on fruit tree to pick fruits",
 
   "tfc.recipe.barrel.ktfcc.barrel_sealed.oolong": "Oolong Tea",
   "tfc.recipe.barrel.ktfcc.barrel_sealed.black": "Black Tea",
-  "tfc.recipe.barrel.ktfcc.barrel_sealed.zongzi_leaves": "Zongzi Leaves"
+  "tfc.recipe.barrel.ktfcc.barrel_sealed.zongzi_leaves": "Zongzi Leaves",
+
+  "ktfcc.jei.stockpot": "Soups",
+  "ktfcc.jei.pot": "Dishes"
 }

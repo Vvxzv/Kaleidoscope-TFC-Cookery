@@ -1,7 +1,13 @@
 package net.vvxzv.ktfcc;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.block.decoration.PlateBlock;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.ModItems;
+import com.github.ysbbbbbb.kaleidoscopecookery.item.FruitBasketItem;
+import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.plant.fruit.FruitTreeLeavesBlock;
+import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.food.IFood;
 import net.dries007.tfc.util.events.StartFireEvent;
@@ -11,6 +17,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -26,6 +33,7 @@ import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
+import net.minecraftforge.items.ItemStackHandler;
 import net.vvxzv.ktfcc.common.block.entity.StoveBlockEntity;
 import net.vvxzv.ktfcc.common.data.FoodEffect;
 import net.vvxzv.ktfcc.common.data.Plate;
@@ -43,6 +51,7 @@ public class ForgeEventHandler {
         bus.addListener(ForgeEventHandler::cancelPlaceRottenBlockItem);
         bus.addListener(ForgeEventHandler::setPlate);
         bus.addListener(ForgeEventHandler::plateTooltip);
+        bus.addListener(ForgeEventHandler::pickFruits);
 
         if(ModList.get().isLoaded("firmalife")) {
             FLEventHandler.init(bus);
@@ -162,6 +171,65 @@ public class ForgeEventHandler {
             event.getToolTip().add(Component.translatable("ktfcc.tooltip.can_place_on_wooden_bowl").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
             event.getToolTip().add(Component.literal(" "));
         }
+
+        if(stack.is(ModItems.FRUIT_BASKET.get())) {
+            event.getToolTip().add(Component.translatable("ktfcc.tooltip.pick_fruit").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+        }
     }
 
+    public static void pickFruits(PlayerInteractEvent.RightClickBlock event) {
+        if (event.getHand() != InteractionHand.MAIN_HAND) return;
+
+        Player player = event.getEntity();
+        if (player == null) return;
+
+        ItemStack handStack = event.getItemStack();
+        if (!handStack.is(ModItems.FRUIT_BASKET.get())) return;
+
+        Level level = event.getLevel();
+        BlockPos clickPos = event.getPos();
+        BlockState clickState = level.getBlockState(clickPos);
+
+        if (!clickState.is(TFCTags.Blocks.FRUIT_TREE_LEAVES) && !clickState.is(TFCTags.Blocks.FRUIT_TREE_BRANCH)) {
+            return;
+        }
+
+        ItemStackHandler basketInv = FruitBasketItem.getItems(handStack);
+
+        BlockPos min = clickPos.offset(-3, -3, -3);
+        BlockPos max = clickPos.offset(3, 3, 3);
+
+        boolean hasPick = false;
+        RandomSource random = RandomSource.create();
+
+        for (BlockPos blockPos : BlockPos.betweenClosed(min, max)) {
+            BlockState blockState = level.getBlockState(blockPos);
+            if (
+                    blockState.is(TFCTags.Blocks.FRUIT_TREE_LEAVES)
+                            && blockState.getValue(TFCBlockStateProperties.LIFECYCLE) != Lifecycle.FRUITING
+            ) continue;
+            if (!(blockState.getBlock() instanceof FruitTreeLeavesBlock leavesBlock)) continue;
+
+            ItemStack fruitStack = leavesBlock.getProductItem(random);
+            if (fruitStack.isEmpty()) continue;
+
+            boolean insertSuccess = false;
+            for (int i = 0; i < basketInv.getSlots(); i++) {
+                if (basketInv.insertItem(i, fruitStack.copy(), false).isEmpty()) {
+                    insertSuccess = true;
+                    break;
+                }
+            }
+            if (!insertSuccess) continue;
+
+            hasPick = true;
+            level.setBlockAndUpdate(blockPos, blockState.setValue(TFCBlockStateProperties.LIFECYCLE, Lifecycle.HEALTHY));
+        }
+
+        if (hasPick) {
+            FruitBasketItem.saveItems(handStack, basketInv);
+        }
+        event.setCancellationResult(InteractionResult.SUCCESS);
+        event.setCanceled(true);
+    }
 }

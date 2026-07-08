@@ -8,6 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -63,5 +64,13 @@ public abstract class AbstractBushBlock extends StationaryBerryBushBlock {
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         return PLANT_SHAPE;
+    }
+
+    @Override
+    protected @NotNull BlockState growAndPropagate(@NotNull Level level, @NotNull BlockPos pos, @NotNull RandomSource random, BlockState state) {
+        if (!state.getValue(LIFECYCLE).active()) {
+            return state;
+        }
+        return state.setValue(STAGE, Math.min(2, state.getValue(STAGE) + 1));
     }
 }
