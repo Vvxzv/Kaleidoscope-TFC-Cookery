@@ -44,5 +44,9 @@
   "ktfcc.tooltip.food_trait.cellar_preserved": "保存于地窖",
   "ktfcc.tooltip.food_trait.cellar_preserved_2": "保存于地窖",
   "ktfcc.tooltip.food_trait.cellar_preserved_3": "保存于地窖",
-  "ktfcc.tooltip.can_place_on_wooden_bowl": "可放置在木碗方块上"
+  "ktfcc.tooltip.can_place_on_wooden_bowl": "可放置在木碗方块上",
+  "ktfcc.tooltip.pick_fruit": "右键单击果树采摘水果",
+
+  "ktfcc.jei.stockpot": "汤",
+  "ktfcc.jei.pot": "炒菜"
 }

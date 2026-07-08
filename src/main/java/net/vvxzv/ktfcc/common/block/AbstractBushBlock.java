@@ -7,8 +7,10 @@ import net.dries007.tfc.util.climate.ClimateRange;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -62,6 +64,15 @@ public abstract class AbstractBushBlock extends StationaryBerryBushBlock {
         }
 
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+    }
+
+    @Override
+    protected void growAndPropagate(BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull RandomSource random, int cycles, int growthsRemaining) {
+        int oldStage = state.getValue(STAGE);
+        if (oldStage < 2) {
+            BlockState newState = state.setValue(STAGE, oldStage + 1);
+            this.placeBlockAndResetCounter(level, pos, newState, cycles, growthsRemaining);
+        }
     }
 
     public ClimateRange getClimateRange() {

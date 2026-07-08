@@ -1,19 +1,23 @@
 package net.vvxzv.ktfcc;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.block.decoration.PlateBlock;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.ModItems;
+import com.github.ysbbbbbb.kaleidoscopecookery.item.FruitBasketItem;
+import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
 import net.dries007.tfc.common.blocks.TFCBlocks;
-import net.dries007.tfc.common.component.TFCComponents;
+import net.dries007.tfc.common.blocks.plant.fruit.FruitTreeLeavesBlock;
+import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.component.food.FoodCapability;
 import net.dries007.tfc.common.component.food.IFood;
-import net.dries007.tfc.util.data.DataManager;
 import net.dries007.tfc.util.events.StartFireEvent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -29,7 +33,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddReloadListenerEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
-import net.vvxzv.ktfcc.common.block.entity.DecayingFoodBlockEntity;
+import net.neoforged.neoforge.items.ItemStackHandler;
 import net.vvxzv.ktfcc.common.block.entity.StoveBlockEntity;
 import net.vvxzv.ktfcc.common.data.DataManagers;
 import net.vvxzv.ktfcc.common.data.Plate;
@@ -46,6 +50,7 @@ public class NeoForgeEventHandler {
         bus.addListener(NeoForgeEventHandler::cancelPlaceRottenBlockItem);
         bus.addListener(NeoForgeEventHandler::setPlate);
         bus.addListener(NeoForgeEventHandler::plateTooltip);
+        bus.addListener(NeoForgeEventHandler::pickFruits);
 
         if(ModList.get().isLoaded("firmalife")) {
             FLEventHandler.init(bus);
@@ -53,8 +58,7 @@ public class NeoForgeEventHandler {
     }
 
     public static void addReloadListeners(AddReloadListenerEvent event) {
-        Registry<DataManager<?>> managers = DataManagers.REGISTRY;
-        managers.forEach(event::addListener);
+        DataManagers.REGISTRY.forEach(event::addListener);
     }
 
     public static void onFireStart(StartFireEvent event) {
@@ -166,5 +170,65 @@ public class NeoForgeEventHandler {
             event.getToolTip().add(Component.translatable("ktfcc.tooltip.can_place_on_wooden_bowl").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
             event.getToolTip().add(Component.literal(" "));
         }
+
+        if(stack.is(ModItems.FRUIT_BASKET.get())) {
+            event.getToolTip().add(Component.translatable("ktfcc.tooltip.pick_fruit").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+        }
+    }
+
+    public static void pickFruits(UseItemOnBlockEvent event) {
+        if (event.getHand() != InteractionHand.MAIN_HAND) return;
+
+        Player player = event.getPlayer();
+        if (player == null) return;
+
+        ItemStack handStack = event.getItemStack();
+        if (!handStack.is(ModItems.FRUIT_BASKET.get())) return;
+
+        Level level = event.getLevel();
+        BlockPos clickPos = event.getPos();
+        BlockState clickState = level.getBlockState(clickPos);
+
+        if (!clickState.is(TFCTags.Blocks.FRUIT_TREE_LEAVES) && !clickState.is(TFCTags.Blocks.FRUIT_TREE_BRANCH)) {
+            return;
+        }
+
+        ItemStackHandler basketInv = FruitBasketItem.getItems(handStack);
+
+        BlockPos min = clickPos.offset(-3, -3, -3);
+        BlockPos max = clickPos.offset(3, 3, 3);
+
+        boolean hasPick = false;
+        RandomSource random = RandomSource.create();
+
+        for (BlockPos blockPos : BlockPos.betweenClosed(min, max)) {
+            BlockState blockState = level.getBlockState(blockPos);
+            if (
+                    blockState.is(TFCTags.Blocks.FRUIT_TREE_LEAVES)
+                            && blockState.getValue(TFCBlockStateProperties.LIFECYCLE) != Lifecycle.FRUITING
+            ) continue;
+            if (!(blockState.getBlock() instanceof FruitTreeLeavesBlock leavesBlock)) continue;
+
+            ItemStack fruitStack = leavesBlock.getProductItem(random);
+            if (fruitStack.isEmpty()) continue;
+
+            boolean insertSuccess = false;
+            for (int i = 0; i < basketInv.getSlots(); i++) {
+                if (basketInv.insertItem(i, fruitStack.copy(), false).isEmpty()) {
+                    insertSuccess = true;
+                    break;
+                }
+            }
+            if (!insertSuccess) continue;
+
+            hasPick = true;
+            level.setBlockAndUpdate(blockPos, blockState.setValue(TFCBlockStateProperties.LIFECYCLE, Lifecycle.HEALTHY));
+        }
+
+        if (hasPick) {
+            FruitBasketItem.saveItems(handStack, basketInv);
+        }
+        event.setCancellationResult(ItemInteractionResult.SUCCESS);
+        event.setCanceled(true);
     }
 }
