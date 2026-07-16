@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ktfcc:tea_tree/oolong"
+          "name": "minecraft:stick"
         }
       ],
       "rolls": 1.0

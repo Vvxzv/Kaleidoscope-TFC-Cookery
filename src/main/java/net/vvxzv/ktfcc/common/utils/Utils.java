@@ -1,8 +1,12 @@
 package net.vvxzv.ktfcc.common.utils;
 
+import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.component.food.FoodCapability;
 import net.dries007.tfc.common.component.food.IFood;
 import net.dries007.tfc.common.component.food.Nutrient;
+import net.dries007.tfc.util.calendar.Month;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
@@ -142,5 +146,24 @@ public class Utils {
         IFood food2 = FoodCapability.get(stack2);
         long food2CreationDate = food2 != null? food2.getCreationDate(): -1L;
         return Math.min(food1CreationDate, food2CreationDate);
+    }
+
+    public static Component getTranslationWithLifecycles(Lifecycle[] lifecycles, Lifecycle target) {
+        if(lifecycles.length != 12) {
+            throw new IllegalStateException("lifecycles length must be 12!");
+        }
+
+        Month month = Month.JANUARY;
+
+        for(int i = 11; i > 0; i--) {
+            if(lifecycles[i] == target) {
+                if(lifecycles[i - 1] != target) {
+                    month = Month.valueOf(i);
+                    break;
+                }
+            }
+        }
+
+        return Component.translatable(month.getTranslationKey(Month.Style.SEASON)).withStyle(ChatFormatting.WHITE);
     }
 }

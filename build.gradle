@@ -137,13 +137,12 @@ dependencies {
     runtimeOnly "curse.maven:patchouli-306770:6842247"
 
     // tfc
-    implementation "curse.maven:terrafirmacraft-302973:8063726"
+    implementation "curse.maven:terrafirmacraft-302973:8365958"
 
     // firmalife
     implementation "curse.maven:firmalife-453394:8028300"
 
     // kaleidoscope cookery
-    //implementation "curse.maven:kaleidoscope-cookery-1309203:7966281"
     implementation "curse.maven:kaleidoscope-cookery-1309203:8231456"
 
     //JEI
