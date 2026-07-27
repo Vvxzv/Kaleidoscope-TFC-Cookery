@@ -13,6 +13,7 @@
     "block.FoodBiteBlockMixin",
     "block.FoodBiteOneByTwoBlockMixin",
     "block.FoodBiteThreeByThreeBlockMixin",
+    "block.FruitBasketBlockMixin",
     "block.PlateBlockMixin",
     "block.ShawarmaSpitBlockMixin",
     "block.StackableFoodBlockMixin",
@@ -34,6 +35,7 @@
     "item.BowlFoodBlockItemMixin",
     "item.FoodWithEffectsItemMixin",
     "item.SickleItemMixin",
+    "item.StrawHatItemMixin",
     "item.TeacupItemMixin",
     "item.WithTooltipsItemMixin"
   ],

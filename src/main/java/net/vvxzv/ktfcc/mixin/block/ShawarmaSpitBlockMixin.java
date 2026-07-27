@@ -1,9 +1,15 @@
 package net.vvxzv.ktfcc.mixin.block;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.block.kitchen.ShawarmaSpitBlock;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
@@ -16,6 +22,7 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -25,6 +32,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.List;
 
 @Mixin(ShawarmaSpitBlock.class)
 public abstract class ShawarmaSpitBlockMixin extends HorizontalDirectionalBlock {
@@ -125,5 +134,10 @@ public abstract class ShawarmaSpitBlockMixin extends HorizontalDirectionalBlock 
         boolean hasAnyRedstone = lowerSignal || upperSignal;
 
         return validHeat && hasAnyRedstone;
+    }
+
+    @Inject(method = "appendHoverText", at = @At("TAIL"))
+    private void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag, CallbackInfo ci) {
+        tooltip.add(Component.translatable("tooltip.ktfcc.shawarma_spit").withStyle(ChatFormatting.GRAY));
     }
 }

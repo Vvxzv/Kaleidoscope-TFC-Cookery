@@ -30,7 +30,9 @@
   "block.ktfcc.mugwort": "Mugwort",
   "block.ktfcc.wild_mugwort": "Wild Mugwort",
 
-  "tooltip.ktfcc.caterpillar": "Chance to drop when harvesting cabbage",
+  "tooltip.ktfcc.caterpillar": "Chance to drop when harvesting cabbage.",
+  "tooltip.ktfcc.straw_hat": "When worn, breaking grass drops extra straw.",
+  "tooltip.ktfcc.shawarma_spit": "The bottom of the block requires a heat source.",
 
   "ktfcc.eat.rotten_block": "Ew~ It looks rotten. It's so gross. I'd not eat it",
 

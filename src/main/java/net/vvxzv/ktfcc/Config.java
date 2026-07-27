@@ -20,6 +20,8 @@ public class Config {
 
     private static final ModConfigSpec.DoubleValue MAX_DYNAMIC_NUTRIENT = BUILDER.comment(" ", "Dynamic nutrient value cap. (default 5)", "动态营养值上限").defineInRange("maxDynamicNutrient", 5.0, 0, 100.0);
 
+    private static final ModConfigSpec.DoubleValue EXTRA_STRAW = BUILDER.comment(" ", "The probability of drop extra straw while wearing a straw hat. (default 1)", "佩戴草帽额外掉落干草的概率").defineInRange("maxDynamicNutrient", 1.0, 0, 1.0);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     public static double stoveTemperature;
@@ -27,6 +29,7 @@ public class Config {
     public static boolean foodTooltips;
     public static boolean farmersDelightCompat;
     public static double maxDynamicNutrient;
+    public static double extraStraw;
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event) {
@@ -35,5 +38,6 @@ public class Config {
         foodTooltips = FOOD_TOOLTIP.get();
         farmersDelightCompat = FARMERS_DELIGHT_COMPAT.get();
         maxDynamicNutrient = MAX_DYNAMIC_NUTRIENT.get();
+        extraStraw = EXTRA_STRAW.get();
     }
 }
