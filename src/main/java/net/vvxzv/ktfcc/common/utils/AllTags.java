@@ -12,9 +12,12 @@ public class AllTags {
     public static class Items {
         public static final TagKey<Item> POT_INGREDIENT = ItemTags.create(ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "pot_ingredient"));
         public static final TagKey<Item> STOCKPOT_INGREDIENT = ItemTags.create(ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "stockpot_ingredient"));
+        public static final TagKey<Item> STRAW_HAT = ItemTags.create(ResourceLocation.fromNamespaceAndPath("kaleidoscope_cookery", "straw_hat"));
+        public static final TagKey<Item> SCYTHES = ItemTags.create(ResourceLocation.fromNamespaceAndPath("tfc", "scythes"));
     }
 
     public static class Blocks {
         public static final TagKey<Block> HEAT_SOURCE = BlockTags.create(ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "heat_source"));
+        public static final TagKey<Block> PLANT_DROPS_EXTRA_STRAW = BlockTags.create(ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "plant_drops_extra_straw"));
     }
 }

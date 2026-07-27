@@ -69,16 +69,4 @@ public class TeacupItemMixin {
     private boolean removeEffectText(List<Object> instance) {
         return true;
     }
-
-    @Inject(method = "appendHoverText", at = @At("TAIL"))
-    private void addEffectText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag, CallbackInfo ci) {
-        TeaEffect tea = TeaEffect.get(stack);
-        if(tea != null) {
-            List<MobEffectInstance> effects = tea.getEffects();
-            if(!effects.isEmpty()) {
-                tooltip.add(CommonComponents.space());
-                PotionUtils.addPotionTooltip(effects, tooltip, 1.0F);
-            }
-        }
-    }
 }

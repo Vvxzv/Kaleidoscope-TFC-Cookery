@@ -31,6 +31,8 @@
   "block.ktfcc.wild_mugwort": "野生艾草",
 
   "tooltip.ktfcc.caterpillar": "收穫捲心菜時概率掉落",
+  "tooltip.ktfcc.straw_hat": "佩戴後打草掉落更多乾草",
+  "tooltip.ktfcc.shawarma_spit": "方塊底部需要熱源",
 
   "ktfcc.eat.rotten_block": "咦~ 它看起來已經壞了，好噁心，還是不要吃了",
 
@@ -45,7 +47,7 @@
   "ktfcc.tooltip.food_trait.cellar_preserved_2": "保存於地窖",
   "ktfcc.tooltip.food_trait.cellar_preserved_3": "保存於地窖",
   "ktfcc.tooltip.can_place_on_wooden_bowl": "可放置在木碗方塊上",
-  "ktfcc.tooltip.pick_fruit": "按右鍵果樹採摘水果",
+  "ktfcc.tooltip.pick_fruit": "右鍵點擊果樹採摘水果",
 
   "ktfcc.jei.stockpot": "湯",
   "ktfcc.jei.pot": "炒菜"

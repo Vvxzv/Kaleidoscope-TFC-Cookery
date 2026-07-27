@@ -102,7 +102,7 @@ minecraft {
 
         server {
             property 'forge.enabledGameTestNamespaces', mod_id
-            args '--nogui'
+            // args '--nogui'
         }
 
         // This run config launches GameTestServer and runs all registered gametests, then exits.
@@ -205,9 +205,11 @@ dependencies {
     // probejs
     implementation fg.deobf("curse.maven:probejs-585406:5227399")
     // jech
-    implementation fg.deobf("curse.maven:just-enough-characters-250702:7411324")
+    // implementation fg.deobf("curse.maven:just-enough-characters-250702:7411324")
     // jei copy
     implementation fg.deobf("curse.maven:jei-copy-recipe-json-1375689:7364314")
+
+    implementation fg.deobf("curse.maven:farmers-delight-398521:8083474")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

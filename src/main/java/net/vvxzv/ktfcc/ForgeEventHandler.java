@@ -10,19 +10,25 @@ import net.dries007.tfc.common.blocks.plant.fruit.FruitTreeLeavesBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.food.IFood;
+import net.dries007.tfc.common.items.TFCItems;
+import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.events.StartFireEvent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -31,6 +37,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.items.ItemStackHandler;
@@ -38,8 +45,11 @@ import net.vvxzv.ktfcc.common.block.entity.StoveBlockEntity;
 import net.vvxzv.ktfcc.common.data.FoodEffect;
 import net.vvxzv.ktfcc.common.data.Plate;
 import net.vvxzv.ktfcc.common.data.TeaEffect;
+import net.vvxzv.ktfcc.common.utils.AllTags;
 import net.vvxzv.ktfcc.common.utils.Decaying;
 import net.vvxzv.ktfcc.compat.firmalife.FLEventHandler;
+
+import java.util.List;
 
 public class ForgeEventHandler {
 
@@ -52,6 +62,8 @@ public class ForgeEventHandler {
         bus.addListener(ForgeEventHandler::setPlate);
         bus.addListener(ForgeEventHandler::plateTooltip);
         bus.addListener(ForgeEventHandler::pickFruits);
+        bus.addListener(ForgeEventHandler::teaTooltip);
+        bus.addListener(ForgeEventHandler::extraStraw);
 
         if(ModList.get().isLoaded("firmalife")) {
             FLEventHandler.init(bus);
@@ -171,10 +183,6 @@ public class ForgeEventHandler {
             event.getToolTip().add(Component.translatable("ktfcc.tooltip.can_place_on_wooden_bowl").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
             event.getToolTip().add(Component.literal(" "));
         }
-
-        if(stack.is(ModItems.FRUIT_BASKET.get())) {
-            event.getToolTip().add(Component.translatable("ktfcc.tooltip.pick_fruit").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
-        }
     }
 
     public static void pickFruits(PlayerInteractEvent.RightClickBlock event) {
@@ -231,5 +239,39 @@ public class ForgeEventHandler {
         }
         event.setCancellationResult(InteractionResult.SUCCESS);
         event.setCanceled(true);
+    }
+
+    public static void teaTooltip(ItemTooltipEvent event) {
+        ItemStack stack = event.getItemStack();
+        TeaEffect tea = TeaEffect.get(stack);
+        if(tea != null) {
+            List<MobEffectInstance> effects = tea.getEffects();
+            if(!effects.isEmpty()) {
+                event.getToolTip().add(CommonComponents.space());
+                PotionUtils.addPotionTooltip(effects, event.getToolTip(), 1.0F);
+            }
+        }
+    }
+
+    public static void extraStraw(BlockEvent.BreakEvent event) {
+        Player player = event.getPlayer();
+        BlockState blockState = event.getState();
+
+        if(player.isCreative()) return;
+
+        double p = Config.extraStraw;
+
+        if(p == 0) return;
+        if(p == 1 || Math.random() < p) {
+            if(blockState.is(AllTags.Blocks.PLANT_DROPS_EXTRA_STRAW)) {
+                ItemStack hat = player.getItemBySlot(EquipmentSlot.HEAD);
+                if(hat.is(AllTags.Items.STRAW_HAT)) {
+                    ItemStack stack = player.getMainHandItem();
+                    if(stack.is(TFCTags.Items.KNIVES) || stack.is(AllTags.Items.SCYTHES)) {
+                        Helpers.spawnItem((Level) event.getLevel(), event.getPos(), new ItemStack(TFCItems.STRAW.get()));
+                    }
+                }
+            }
+        }
     }
 }
