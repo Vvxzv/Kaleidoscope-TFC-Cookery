@@ -63,7 +63,6 @@ public class ForgeEventHandler {
         bus.addListener(ForgeEventHandler::plateTooltip);
         bus.addListener(ForgeEventHandler::pickFruits);
         bus.addListener(ForgeEventHandler::teaTooltip);
-        bus.addListener(ForgeEventHandler::extraStraw);
 
         if(ModList.get().isLoaded("firmalife")) {
             FLEventHandler.init(bus);
@@ -249,28 +248,6 @@ public class ForgeEventHandler {
             if(!effects.isEmpty()) {
                 event.getToolTip().add(CommonComponents.space());
                 PotionUtils.addPotionTooltip(effects, event.getToolTip(), 1.0F);
-            }
-        }
-    }
-
-    public static void extraStraw(BlockEvent.BreakEvent event) {
-        Player player = event.getPlayer();
-        BlockState blockState = event.getState();
-
-        if(player.isCreative()) return;
-
-        double p = Config.extraStraw;
-
-        if(p == 0) return;
-        if(p == 1 || Math.random() < p) {
-            if(blockState.is(AllTags.Blocks.PLANT_DROPS_EXTRA_STRAW)) {
-                ItemStack hat = player.getItemBySlot(EquipmentSlot.HEAD);
-                if(hat.is(AllTags.Items.STRAW_HAT)) {
-                    ItemStack stack = player.getMainHandItem();
-                    if(stack.is(TFCTags.Items.KNIVES) || stack.is(AllTags.Items.SCYTHES)) {
-                        Helpers.spawnItem((Level) event.getLevel(), event.getPos(), new ItemStack(TFCItems.STRAW.get()));
-                    }
-                }
             }
         }
     }

@@ -6,7 +6,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.vvxzv.ktfcc.common.loot.LootModifiers;
+import net.vvxzv.ktfcc.common.loot.modifiers.LootModifiers;
+import net.vvxzv.ktfcc.common.loot.conditions.LootConditions;
 import net.vvxzv.ktfcc.common.registry.BlockEntities;
 import net.vvxzv.ktfcc.common.registry.Blocks;
 import net.vvxzv.ktfcc.common.registry.CreativeTab;
@@ -24,6 +25,7 @@ public class KaleidoscopeTFCCookery {
         Blocks.BLOCKS.register(modEventBus);
         Items.ITEMS.register(modEventBus);
         BlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        LootConditions.LOOT_CONDITIONS.register(modEventBus);
         LootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         CreativeTab.CREATIVE_MODE_TAB.register(modEventBus);
         ForgeEventHandler.init();

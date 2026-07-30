@@ -8,6 +8,9 @@
     "tfc:plant/timothy_grass",
     "tfc:plant/raddia_grass",
     "tfc:plant/tall_fescue_grass",
-    "tfc:plant/switchgrass"
+    "tfc:plant/switchgrass",
+    "tfc:plant/beachgrass",
+    "tfc:plant/orchard_grass",
+    "tfc:plant/pampas_grass"
   ]
 }
