@@ -63,7 +63,6 @@ public class NeoForgeEventHandler {
         bus.addListener(NeoForgeEventHandler::plateTooltip);
         bus.addListener(NeoForgeEventHandler::pickFruits);
         bus.addListener(NeoForgeEventHandler::teaTooltip);
-        bus.addListener(NeoForgeEventHandler::extraStraw);
 
         if(ModList.get().isLoaded("firmalife")) {
             FLEventHandler.init(bus);
@@ -249,28 +248,6 @@ public class NeoForgeEventHandler {
             if(!effects.isEmpty()) {
                 event.getToolTip().add(CommonComponents.space());
                 PotionContents.addPotionTooltip(effects, event.getToolTip()::add, 1.0F, event.getContext().tickRate());
-            }
-        }
-    }
-
-    public static void extraStraw(BlockEvent.BreakEvent event) {
-        Player player = event.getPlayer();
-        BlockState blockState = event.getState();
-
-        if(player.isCreative()) return;
-
-        double p = Config.extraStraw;
-
-        if(p == 0) return;
-        if(p == 1 || Math.random() < p) {
-            if(blockState.is(AllTags.Blocks.PLANT_DROPS_EXTRA_STRAW)) {
-                ItemStack hat = player.getItemBySlot(EquipmentSlot.HEAD);
-                if(hat.is(AllTags.Items.STRAW_HAT)) {
-                    ItemStack stack = player.getMainHandItem();
-                    if(stack.is(TFCTags.Items.TOOLS_KNIFE) || stack.is(TFCTags.Items.TOOLS_SCYTHE)) {
-                        Helpers.spawnItem((Level) event.getLevel(), event.getPos(), new ItemStack(TFCItems.STRAW));
-                    }
-                }
             }
         }
     }

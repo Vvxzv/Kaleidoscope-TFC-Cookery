@@ -1,4 +1,4 @@
-package net.vvxzv.ktfcc.common.loot;
+package net.vvxzv.ktfcc.common.loot.modifiers;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;

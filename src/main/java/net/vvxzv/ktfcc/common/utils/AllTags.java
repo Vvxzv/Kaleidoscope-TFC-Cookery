@@ -15,7 +15,6 @@ public class AllTags {
         public static final TagKey<Item> STOCKPOT_INGREDIENT = ItemTags.create(ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "stockpot_ingredient"));
         public static final TagKey<Item> DISHES = ItemTags.create(ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "dishes"));
         public static final TagKey<Item> SOUPS = ItemTags.create(ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "soups"));
-        public static final TagKey<Item> STRAW_HAT = ItemTags.create(ResourceLocation.fromNamespaceAndPath(KaleidoscopeCookery.MOD_ID, "straw_hat"));
     }
 
     public static class Blocks {

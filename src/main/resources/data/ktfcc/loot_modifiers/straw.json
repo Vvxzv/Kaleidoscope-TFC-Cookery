@@ -1,0 +1,27 @@
+{
+  "type": "ktfcc:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 1
+    },
+    {
+      "condition": "ktfcc:block_tag",
+      "tag": "ktfcc:plant_drops_extra_straw"
+    },
+    {
+      "condition": "kaleidoscope_cookery:advance_block_match_tool",
+      "predicate": {
+        "tag": "kaleidoscope_cookery:straw_hat"
+      },
+      "slot": "head"
+    },
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "tag": "tfc:sharp_tools"
+      }
+    }
+  ],
+  "item": "tfc:straw"
+}

@@ -6,7 +6,8 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.registries.NewRegistryEvent;
 import net.vvxzv.ktfcc.common.data.DataManagers;
-import net.vvxzv.ktfcc.common.loot.LootModifiers;
+import net.vvxzv.ktfcc.common.loot.conditions.LootConditions;
+import net.vvxzv.ktfcc.common.loot.modifiers.LootModifiers;
 import net.vvxzv.ktfcc.common.registry.BlockEntities;
 import net.vvxzv.ktfcc.common.registry.Blocks;
 import net.vvxzv.ktfcc.common.registry.CreativeTab;
@@ -21,6 +22,7 @@ public class KaleidoscopeTFCCookery {
         Items.ITEMS.register(modEventBus);
         Blocks.BLOCKS.register(modEventBus);
         BlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        LootConditions.LOOT_CONDITIONS.register(modEventBus);
         LootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         CreativeTab.CREATIVE_MODE_TAB.register(modEventBus);
         FoodTraits.TRAITS.register(modEventBus);
