@@ -26,7 +26,6 @@ public class Config {
     public static boolean foodTooltips;
     public static boolean farmersDelightCompat;
     public static double maxDynamicNutrient;
-    public static double extraStraw;
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event) {
