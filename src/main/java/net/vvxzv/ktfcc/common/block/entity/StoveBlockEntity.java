@@ -72,7 +72,7 @@ public class StoveBlockEntity extends TFCBlockEntity {
     public boolean lit(Level level, BlockPos pos, BlockState state) {
         boolean isStoveLit = state.getValue(BlockStateProperties.LIT);
         if(!isStoveLit) {
-            long calendarTick = Calendars.SERVER.getCalendarTicks();
+            long calendarTick = Calendars.get().getCalendarTicks();
             ItemStack stack = this.burnFuel(calendarTick);
 
             if(this.burntTick > calendarTick) {
@@ -151,7 +151,7 @@ public class StoveBlockEntity extends TFCBlockEntity {
     }
 
     public @Nullable String getTimeText() {
-        long calendarTick = Calendars.SERVER.getCalendarTicks();
+        long calendarTick = Calendars.get().getCalendarTicks();
         if(this.burntTick - calendarTick > 0) {
             long burningTicks = this.burntTick - calendarTick;
             int totalSeconds = Math.toIntExact(burningTicks / 20);
