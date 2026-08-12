@@ -10,6 +10,7 @@
     "ScarecrowEntityMixin",
     "SimpleSoupBaseMixin",
     "block.ChiliRistraBlockMixin",
+    "block.EnamelBasinBlockMixin",
     "block.FoodBiteBlockMixin",
     "block.FoodBiteOneByTwoBlockMixin",
     "block.FoodBiteThreeByThreeBlockMixin",

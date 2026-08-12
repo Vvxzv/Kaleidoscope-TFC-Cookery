@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "id": "ktfcc:oil_pot",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "item": "ktfcc:oil_pot"
+    }
+  ]
+}

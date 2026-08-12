@@ -4,15 +4,16 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.registries.NewRegistryEvent;
+import net.vvxzv.ktfcc.common.block.entity.OilPotBlockEntity;
 import net.vvxzv.ktfcc.common.data.DataManagers;
 import net.vvxzv.ktfcc.common.loot.conditions.LootConditions;
 import net.vvxzv.ktfcc.common.loot.modifiers.LootModifiers;
-import net.vvxzv.ktfcc.common.registry.BlockEntities;
-import net.vvxzv.ktfcc.common.registry.Blocks;
-import net.vvxzv.ktfcc.common.registry.CreativeTab;
-import net.vvxzv.ktfcc.common.registry.Items;
+import net.vvxzv.ktfcc.common.registry.*;
 import net.vvxzv.ktfcc.common.utils.FoodTraits;
+import net.vvxzv.ktfcc.network.PacketHandler;
 
 @Mod(KaleidoscopeTFCCookery.MODID)
 public class KaleidoscopeTFCCookery {
@@ -27,8 +28,11 @@ public class KaleidoscopeTFCCookery {
         CreativeTab.CREATIVE_MODE_TAB.register(modEventBus);
         FoodTraits.TRAITS.register(modEventBus);
         DataManagers.MANAGERS.register(modEventBus);
+        DataComponent.DATA_COMPONENT_TYPES.register(modEventBus);
 
         modEventBus.addListener(this::registerRegistries);
+        modEventBus.addListener(PacketHandler::setup);
+        modEventBus.addListener(this::registerCapabilities);
 
         NeoForgeEventHandler.init();
 
@@ -37,5 +41,13 @@ public class KaleidoscopeTFCCookery {
 
     public void registerRegistries(NewRegistryEvent event) {
         event.register(DataManagers.REGISTRY);
+    }
+
+    public void registerCapabilities(RegisterCapabilitiesEvent event) {
+        event.registerBlockEntity(
+                Capabilities.FluidHandler.BLOCK,
+                BlockEntities.OIL_POT.get(),
+                OilPotBlockEntity::getSidedFluidInventory
+        );
     }
 }

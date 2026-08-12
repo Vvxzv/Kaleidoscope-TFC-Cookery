@@ -22,5 +22,6 @@ public class DataManagers {
         register(TeaEffect.MANAGER);
         register(FoodEffect.MANAGER);
         register(Plate.MANAGER);
+        register(Oil.MANAGER);
     }
 }

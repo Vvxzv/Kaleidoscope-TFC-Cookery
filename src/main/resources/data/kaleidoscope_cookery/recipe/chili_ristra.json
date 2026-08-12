@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		"aa",
+		"ab",
 		"aa",
 		"aa"
 	],
@@ -16,6 +16,9 @@
 					"tag": "ktfcc:red_pepper"
 				}
 			]
+		},
+		"b": {
+			"item": "minecraft:stick"
 		}
 	},
 	"result": {

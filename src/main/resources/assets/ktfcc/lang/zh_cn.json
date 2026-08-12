@@ -29,10 +29,12 @@
   "block.ktfcc.tea_tree.biluochun": "绿茶树",
   "block.ktfcc.mugwort": "艾草",
   "block.ktfcc.wild_mugwort": "野生艾草",
+  "block.ktfcc.oil_pot": "油壶",
 
   "tooltip.ktfcc.caterpillar": "收获卷心菜时概率掉落",
   "tooltip.ktfcc.straw_hat": "佩戴后打草掉落更多干草",
   "tooltip.ktfcc.shawarma_spit": "方块底部需要热源",
+  "tooltip.ktfcc.oil_pot": "可装入液体油",
 
   "ktfcc.eat.rotten_block": "咦~ 它看起来已经坏了，好恶心，还是不要吃了",
 

@@ -63,4 +63,6 @@ public class Blocks {
                     ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "mugwort")
             )
     );
+
+    public static final DeferredBlock<Block> OIL_POT = registerBlock("oil_pot", OilPotBlock::new);
 }

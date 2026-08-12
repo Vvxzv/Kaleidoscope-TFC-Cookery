@@ -1,0 +1,60 @@
+package net.vvxzv.ktfcc.network;
+
+import com.mojang.logging.LogUtils;
+import net.dries007.tfc.util.data.DataManager;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.resources.ResourceLocation;
+import net.vvxzv.ktfcc.common.data.DataManagers;
+import org.jetbrains.annotations.NotNull;
+import org.slf4j.Logger;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public record DataManagerSyncPacket(List<Entry<?>> values) implements CustomPacketPayload {
+    public static final CustomPacketPayload.Type<DataManagerSyncPacket> TYPE = PacketHandler.type("data_managers");
+    public static final StreamCodec<RegistryFriendlyByteBuf, DataManagerSyncPacket> CODEC = ByteBufCodecs.registry(DataManagers.KEY)
+            .<Entry<?>>dispatch(Entry::manager, DataManagerSyncPacket::streamCodec)
+            .apply(ByteBufCodecs.list())
+            .map(DataManagerSyncPacket::new, DataManagerSyncPacket::values);
+
+    private static final Logger LOGGER = LogUtils.getLogger();
+
+    private static <T> StreamCodec<RegistryFriendlyByteBuf, Entry<T>> streamCodec(DataManager<T> manager) {
+        return ByteBufCodecs.<RegistryFriendlyByteBuf, ResourceLocation, T, Map<ResourceLocation, T>>map(HashMap::new, ResourceLocation.STREAM_CODEC, manager.streamCodec())
+                .map(e -> new Entry<>(manager, e), e -> e.values);
+    }
+
+    public DataManagerSyncPacket() {
+        this(DataManagers.REGISTRY.stream().filter(DataManager::isSynced).<Entry<?>>map(Entry::new).toList());
+    }
+
+    @Override
+    public @NotNull Type<? extends CustomPacketPayload> type() {
+        return TYPE;
+    }
+
+    void handle(boolean isMemoryConnection) {
+        if (isMemoryConnection) {
+            LOGGER.info("Ignoring DataManager sync on logical server");
+            return;
+        }
+        for (Entry<?> v : values) {
+            v.handle();
+        }
+    }
+
+    record Entry<T>(DataManager<T> manager, Map<ResourceLocation, T> values) {
+        Entry(DataManager<T> manager) {
+            this(manager, manager.getElements());
+        }
+
+        void handle() {
+            manager.bindValues(values);
+        }
+    }
+}

@@ -10,25 +10,19 @@ import net.dries007.tfc.common.blocks.plant.fruit.FruitTreeLeavesBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.component.food.FoodCapability;
 import net.dries007.tfc.common.component.food.IFood;
-import net.dries007.tfc.common.items.TFCItems;
-import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.events.StartFireEvent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -37,32 +31,30 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddReloadListenerEvent;
+import net.neoforged.neoforge.event.OnDatapackSyncEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
-import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.items.ItemStackHandler;
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.vvxzv.ktfcc.common.block.entity.StoveBlockEntity;
 import net.vvxzv.ktfcc.common.data.DataManagers;
 import net.vvxzv.ktfcc.common.data.Plate;
-import net.vvxzv.ktfcc.common.data.TeaEffect;
-import net.vvxzv.ktfcc.common.utils.AllTags;
 import net.vvxzv.ktfcc.common.utils.Decaying;
 import net.vvxzv.ktfcc.compat.firmalife.FLEventHandler;
-
-import java.util.List;
+import net.vvxzv.ktfcc.network.DataManagerSyncPacket;
 
 public class NeoForgeEventHandler {
 
     public static void init() {
         IEventBus bus = NeoForge.EVENT_BUS;
         bus.addListener(NeoForgeEventHandler::addReloadListeners);
+        bus.addListener(NeoForgeEventHandler::onDataPackSync);
         bus.addListener(NeoForgeEventHandler::onFireStart);
         bus.addListener(NeoForgeEventHandler::addFuelToStove);
         bus.addListener(NeoForgeEventHandler::cancelPlaceRottenBlockItem);
         bus.addListener(NeoForgeEventHandler::setPlate);
         bus.addListener(NeoForgeEventHandler::plateTooltip);
         bus.addListener(NeoForgeEventHandler::pickFruits);
-        bus.addListener(NeoForgeEventHandler::teaTooltip);
 
         if(ModList.get().isLoaded("firmalife")) {
             FLEventHandler.init(bus);
@@ -71,6 +63,15 @@ public class NeoForgeEventHandler {
 
     public static void addReloadListeners(AddReloadListenerEvent event) {
         DataManagers.REGISTRY.forEach(event::addListener);
+    }
+
+    public static void onDataPackSync(OnDatapackSyncEvent event) {
+        if (event.getPlayer() == null) {
+            PacketDistributor.sendToAllPlayers(new DataManagerSyncPacket());
+        } else {
+            PacketDistributor.sendToPlayer(event.getPlayer(), new DataManagerSyncPacket());
+        }
+
     }
 
     public static void onFireStart(StartFireEvent event) {
@@ -238,17 +239,5 @@ public class NeoForgeEventHandler {
         }
         event.setCancellationResult(ItemInteractionResult.SUCCESS);
         event.setCanceled(true);
-    }
-
-    public static void teaTooltip(ItemTooltipEvent event) {
-        ItemStack stack = event.getItemStack();
-        TeaEffect tea = TeaEffect.get(stack);
-        if(tea != null) {
-            List<MobEffectInstance> effects = tea.getEffects();
-            if(!effects.isEmpty()) {
-                event.getToolTip().add(CommonComponents.space());
-                PotionContents.addPotionTooltip(effects, event.getToolTip()::add, 1.0F, event.getContext().tickRate());
-            }
-        }
     }
 }

@@ -1,9 +1,14 @@
 package net.vvxzv.ktfcc.mixin.item;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.item.TeacupItem;
+import net.minecraft.network.chat.CommonComponents;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.level.Level;
 import net.vvxzv.ktfcc.Config;
 import net.vvxzv.ktfcc.common.data.TeaEffect;
@@ -12,6 +17,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
@@ -51,5 +57,17 @@ public class TeacupItemMixin {
     @Redirect(method = "appendHoverText", at = @At(value = "INVOKE", target = "Ljava/util/List;isEmpty()Z"))
     private boolean removeEffectText(List<Object> instance) {
         return true;
+    }
+
+    @Inject(method = "appendHoverText", at = @At("TAIL"))
+    private void addTooltip(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag tooltipFlag, CallbackInfo ci) {
+        TeaEffect tea = TeaEffect.get(stack);
+        if(tea != null) {
+            List<MobEffectInstance> effects = tea.getEffects();
+            if(!effects.isEmpty()) {
+                tooltip.add(CommonComponents.space());
+                PotionContents.addPotionTooltip(effects, tooltip::add, 1.0F, context.tickRate());
+            }
+        }
     }
 }

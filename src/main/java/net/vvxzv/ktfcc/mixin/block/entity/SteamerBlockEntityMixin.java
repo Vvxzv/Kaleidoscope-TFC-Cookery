@@ -54,8 +54,8 @@ public class SteamerBlockEntityMixin extends BaseBlockEntity {
     @Inject(method = "hasHeatSource", at = @At("RETURN"), cancellable = true)
     private void heatSource(Level level, CallbackInfoReturnable<Boolean> cir){
         BlockState belowState = level.getBlockState(this.worldPosition.below());
-        if(belowState.hasProperty(BlockStateProperties.LIT) && belowState.getValue(BlockStateProperties.LIT)){
-            cir.setReturnValue(true);
+        if(belowState.hasProperty(BlockStateProperties.LIT)){
+            cir.setReturnValue(belowState.getValue(BlockStateProperties.LIT));
             return;
         }
         cir.setReturnValue(belowState.is(AllTags.Blocks.HEAT_SOURCE));
