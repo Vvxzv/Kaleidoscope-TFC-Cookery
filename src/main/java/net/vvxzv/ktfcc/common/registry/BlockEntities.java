@@ -12,6 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.vvxzv.ktfcc.KaleidoscopeTFCCookery;
 import net.vvxzv.ktfcc.common.block.AbstractBushBlock;
 import net.vvxzv.ktfcc.common.block.entity.DecayingFoodBlockEntity;
+import net.vvxzv.ktfcc.common.block.entity.OilPotBlockEntity;
 import net.vvxzv.ktfcc.common.block.entity.StoveBlockEntity;
 import net.vvxzv.ktfcc.common.block.entity.BushBlockEntity;
 
@@ -53,6 +54,14 @@ public class BlockEntities {
                     BuiltInRegistries.BLOCK.stream()
                             .filter(block -> block instanceof AbstractBushBlock)
                             .toArray(Block[]::new)
+            ).build(null)
+    );
+
+    public static final RegistryObject<BlockEntityType<OilPotBlockEntity>> OIL_POT = BLOCK_ENTITIES.register(
+            "oil_pot",
+            () -> BlockEntityType.Builder.of(
+                    OilPotBlockEntity::new,
+                    Blocks.OIL_POT.get()
             ).build(null)
     );
 }

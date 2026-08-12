@@ -29,10 +29,12 @@
   "block.ktfcc.tea_tree.biluochun": "Biluochun Tea Tree",
   "block.ktfcc.mugwort": "Mugwort",
   "block.ktfcc.wild_mugwort": "Wild Mugwort",
+  "block.ktfcc.oil_pot": "Oil Pot",
 
   "tooltip.ktfcc.caterpillar": "Chance to drop when harvesting cabbage.",
   "tooltip.ktfcc.straw_hat": "When worn, breaking grass drops extra straw.",
   "tooltip.ktfcc.shawarma_spit": "The bottom of the block requires a heat source.",
+  "tooltip.ktfcc.oil_pot": "Can be filled with liquid oil",
 
   "ktfcc.eat.rotten_block": "Ew~ It looks rotten. It's so gross. I'd not eat it",
 

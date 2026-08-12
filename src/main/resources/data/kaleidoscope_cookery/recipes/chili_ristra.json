@@ -5,7 +5,7 @@
 		"count": 1
 	},
 	"pattern": [
-		"aa",
+		"ab",
 		"aa",
 		"aa"
 	],
@@ -15,6 +15,9 @@
 			"ingredient": {
 				"tag": "ktfcc:red_pepper"
 			}
+		},
+		"b": {
+			"item": "minecraft:stick"
 		}
 	}
 }

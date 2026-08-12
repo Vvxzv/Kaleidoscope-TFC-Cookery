@@ -10,59 +10,55 @@ import net.dries007.tfc.common.blocks.plant.fruit.FruitTreeLeavesBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.food.IFood;
-import net.dries007.tfc.common.items.TFCItems;
-import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.events.StartFireEvent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AddReloadListenerEvent;
+import net.minecraftforge.event.OnDatapackSyncEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.network.PacketDistributor;
+import net.vvxzv.ktfcc.common.block.entity.OilPotBlockEntity;
 import net.vvxzv.ktfcc.common.block.entity.StoveBlockEntity;
 import net.vvxzv.ktfcc.common.data.FoodEffect;
+import net.vvxzv.ktfcc.common.data.Oil;
 import net.vvxzv.ktfcc.common.data.Plate;
 import net.vvxzv.ktfcc.common.data.TeaEffect;
-import net.vvxzv.ktfcc.common.utils.AllTags;
 import net.vvxzv.ktfcc.common.utils.Decaying;
 import net.vvxzv.ktfcc.compat.firmalife.FLEventHandler;
-
-import java.util.List;
+import net.vvxzv.ktfcc.network.PacketHandler;
 
 public class ForgeEventHandler {
 
     public static void init() {
         IEventBus bus = MinecraftForge.EVENT_BUS;
         bus.addListener(ForgeEventHandler::addReloadListeners);
+        bus.addListener(ForgeEventHandler::onDataPackSync);
         bus.addListener(ForgeEventHandler::onFireStart);
         bus.addListener(ForgeEventHandler::addFuelToStove);
         bus.addListener(ForgeEventHandler::cancelPlaceRottenBlockItem);
         bus.addListener(ForgeEventHandler::setPlate);
         bus.addListener(ForgeEventHandler::plateTooltip);
         bus.addListener(ForgeEventHandler::pickFruits);
-        bus.addListener(ForgeEventHandler::teaTooltip);
 
         if(ModList.get().isLoaded("firmalife")) {
             FLEventHandler.init(bus);
@@ -70,9 +66,19 @@ public class ForgeEventHandler {
     }
 
     public static void addReloadListeners(AddReloadListenerEvent event) {
-        event.addListener(TeaEffect.MANAGER);
         event.addListener(FoodEffect.MANAGER);
         event.addListener(Plate.MANAGER);
+        event.addListener(TeaEffect.MANAGER);
+        event.addListener(Oil.MANAGER);
+    }
+
+    public static void onDataPackSync(OnDatapackSyncEvent event) {
+        ServerPlayer player = event.getPlayer();
+        PacketDistributor.PacketTarget target = player == null ? PacketDistributor.ALL.noArg() : PacketDistributor.PLAYER.with(() -> player);
+        PacketHandler.send(target, FoodEffect.MANAGER.createSyncPacket());
+        PacketHandler.send(target, Plate.MANAGER.createSyncPacket());
+        PacketHandler.send(target, TeaEffect.MANAGER.createSyncPacket());
+        PacketHandler.send(target, Oil.MANAGER.createSyncPacket());
     }
 
     public static void onFireStart(StartFireEvent event) {
@@ -238,17 +244,5 @@ public class ForgeEventHandler {
         }
         event.setCancellationResult(InteractionResult.SUCCESS);
         event.setCanceled(true);
-    }
-
-    public static void teaTooltip(ItemTooltipEvent event) {
-        ItemStack stack = event.getItemStack();
-        TeaEffect tea = TeaEffect.get(stack);
-        if(tea != null) {
-            List<MobEffectInstance> effects = tea.getEffects();
-            if(!effects.isEmpty()) {
-                event.getToolTip().add(CommonComponents.space());
-                PotionUtils.addPotionTooltip(effects, event.getToolTip(), 1.0F);
-            }
-        }
     }
 }

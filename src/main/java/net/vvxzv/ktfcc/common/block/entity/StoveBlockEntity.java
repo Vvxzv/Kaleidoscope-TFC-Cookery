@@ -10,6 +10,7 @@ import net.minecraft.nbt.ListTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.vvxzv.ktfcc.common.registry.BlockEntities;
@@ -22,12 +23,16 @@ public class StoveBlockEntity extends TFCBlockEntity {
     private float temperature;
     private long burntTick;
 
-    public StoveBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(BlockEntities.STOVE.get(), pPos, pBlockState);
+    protected StoveBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
         this.fuels = new ItemStack[]{ItemStack.EMPTY, ItemStack.EMPTY, ItemStack.EMPTY, ItemStack.EMPTY};
         this.maxTemperature = 0;
         this.temperature = 0;
         this.burntTick = 0;
+    }
+
+    public StoveBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        this(BlockEntities.STOVE.get(), pPos, pBlockState);
     }
 
     public void serverTick(Level level, BlockPos pos, BlockState state) {

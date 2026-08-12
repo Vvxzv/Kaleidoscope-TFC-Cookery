@@ -170,4 +170,9 @@ public class Utils {
         long food2CreationDate = food2 != null? food2.getCreationDate(): -1L;
         return Math.min(food1CreationDate, food2CreationDate);
     }
+
+    public static FluidStack getContainedFluid(ItemStack stack) {
+        IFluidHandlerItem handler = Helpers.getCapability(stack, Capabilities.FLUID_ITEM);
+        return handler != null ? handler.drain(Integer.MAX_VALUE, IFluidHandler.FluidAction.SIMULATE) : FluidStack.EMPTY;
+    }
 }

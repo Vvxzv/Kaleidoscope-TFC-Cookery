@@ -13,6 +13,7 @@ import net.vvxzv.ktfcc.common.registry.Blocks;
 import net.vvxzv.ktfcc.common.registry.CreativeTab;
 import net.vvxzv.ktfcc.common.registry.Items;
 import net.vvxzv.ktfcc.common.utils.FoodTraits;
+import net.vvxzv.ktfcc.network.PacketHandler;
 
 @Mod(KaleidoscopeTFCCookery.MODID)
 public class KaleidoscopeTFCCookery {
@@ -29,6 +30,7 @@ public class KaleidoscopeTFCCookery {
         LootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         CreativeTab.CREATIVE_MODE_TAB.register(modEventBus);
         ForgeEventHandler.init();
+        PacketHandler.init();
 
         modEventBus.addListener(this::setup);
 

@@ -92,7 +92,11 @@ public abstract class StockpotBlockEntityMixin extends BaseBlockEntity {
     @Inject(method = "hasHeatSource", at = @At("RETURN"), cancellable = true, remap = false)
     private void heatSource(Level level, CallbackInfoReturnable<Boolean> cir){
         BlockState belowState = level.getBlockState(this.worldPosition.below());
-        cir.setReturnValue(belowState.hasProperty(BlockStateProperties.LIT)? belowState.getValue(BlockStateProperties.LIT) : belowState.is(AllTags.Blocks.HEAT_SOURCE));
+        if(belowState.hasProperty(BlockStateProperties.LIT)){
+            cir.setReturnValue(belowState.getValue(BlockStateProperties.LIT));
+            return;
+        }
+        cir.setReturnValue(belowState.is(AllTags.Blocks.HEAT_SOURCE));
     }
 
     @Shadow(remap = false)

@@ -65,4 +65,6 @@ public class Blocks {
             )
     );
 
+    public static final RegistryObject<Block> OIL_POT = registerBlock("oil_pot", OilPotBlock::new);
+
 }

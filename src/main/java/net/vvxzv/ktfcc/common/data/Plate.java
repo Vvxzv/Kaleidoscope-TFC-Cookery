@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Collections;
 
-public final class Plate {
+public class Plate {
     public static final DataManager<Plate> MANAGER = new DataManager<>(
             ResourceLocation.fromNamespaceAndPath(KaleidoscopeTFCCookery.MODID, "plate"),
             "plate", Plate::new, Plate::new, Plate::encode, Plate.Packet::new

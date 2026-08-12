@@ -1,7 +1,9 @@
 package net.vvxzv.ktfcc.client;
 
+import com.github.ysbbbbbb.kaleidoscopecookery.item.OilPotItem;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -19,5 +21,7 @@ public class ClientEventHandler {
 
         RenderTypeRegistry.register(RenderType.cutout(), Blocks.MUGWORT.get());
         RenderTypeRegistry.register(RenderType.cutout(), Blocks.WILD_MUGWORT.get());
+
+        event.enqueueWork(() -> ItemProperties.register(Blocks.OIL_POT.get().asItem(), OilPotItem.HAS_OIL_PROPERTY, ((pStack, pLevel, pEntity, pSeed) -> pStack.hasTag()? 1: 0)));
     }
 }
