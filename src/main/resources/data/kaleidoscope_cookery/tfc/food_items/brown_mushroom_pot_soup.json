@@ -3,8 +3,8 @@
 		"item": "kaleidoscope_cookery:brown_mushroom_pot_soup"
 	},
 	"decay_modifier": 1,
-	"hunger": 4,
-	"saturation": 2,
+	"hunger": 6,
+	"saturation": 4,
 	"water": 40,
-	"vegetables": 5.6
+	"vegetables": 4.8
 }

@@ -3,7 +3,7 @@
 		"item": "kaleidoscope_cookery:candied_potato"
 	},
 	"decay_modifier": 1.5,
-	"hunger": 4,
-	"saturation": 4,
-	"vegetables": 2.5
+	"hunger": 10,
+	"saturation": 12,
+	"vegetables": 3.19
 }

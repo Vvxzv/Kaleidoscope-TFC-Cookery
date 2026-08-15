@@ -3,8 +3,8 @@
 		"item": "kaleidoscope_cookery:stuffed_tiger_skin_pepper"
 	},
 	"decay_modifier": 2,
-	"hunger": 4,
-	"saturation": 2,
-	"vegetables": 1.3,
-	"protein": 1.5
+	"hunger": 18,
+	"saturation": 10,
+	"vegetables": 2.4,
+	"protein": 1.92
 }

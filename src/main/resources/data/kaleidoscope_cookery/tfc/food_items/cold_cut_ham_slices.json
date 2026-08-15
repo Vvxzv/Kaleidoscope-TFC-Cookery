@@ -3,7 +3,7 @@
 		"item": "kaleidoscope_cookery:cold_cut_ham_slices"
 	},
 	"decay_modifier": 1.5,
-	"hunger": 4,
-	"saturation": 3,
+	"hunger": 30,
+	"saturation": 24,
 	"protein": 2.5
 }

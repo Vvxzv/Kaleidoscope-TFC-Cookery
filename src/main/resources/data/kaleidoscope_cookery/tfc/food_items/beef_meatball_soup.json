@@ -3,9 +3,9 @@
 		"item": "kaleidoscope_cookery:beef_meatball_soup"
 	},
 	"decay_modifier": 2,
-	"hunger": 4,
-	"saturation": 4,
+	"hunger": 8,
+	"saturation": 8,
 	"water": 20,
-	"vegetables": 1.5,
+	"vegetables": 1.25,
 	"protein": 4
 }

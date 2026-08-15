@@ -3,7 +3,7 @@
 		"item": "kaleidoscope_cookery:cold_roasted_meat"
 	},
 	"decay_modifier": 1.5,
-	"hunger": 4,
-	"saturation": 3,
-	"protein": 3.1
+	"hunger": 10,
+	"saturation": 9,
+	"protein": 6
 }

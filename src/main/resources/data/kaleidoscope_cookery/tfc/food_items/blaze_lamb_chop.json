@@ -3,7 +3,7 @@
 		"item": "kaleidoscope_cookery:blaze_lamb_chop"
 	},
 	"decay_modifier": 1.5,
-	"hunger": 4,
-	"saturation": 2,
-	"protein": 1.9
+	"hunger": 10,
+	"saturation": 6,
+	"protein": 1.92
 }

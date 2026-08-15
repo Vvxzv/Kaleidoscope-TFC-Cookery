@@ -6,9 +6,11 @@ import net.dries007.tfc.common.capabilities.food.IFood;
 import net.dries007.tfc.common.capabilities.food.Nutrient;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.fluids.FluidStack;
@@ -174,5 +176,16 @@ public class Utils {
     public static FluidStack getContainedFluid(ItemStack stack) {
         IFluidHandlerItem handler = Helpers.getCapability(stack, Capabilities.FLUID_ITEM);
         return handler != null ? handler.drain(Integer.MAX_VALUE, IFluidHandler.FluidAction.SIMULATE) : FluidStack.EMPTY;
+    }
+
+    public static boolean isValidItems(List<ItemStack> itemStacks, TagKey<Item> tagKey) {
+        for (ItemStack itemStack: itemStacks) {
+            if(!itemStack.isEmpty()) {
+                if(!itemStack.is(tagKey)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

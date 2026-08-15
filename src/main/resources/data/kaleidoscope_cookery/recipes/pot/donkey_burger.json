@@ -13,6 +13,15 @@
 		},
 		{
 			"item": "tfc:food/horse_meat"
+		},
+		{
+			"tag": "forge:vegetables/chilipepper"
+		},
+		{
+			"tag": "forge:dough"
+		},
+		{
+			"item": "tfc:food/horse_meat"
 		}
 	],
 	"carrier": {

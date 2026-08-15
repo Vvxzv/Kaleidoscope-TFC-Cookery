@@ -3,9 +3,9 @@
 		"item": "kaleidoscope_cookery:four_joy_meatball_soup"
 	},
 	"decay_modifier": 1,
-	"hunger": 4,
-	"saturation": 4,
+	"hunger": 14,
+	"saturation": 16,
 	"water": 30,
-	"vegetables": 1.9,
-	"protein": 2.5
+	"vegetables": 3.2,
+	"protein": 6.4
 }

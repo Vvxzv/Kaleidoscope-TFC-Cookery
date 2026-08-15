@@ -3,11 +3,11 @@
 		"item": "kaleidoscope_cookery:buddha_jumps_over_the_wall"
 	},
 	"decay_modifier": 1.5,
-	"hunger": 4,
-	"saturation": 4,
+	"hunger": 6,
+	"saturation": 8,
 	"water": 40,
-	"fruit": 1.3,
-	"vegetables": 2.5,
-	"protein": 3.8,
-	"dairy": 1.3
+	"fruit": 1.6,
+	"vegetables": 2.4,
+	"protein": 4.8,
+	"dairy": 0.48
 }

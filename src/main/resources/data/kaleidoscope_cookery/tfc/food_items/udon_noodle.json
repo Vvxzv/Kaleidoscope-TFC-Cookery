@@ -3,11 +3,11 @@
 		"item": "kaleidoscope_cookery:udon_noodle"
 	},
 	"decay_modifier": 2.5,
-	"hunger": 4,
-	"saturation": 3,
+	"hunger": 8,
+	"saturation": 6,
 	"water": 15,
-	"grain": 2.5,
+	"grain": 2,
 	"vegetables": 2,
-	"protein": 3.5,
-	"dairy": 0.5
+	"protein": 4.37,
+	"dairy": 0.37
 }

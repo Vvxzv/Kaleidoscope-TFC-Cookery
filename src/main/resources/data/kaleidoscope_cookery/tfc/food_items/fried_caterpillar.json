@@ -3,8 +3,8 @@
 		"item": "kaleidoscope_cookery:fried_caterpillar"
 	},
 	"decay_modifier": 1,
-	"hunger": 4,
-	"saturation": 4,
-	"grain": 1.3,
-	"protein": 2.5
+	"hunger": 10,
+	"saturation": 12,
+	"grain": 1.92,
+	"protein": 2.4
 }

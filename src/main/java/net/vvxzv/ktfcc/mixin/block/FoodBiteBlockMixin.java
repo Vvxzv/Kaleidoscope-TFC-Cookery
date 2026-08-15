@@ -3,6 +3,7 @@ package net.vvxzv.ktfcc.mixin.block;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.food.FoodBiteBlock;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.food.FoodBlock;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
+import net.dries007.tfc.common.capabilities.food.FoodData;
 import net.dries007.tfc.common.capabilities.food.IFood;
 import net.dries007.tfc.common.capabilities.food.TFCFoodData;
 import net.dries007.tfc.util.Helpers;
@@ -14,7 +15,6 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.food.FoodData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.EntityBlock;
@@ -44,6 +44,10 @@ public class FoodBiteBlockMixin extends FoodBlock implements EntityBlock {
     @Shadow(remap = false)
     protected IntegerProperty bites;
 
+    @Final
+    @Shadow(remap = false)
+    protected int maxBites;
+
     @Override
     public @Nullable BlockEntity newBlockEntity(@NotNull BlockPos pPos, @NotNull BlockState pState) {
         return new DecayingFoodBlockEntity(pPos, pState);
@@ -60,11 +64,13 @@ public class FoodBiteBlockMixin extends FoodBlock implements EntityBlock {
     }
 
     @Redirect(method = "eat", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/food/FoodData;eat(IF)V"))
-    private void eat(FoodData instance, int pFoodLevelModifier, float pSaturationLevelModifier, Level level, BlockPos pos, BlockState state, Player player) {
+    private void eat(net.minecraft.world.food.FoodData instance, int pFoodLevelModifier, float pSaturationLevelModifier, Level level, BlockPos pos, BlockState state, Player player) {
         if(instance instanceof TFCFoodData foodData){
             IFood iFood = FoodCapability.get(this.asItem().getDefaultInstance());
             if (iFood != null) {
-                foodData.eat(iFood);
+                FoodData data = iFood.getData();
+                FoodData newData = new FoodData(4, data.water(), data.saturation() / this.maxBites, data.grain(), data.fruit(), data.vegetables(), data.protein(), data.dairy(), 0);
+                foodData.eat(newData);
             }
         }
         ItemStack stack = new ItemStack(this.asItem());

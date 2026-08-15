@@ -2,7 +2,6 @@ package net.vvxzv.ktfcc.mixin.block.entity;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.blockentity.BaseBlockEntity;
 import com.github.ysbbbbbb.kaleidoscopecookery.blockentity.kitchen.PotBlockEntity;
-import com.github.ysbbbbbb.kaleidoscopecookery.util.ItemUtils;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.capabilities.food.DynamicBowlHandler;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
@@ -87,23 +86,11 @@ public abstract class PotBlockEntityMixin extends BaseBlockEntity {
 
     @Redirect(method = "startCooking", at = @At(value = "INVOKE", target = "Lcom/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/PotBlockEntity;applySuspiciousRecipe()V"), remap = false)
     private void addDishRecipe(PotBlockEntity instance) {
-        if(this.isValidItems()) {
+        if(Utils.isValidItems(this.inputs, AllTags.Items.POT_INGREDIENT)) {
             this.setDynamicNutrientRecipe();
         } else {
             this.applySuspiciousRecipe();
         }
-    }
-
-    @Unique
-    private boolean isValidItems() {
-        for (ItemStack itemStack: this.inputs) {
-            if(!itemStack.isEmpty()) {
-                if(!itemStack.is(AllTags.Items.POT_INGREDIENT)) {
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 
     @Unique

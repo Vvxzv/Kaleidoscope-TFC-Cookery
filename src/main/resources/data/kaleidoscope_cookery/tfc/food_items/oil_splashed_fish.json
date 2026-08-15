@@ -3,8 +3,8 @@
 		"item": "kaleidoscope_cookery:oil_splashed_fish"
 	},
 	"decay_modifier": 2,
-	"hunger": 4,
-	"saturation": 3,
-	"vegetables": 1.5,
-	"protein": 1.9
+	"hunger": 18,
+	"saturation": 15,
+	"vegetables": 2,
+	"protein": 4
 }

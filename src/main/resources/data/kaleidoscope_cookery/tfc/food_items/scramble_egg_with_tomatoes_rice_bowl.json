@@ -4,10 +4,10 @@
 	},
 	"decay_modifier": 2.5,
 	"hunger": 4,
-	"saturation": 4,
+	"saturation": 5,
 	"water": 5,
 	"grain": 1,
-	"vegetables": 3.6,
-	"protein": 3.6,
-	"dairy": 1.2
+	"vegetables": 4.5,
+	"protein": 4.5,
+	"dairy": 0.9
 }
