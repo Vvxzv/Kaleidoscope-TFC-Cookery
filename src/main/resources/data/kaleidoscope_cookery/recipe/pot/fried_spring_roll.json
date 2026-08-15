@@ -14,6 +14,20 @@
 		],
 		{
 			"tag": "c:mushrooms"
+		},
+		{
+			"tag": "c:foods/flour"
+		},
+		[
+			{
+				"item": "kaleidoscope_cookery:raw_pork_belly"
+			},
+			{
+				"item": "tfc:food/pork"
+			}
+		],
+		{
+			"tag": "c:mushrooms"
 		}
 	],
 	"result": {

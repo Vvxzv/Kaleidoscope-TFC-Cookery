@@ -3,10 +3,10 @@
 		"item": "kaleidoscope_cookery:scramble_egg_with_tomatoes"
 	},
 	"decay_modifier": 3,
-	"hunger": 4,
-	"saturation": 3,
+	"hunger": 8,
+	"saturation": 6,
 	"water": 10,
-	"vegetables": 3.6,
-	"protein": 3.6,
-	"dairy": 1.2
+	"vegetables": 3,
+	"protein": 1.8,
+	"dairy": 0.9
 }

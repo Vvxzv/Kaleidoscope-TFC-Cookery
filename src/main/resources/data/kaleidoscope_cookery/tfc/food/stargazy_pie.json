@@ -3,9 +3,10 @@
 		"item": "kaleidoscope_cookery:stargazy_pie"
 	},
 	"decay_modifier": 2,
-	"hunger": 4,
-	"saturation": 3,
-	"grain": 1.3,
-	"fruit": 1,
-	"protein": 3
+	"hunger": 14,
+	"saturation": 12,
+	"grain": 0.8,
+	"vegetables": 1.6,
+	"protein": 2.4,
+	"dairy": 0.24
 }

@@ -3,8 +3,8 @@
 		"item": "kaleidoscope_cookery:pork_bone_soup"
 	},
 	"decay_modifier": 1.5,
-	"hunger": 4,
-	"saturation": 2,
+	"hunger": 8,
+	"saturation": 4,
 	"water": 30,
-	"protein": 2.5
+	"protein": 3
 }

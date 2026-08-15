@@ -3,7 +3,7 @@
 		"item": "kaleidoscope_cookery:spicy_rabbit_head"
 	},
 	"decay_modifier": 1.5,
-	"hunger": 4,
-	"vegetables": 1.3,
-	"protein": 1.3
+	"hunger": 10,
+	"vegetables": 2.4,
+	"protein": 1.2
 }

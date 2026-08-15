@@ -3,9 +3,9 @@
 		"item": "kaleidoscope_cookery:numbing_spicy_chicken"
 	},
 	"decay_modifier": 1.5,
-	"hunger": 4,
-	"saturation": 4,
+	"hunger": 10,
+	"saturation": 12,
 	"water": 20,
-	"vegetables": 1.3,
-	"protein": 2.5
+	"vegetables": 2.4,
+	"protein": 2.4
 }

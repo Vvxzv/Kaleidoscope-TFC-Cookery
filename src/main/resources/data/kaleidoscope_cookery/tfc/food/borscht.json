@@ -3,9 +3,9 @@
 		"item": "kaleidoscope_cookery:borscht"
 	},
 	"decay_modifier": 2.5,
-	"hunger": 4,
-	"saturation": 3,
+	"hunger": 8,
+	"saturation": 6,
 	"water": 30,
-	"vegetables": 2.5,
-	"protein": 2.5
+	"vegetables": 5,
+	"protein": 2
 }

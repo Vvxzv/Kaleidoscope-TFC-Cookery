@@ -5,7 +5,5 @@
 	"decay_modifier": 1.5,
 	"hunger": 4,
 	"saturation": 3,
-	"fruit": 0.6,
-	"vegetables": 0.6,
-	"protein": 3
+	"protein": 3.19
 }

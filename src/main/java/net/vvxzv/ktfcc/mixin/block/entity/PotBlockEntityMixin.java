@@ -2,7 +2,6 @@ package net.vvxzv.ktfcc.mixin.block.entity;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.blockentity.BaseBlockEntity;
 import com.github.ysbbbbbb.kaleidoscopecookery.blockentity.kitchen.PotBlockEntity;
-import com.github.ysbbbbbb.kaleidoscopecookery.util.ItemUtils;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.component.Bowl;
 import net.dries007.tfc.common.component.TFCComponents;
@@ -10,7 +9,6 @@ import net.dries007.tfc.common.component.food.FoodCapability;
 import net.dries007.tfc.common.component.food.FoodData;
 import net.dries007.tfc.common.component.food.IFood;
 import net.dries007.tfc.common.component.item.ItemListComponent;
-import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.entity.LivingEntity;
@@ -31,8 +29,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
-import java.util.ArrayList;
 
 @Mixin(PotBlockEntity.class)
 public abstract class PotBlockEntityMixin extends BaseBlockEntity {
@@ -89,23 +85,11 @@ public abstract class PotBlockEntityMixin extends BaseBlockEntity {
 
     @Redirect(method = "startCooking", at = @At(value = "INVOKE", target = "Lcom/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/PotBlockEntity;applySuspiciousRecipe()V"))
     private void addDishRecipe(PotBlockEntity instance) {
-        if(this.isValidItems()) {
+        if(Utils.isValidItems(this.inputs, AllTags.Items.POT_INGREDIENT)) {
             this.setDynamicNutrientRecipe();
         } else {
             this.applySuspiciousRecipe();
         }
-    }
-
-    @Unique
-    private boolean isValidItems() {
-        for (ItemStack itemStack: this.inputs) {
-            if(!itemStack.isEmpty()) {
-                if(!itemStack.is(AllTags.Items.POT_INGREDIENT)) {
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 
     @Unique

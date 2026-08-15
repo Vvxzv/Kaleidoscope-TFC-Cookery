@@ -3,8 +3,8 @@
 		"item": "kaleidoscope_cookery:golden_salad"
 	},
 	"decay_modifier": 0,
-	"hunger": 4,
-	"saturation": 5,
+	"hunger": 22,
+	"saturation": 30,
 	"water": 15,
 	"fruit": 1,
 	"vegetables": 1

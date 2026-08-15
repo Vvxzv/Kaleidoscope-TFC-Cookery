@@ -6,6 +6,7 @@
 	"hunger": 4,
 	"saturation": 5,
 	"water": 10,
-	"vegetables": 2,
-	"protein": 2.5
+	"grain": 0.25,
+	"vegetables": 2.5,
+	"protein": 4
 }

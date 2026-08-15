@@ -35,6 +35,7 @@
     "effect.FlatulenceEventMixin",
     "item.BowlFoodBlockItemMixin",
     "item.FoodWithEffectsItemMixin",
+    "item.RecipeItemMixin",
     "item.SickleItemMixin",
     "item.StrawHatItemMixin",
     "item.TeacupItemMixin",

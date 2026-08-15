@@ -3,7 +3,7 @@
 		"item": "kaleidoscope_cookery:fondant_spider_eye"
 	},
 	"decay_modifier": 3,
-	"hunger": 4,
-	"saturation": 1,
-	"protein": 1.3
+	"hunger": 14,
+	"saturation": 4,
+	"protein": 2.34
 }

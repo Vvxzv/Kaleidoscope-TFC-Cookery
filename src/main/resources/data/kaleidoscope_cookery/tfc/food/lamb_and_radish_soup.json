@@ -3,9 +3,9 @@
 		"item": "kaleidoscope_cookery:lamb_and_radish_soup"
 	},
 	"decay_modifier": 2,
-	"hunger": 4,
-	"saturation": 4,
+	"hunger": 8,
+	"saturation": 8,
 	"water": 30,
-	"vegetables": 2,
-	"protein": 2
+	"vegetables": 3.75,
+	"protein": 1.5
 }

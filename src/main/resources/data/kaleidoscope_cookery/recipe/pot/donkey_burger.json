@@ -2,7 +2,7 @@
 	"type": "kaleidoscope_cookery:pot",
 	"ingredients": [
 		{
-			"tag": "c:vegetables/chilipepper"
+			"tag": "ktfcc:chilipepper"
 		},
 		{
 			"tag": "c:dough"
@@ -11,7 +11,7 @@
 			"item": "tfc:food/horse_meat"
 		},
 		{
-			"tag": "c:vegetables/chilipepper"
+			"tag": "ktfcc:chilipepper"
 		},
 		{
 			"tag": "c:dough"

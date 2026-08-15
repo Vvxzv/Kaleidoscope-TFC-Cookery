@@ -2,6 +2,9 @@ package net.vvxzv.ktfcc.mixin.block;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.block.food.FoodBiteBlock;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.food.FoodBlock;
+import net.dries007.tfc.common.component.food.FoodCapability;
+import net.dries007.tfc.common.component.food.FoodData;
+import net.dries007.tfc.common.component.food.IFood;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -10,7 +13,6 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.food.FoodData;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -46,6 +48,10 @@ public class FoodBiteBlockMixin extends FoodBlock implements EntityBlock {
     @Shadow
     protected FoodProperties foodProperties;
 
+    @Final
+    @Shadow
+    protected int maxBites;
+
     @Override
     public @Nullable BlockEntity newBlockEntity(@NotNull BlockPos pPos, @NotNull BlockState pState) {
         return new DecayingFoodBlockEntity(pPos, pState);
@@ -72,9 +78,15 @@ public class FoodBiteBlockMixin extends FoodBlock implements EntityBlock {
     }
 
     @Redirect(method = "eat", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/food/FoodData;eat(IF)V"))
-    private void eatAddApplyEffect(FoodData instance, int foodLevelModifier, float saturationLevelModifier, Level level, BlockPos pos, BlockState state, Player player) {
+    private void eatAddApplyEffect(net.minecraft.world.food.FoodData instance, int foodLevelModifier, float saturationLevelModifier, Level level, BlockPos pos, BlockState state, Player player) {
         FoodProperties newFoodProperties = this.foodProperties;
         ItemStack stack = new ItemStack(this.asItem());
+        IFood food = FoodCapability.get(stack);
+        if(food != null && this.maxBites > 0) {
+            FoodData data = food.getData();
+            FoodData newData = new FoodData(4, data.water(), data.saturation() / this.maxBites, data.intoxication(), data.nutrients(), 0);
+            FoodCapability.setFoodForDynamicItemOnCreate(stack, newData);
+        }
         FoodEffect foodEffect = FoodEffect.get(stack);
         if(foodEffect != null) {
             newFoodProperties = Utils.foodPropertiesRemoveEffect(foodProperties);

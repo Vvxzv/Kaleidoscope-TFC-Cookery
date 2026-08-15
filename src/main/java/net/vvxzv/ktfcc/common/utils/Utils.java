@@ -7,10 +7,11 @@ import net.dries007.tfc.common.component.food.Nutrient;
 import net.dries007.tfc.util.calendar.Month;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -165,5 +166,16 @@ public class Utils {
         }
 
         return Component.translatable(month.getTranslationKey(Month.Style.SEASON)).withStyle(ChatFormatting.WHITE);
+    }
+
+    public static boolean isValidItems(List<ItemStack> itemStacks, TagKey<Item> tagKey) {
+        for (ItemStack itemStack: itemStacks) {
+            if(!itemStack.isEmpty()) {
+                if(!itemStack.is(tagKey)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

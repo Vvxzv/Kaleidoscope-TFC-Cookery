@@ -3,8 +3,8 @@
 		"item": "kaleidoscope_cookery:spicy_chicken"
 	},
 	"decay_modifier": 1.5,
-	"hunger": 4,
-	"saturation": 3,
-	"vegetables": 1.6,
-	"protein": 2.5
+	"hunger": 14,
+	"saturation": 12,
+	"vegetables": 2.4,
+	"protein": 2.4
 }

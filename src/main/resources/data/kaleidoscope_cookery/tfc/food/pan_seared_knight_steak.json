@@ -3,8 +3,8 @@
 		"item": "kaleidoscope_cookery:pan_seared_knight_steak"
 	},
 	"decay_modifier": 1.5,
-	"hunger": 4,
-	"saturation": 2,
-	"fruit": 1.3,
-	"protein": 2.5
+	"hunger": 14,
+	"saturation": 8,
+	"fruit": 1.6,
+	"protein": 3.84
 }

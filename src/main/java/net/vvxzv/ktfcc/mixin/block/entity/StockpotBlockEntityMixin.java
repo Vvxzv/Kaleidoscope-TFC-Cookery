@@ -22,7 +22,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -105,7 +104,7 @@ public abstract class StockpotBlockEntityMixin extends BaseBlockEntity {
 
     @Redirect(method = "setRecipe", at = @At(value = "INVOKE", target = "Lcom/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/StockpotBlockEntity;applySuspiciousRecipe()V"))
     private void addTFCPotRecipe(StockpotBlockEntity instance) {
-        if(this.isValidItems()) {
+        if(Utils.isValidItems(this.inputs, AllTags.Items.STOCKPOT_INGREDIENT)) {
             this.setDynamicNutrientRecipe();
         } else {
             this.applySuspiciousRecipe();
@@ -172,18 +171,6 @@ public abstract class StockpotBlockEntityMixin extends BaseBlockEntity {
         } else {
             return false;
         }
-    }
-
-    @Unique
-    private boolean isValidItems() {
-        for (ItemStack itemStack: this.inputs) {
-            if(!itemStack.isEmpty()) {
-                if(!itemStack.is(AllTags.Items.STOCKPOT_INGREDIENT)) {
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 
     @Unique

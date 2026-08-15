@@ -3,11 +3,11 @@
 		"item": "kaleidoscope_cookery:scramble_egg_with_tomatoes_rice_bowl"
 	},
 	"decay_modifier": 2.5,
-	"hunger": 4,
-	"saturation": 4,
+	"hunger": 8,
+	"saturation": 10,
 	"water": 5,
 	"grain": 1.5,
-	"vegetables": 3.6,
-	"protein": 3.6,
-	"dairy": 1.2
+	"vegetables": 3,
+	"protein": 1.8,
+	"dairy": 0.9
 }

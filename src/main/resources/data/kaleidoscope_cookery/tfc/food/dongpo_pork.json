@@ -3,8 +3,8 @@
 		"item": "kaleidoscope_cookery:dongpo_pork"
 	},
 	"decay_modifier": 2,
-	"hunger": 4,
-	"saturation": 3,
+	"hunger": 10,
+	"saturation": 9,
 	"vegetables": 0.6,
-	"protein": 1.9
+	"protein": 2.88
 }
