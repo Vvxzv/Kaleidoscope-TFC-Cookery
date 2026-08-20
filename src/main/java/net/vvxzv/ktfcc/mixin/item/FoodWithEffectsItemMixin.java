@@ -72,6 +72,7 @@ public class FoodWithEffectsItemMixin extends Item {
                 return entity.eat(level, stack, foodProperties);
             }
         }
+
         return super.finishUsingItem(stack, level, entity);
     }
 }

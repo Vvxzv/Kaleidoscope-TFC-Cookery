@@ -74,7 +74,7 @@ public abstract class PotBlockEntityMixin extends BaseBlockEntity {
     }
 
     @Inject(method = "takeOutWithCarrier", at = @At("HEAD"), remap = false)
-    public void ktfcc$bindBowlData(Level level, LivingEntity user, ItemStack mainHandItem, ItemStack finallyResult, CallbackInfoReturnable<Boolean> cir) {
+    public void bindBowlData(Level level, LivingEntity user, ItemStack mainHandItem, ItemStack finallyResult, CallbackInfoReturnable<Boolean> cir) {
         if(finallyResult.is(AllTags.Items.DISHES)) {
             finallyResult.set(TFCComponents.BOWL, Bowl.of(mainHandItem));
         }
@@ -98,8 +98,13 @@ public abstract class PotBlockEntityMixin extends BaseBlockEntity {
     }
 
     @Unique
+    private float getDynamicNutrientMultiplier() {
+        return (float) Config.dynamicNutrientMultiplier;
+    }
+
+    @Unique
     private void setDynamicNutrientRecipe() {
-        float[] nutrients = Utils.getFinalNutrients(this.inputs, 0.8f, this.getMaxDynamicNutrient());
+        float[] nutrients = Utils.getFinalNutrients(this.inputs, this.getDynamicNutrientMultiplier(), this.getMaxDynamicNutrient());
         ItemStack resultItem = new ItemStack(Items.DISHES.get(Utils.matchMainNutrient(nutrients)).get());
 
         FoodData tfcFoodData = new FoodData(
