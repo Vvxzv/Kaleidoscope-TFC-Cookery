@@ -182,8 +182,13 @@ public abstract class StockpotBlockEntityMixin extends BaseBlockEntity {
     }
 
     @Unique
+    private float getDynamicNutrientMultiplier() {
+        return (float) Config.dynamicNutrientMultiplier;
+    }
+
+    @Unique
     private void setDynamicNutrientRecipe() {
-        float[] nutrients = Utils.getFinalNutrients(this.inputs, 0.85f, this.getMaxDynamicNutrient());
+        float[] nutrients = Utils.getFinalNutrients(this.inputs, this.getDynamicNutrientMultiplier(), this.getMaxDynamicNutrient());
         ItemStack resultItem = new ItemStack(TFCItems.SOUPS.get(Utils.matchMainNutrient(nutrients)).get());
 
         IFood food = FoodCapability.get(resultItem);

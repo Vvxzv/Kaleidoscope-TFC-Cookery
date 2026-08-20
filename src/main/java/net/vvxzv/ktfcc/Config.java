@@ -9,8 +9,6 @@ import net.minecraftforge.fml.event.config.ModConfigEvent;
 public class Config {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
-    private static final ForgeConfigSpec.DoubleValue STOVE_TEMPERATURE = BUILDER.comment(" ", "The stove provides the highest temperature that can be reached by a cluster of heat sources. (default 450)", "炉灶提供群峦热源可达到的最高温度（默认450）").defineInRange("stoveTemperature", 450.0, 200, 2000);
-
     private static final ForgeConfigSpec.DoubleValue FLATULENCE_FLY = BUILDER.comment(" ", "A value about flatulence effect add movement when shift key down. (default 0)", "在胀气效果下，当玩家下蹲时给玩家加的移动速度").defineInRange("flatulenceAddFlyMovement", 0, 0, 0.75);
 
     private static final ForgeConfigSpec.BooleanValue FOOD_TOOLTIP = BUILDER.comment(" ", "Turn on or turn off food tooltips", "开启或关闭食物tooltip").define("foodTooltips", true);
@@ -19,20 +17,22 @@ public class Config {
 
     private static final ForgeConfigSpec.DoubleValue MAX_DYNAMIC_NUTRIENT = BUILDER.comment(" ", "Dynamic nutrient value cap. (default 5)", "动态营养值上限").defineInRange("maxDynamicNutrient", 5.0, 0, 100.0);
 
+    private static final ForgeConfigSpec.DoubleValue DYNAMIC_NUTRIENT_MULTIPLIER = BUILDER.comment(" ", "Dynamic nutrient multiplier value about soup or dish.", "汤与炒菜的营养乘数").defineInRange("dynamicNutrientMultiplier", 0.8, 0, 1);
+
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
-    public static double stoveTemperature;
     public static double flatulenceAddFlyMovement;
     public static boolean foodTooltips;
     public static boolean farmersDelightCompat;
     public static double maxDynamicNutrient;
+    public static double dynamicNutrientMultiplier;
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event) {
-        stoveTemperature = STOVE_TEMPERATURE.get();
         flatulenceAddFlyMovement = FLATULENCE_FLY.get();
         foodTooltips = FOOD_TOOLTIP.get();
         farmersDelightCompat = FARMERS_DELIGHT_COMPAT.get();
         maxDynamicNutrient = MAX_DYNAMIC_NUTRIENT.get();
+        dynamicNutrientMultiplier = DYNAMIC_NUTRIENT_MULTIPLIER.get();
     }
 }
