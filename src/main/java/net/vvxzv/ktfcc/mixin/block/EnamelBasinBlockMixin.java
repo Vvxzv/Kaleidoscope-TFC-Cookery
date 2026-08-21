@@ -4,6 +4,7 @@ import com.github.ysbbbbbb.kaleidoscopecookery.block.kitchen.EnamelBasinBlock;
 import com.github.ysbbbbbb.kaleidoscopecookery.item.KitchenShovelItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -22,10 +23,10 @@ public class EnamelBasinBlockMixin extends Block {
     }
 
     @Inject(method = "onShovelClick", at = @At("HEAD"), cancellable = true)
-    private void onShovelClick(BlockState state, Level level, BlockPos pos, Player player, ItemStack mainHandItem, CallbackInfoReturnable<InteractionResult> cir) {
+    private void onShovelClick(BlockState state, Level level, BlockPos pos, Player player, ItemStack mainHandItem, CallbackInfoReturnable<ItemInteractionResult> cir) {
         boolean shovelHasOil = KitchenShovelItem.hasOil(mainHandItem);
         if (shovelHasOil) {
-            cir.setReturnValue(InteractionResult.FAIL);
+            cir.setReturnValue(ItemInteractionResult.FAIL);
         }
     }
 }
