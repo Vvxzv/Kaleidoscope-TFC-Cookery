@@ -14,15 +14,39 @@
 		{
 			"tag": "forge:raw_pork"
 		},
-		{
-			"tag": "forge:vegetables/chilipepper"
-		},
-		{
-			"tag": "forge:vegetables/chilipepper"
-		},
-		{
-			"tag": "forge:vegetables/chilipepper"
-		}
+		[
+			{
+				"item": "tfc:food/yellow_bell_pepper"
+			},
+			{
+				"item": "tfc:food/red_bell_pepper"
+			},
+			{
+				"item": "kaleidoscope_cookery:red_chili"
+			}
+		],
+		[
+			{
+				"item": "tfc:food/yellow_bell_pepper"
+			},
+			{
+				"item": "tfc:food/red_bell_pepper"
+			},
+			{
+				"item": "kaleidoscope_cookery:red_chili"
+			}
+		],
+		[
+			{
+				"item": "tfc:food/yellow_bell_pepper"
+			},
+			{
+				"item": "tfc:food/red_bell_pepper"
+			},
+			{
+				"item": "kaleidoscope_cookery:red_chili"
+			}
+		]
 	],
 	"carrier": {
 		"item": "minecraft:bowl"

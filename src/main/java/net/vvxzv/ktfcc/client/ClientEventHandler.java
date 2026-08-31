@@ -1,7 +1,7 @@
 package net.vvxzv.ktfcc.client;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.item.OilPotItem;
-import dev.architectury.registry.client.rendering.RenderTypeRegistry;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraftforge.api.distmarker.Dist;
@@ -14,13 +14,14 @@ import net.vvxzv.ktfcc.common.registry.Blocks;
 @Mod.EventBusSubscriber(modid = KaleidoscopeTFCCookery.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientEventHandler {
 
+    @SuppressWarnings("removal")
     @SubscribeEvent
     public static void clientSetupEvent(FMLClientSetupEvent event) {
-        Blocks.TEA_TREES.forEach((tea, block) -> RenderTypeRegistry.register(RenderType.cutout(), block.get()));
-        Blocks.WILD_TEA_TREES.forEach((tea, block) -> RenderTypeRegistry.register(RenderType.cutout(), block.get()));
+        Blocks.TEA_TREES.forEach((tea, block) -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
+        Blocks.WILD_TEA_TREES.forEach((tea, block) -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
 
-        RenderTypeRegistry.register(RenderType.cutout(), Blocks.MUGWORT.get());
-        RenderTypeRegistry.register(RenderType.cutout(), Blocks.WILD_MUGWORT.get());
+        ItemBlockRenderTypes.setRenderLayer(Blocks.MUGWORT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(Blocks.WILD_MUGWORT.get(), RenderType.cutout());
 
         event.enqueueWork(() -> ItemProperties.register(Blocks.OIL_POT.get().asItem(), OilPotItem.HAS_OIL_PROPERTY, ((pStack, pLevel, pEntity, pSeed) -> pStack.hasTag()? 1: 0)));
     }
