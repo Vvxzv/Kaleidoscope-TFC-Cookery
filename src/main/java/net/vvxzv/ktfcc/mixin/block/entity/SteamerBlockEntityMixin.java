@@ -48,6 +48,9 @@ public class SteamerBlockEntityMixin extends BaseBlockEntity {
         ItemStack stack = instance.get(index);
         SingleRecipeInput container = new SingleRecipeInput(stack);
         ItemStack resultStack = quickCheck.getRecipeFor(container, level).map((r) -> r.value().assemble(container, level.registryAccess())).orElse(stack);
+        if(ItemStack.isSameItemSameComponents(stack, resultStack)) {
+            return stack;
+        }
         return instance.set(index, FoodCapability.updateFoodFromPrevious(stack, resultStack));
     }
 

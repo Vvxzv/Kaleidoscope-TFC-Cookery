@@ -3,6 +3,39 @@
 	"ingredients": [
 		[
 			{
+				"item": "tfc:food/yellow_bell_pepper"
+			},
+			{
+				"item": "tfc:food/red_bell_pepper"
+			},
+			{
+				"item": "kaleidoscope_cookery:red_chili"
+			}
+		],
+		[
+			{
+				"item": "tfc:food/yellow_bell_pepper"
+			},
+			{
+				"item": "tfc:food/red_bell_pepper"
+			},
+			{
+				"item": "kaleidoscope_cookery:red_chili"
+			}
+		],
+		[
+			{
+				"item": "tfc:food/yellow_bell_pepper"
+			},
+			{
+				"item": "tfc:food/red_bell_pepper"
+			},
+			{
+				"item": "kaleidoscope_cookery:red_chili"
+			}
+		],
+		[
+			{
 				"item": "kaleidoscope_cookery:raw_pork_belly"
 			},
 			{
@@ -16,16 +49,7 @@
 			{
 				"item": "tfc:food/pork"
 			}
-		],
-		{
-			"tag": "ktfcc:chilipepper"
-		},
-		{
-			"tag": "ktfcc:chilipepper"
-		},
-		{
-			"tag": "ktfcc:chilipepper"
-		}
+		]
 	],
 	"result": {
 		"id": "kaleidoscope_cookery:fish_flavored_shredded_pork",
