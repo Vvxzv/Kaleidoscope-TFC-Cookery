@@ -66,24 +66,12 @@ public abstract class BowlFoodBlockItemMixin extends BlockItem {
             this.effectInstances.clear();
             List<MobEffectInstance> effects = foodEffect.getEffects();
             if(!effects.isEmpty()) {
-                effectInstances.addAll(effects);
+                for (MobEffectInstance effect: effects) {
+                    this.effectInstances.add(new MobEffectInstance(effect));
+                }
             }
         }
     }
-
-//    @Redirect(method = "finishUsingItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/BlockItem;finishUsingItem(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/item/ItemStack;"))
-//    private ItemStack finishUsingItem(BlockItem instance, ItemStack stack, Level level, LivingEntity entity) {
-//        FoodEffect foodEffect = FoodEffect.get(stack);
-//        if(foodEffect != null) {
-//            FoodProperties foodproperties = stack.getFoodProperties(entity);
-//            if(foodproperties != null) {
-//                FoodProperties foodProperties = Utils.foodPropertiesRemoveEffect(foodproperties);
-//                Utils.applyFoodEffect(foodEffect, entity);
-//                return entity.eat(level, stack, foodProperties);
-//            }
-//        }
-//        return instance.finishUsingItem(stack, level, entity);
-//    }
 
     @Shadow
     protected abstract List<ItemStack> getDrops(BlockState state, LootParams.Builder params);

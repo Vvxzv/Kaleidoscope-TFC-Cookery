@@ -22,12 +22,12 @@ import java.util.List;
 public record FoodEffect(Ingredient ingredient, List<MobEffectInstance> mobEffects) {
     public static final Codec<FoodEffect> CODEC = RecordCodecBuilder.create(i -> i.group(
             Ingredient.CODEC.fieldOf("ingredient").forGetter(c -> c.ingredient),
-            MobEffectInstance.CODEC.listOf().fieldOf("effects").forGetter(FoodEffect::mobEffects)
+            MobEffectInstance.CODEC.listOf().fieldOf("effects").forGetter(c -> c.mobEffects)
     ).apply(i, FoodEffect::new));
 
     public static final StreamCodec<RegistryFriendlyByteBuf, FoodEffect> STREAM_CODEC = StreamCodec.composite(
             Ingredient.CONTENTS_STREAM_CODEC, c -> c.ingredient,
-            ByteBufCodecs.collection(ArrayList::new, MobEffectInstance.STREAM_CODEC), c -> c.mobEffects,
+            ByteBufCodecs.collection(ArrayList::new, MobEffectInstance.STREAM_CODEC), FoodEffect::getEffects,
             FoodEffect::new
     );
 
@@ -52,6 +52,10 @@ public record FoodEffect(Ingredient ingredient, List<MobEffectInstance> mobEffec
     }
 
     public List<MobEffectInstance> getEffects() {
-        return new ArrayList<>(this.mobEffects);
+        List<MobEffectInstance> list = new ArrayList<>();
+        for (MobEffectInstance effect: this.mobEffects) {
+            list.add(new MobEffectInstance(effect));
+        }
+        return list;
     }
 }

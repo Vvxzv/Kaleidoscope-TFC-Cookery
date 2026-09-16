@@ -90,12 +90,7 @@ public class FoodBiteBlockMixin extends FoodBlock implements EntityBlock {
         FoodEffect foodEffect = FoodEffect.get(stack);
         if(foodEffect != null) {
             newFoodProperties = Utils.foodPropertiesRemoveEffect(foodProperties);
-            List<MobEffectInstance> effects = foodEffect.getEffects();
-            if(!effects.isEmpty()) {
-                for(MobEffectInstance effect: foodEffect.getEffects()) {
-                    player.addEffect(effect);
-                }
-            }
+            Utils.applyFoodEffect(foodEffect, player);
         }
         player.eat(level, stack, newFoodProperties);
     }
