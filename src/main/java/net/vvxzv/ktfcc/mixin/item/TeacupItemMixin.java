@@ -47,7 +47,7 @@ public class TeacupItemMixin {
         if(tea != null) {
             List<MobEffectInstance> effects = tea.getEffects();
             for (MobEffectInstance effect: effects) {
-                entity.addEffect(effect);
+                entity.addEffect(new MobEffectInstance(effect));
             }
         }
     }

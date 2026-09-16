@@ -59,7 +59,9 @@ public class BowlFoodBlockItemMixin {
             this.effectInstances.clear();
             List<MobEffectInstance> effects = foodEffect.getEffects();
             if(!effects.isEmpty()) {
-                effectInstances.addAll(effects);
+                for (MobEffectInstance effect: effects) {
+                    this.effectInstances.add(new MobEffectInstance(effect));
+                }
             }
         }
     }

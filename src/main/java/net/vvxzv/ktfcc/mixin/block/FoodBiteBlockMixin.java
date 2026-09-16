@@ -25,6 +25,7 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.vvxzv.ktfcc.common.block.entity.DecayingFoodBlockEntity;
 import net.vvxzv.ktfcc.common.data.FoodEffect;
+import net.vvxzv.ktfcc.common.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
@@ -74,15 +75,7 @@ public class FoodBiteBlockMixin extends FoodBlock implements EntityBlock {
             }
         }
         ItemStack stack = new ItemStack(this.asItem());
-        FoodEffect foodEffect = FoodEffect.get(stack);
-        if(foodEffect != null) {
-            List<MobEffectInstance> effects = foodEffect.getEffects();
-            if(!effects.isEmpty()) {
-                for(MobEffectInstance effect: foodEffect.getEffects()) {
-                    player.addEffect(effect);
-                }
-            }
-        }
+        Utils.applyFoodEffect(stack, player);
     }
 
     @Redirect(method = "eat", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;addEffect(Lnet/minecraft/world/effect/MobEffectInstance;)Z"))

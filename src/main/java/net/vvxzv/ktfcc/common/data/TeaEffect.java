@@ -27,7 +27,7 @@ public class TeaEffect extends ItemDefinition {
             "tea_effect", TeaEffect::new, TeaEffect::new, TeaEffect::encode, TeaEffect.Packet::new
     );
 
-    private List<MobEffectInstance> mobEffects = new ArrayList<>();
+    private final List<MobEffectInstance> mobEffects = new ArrayList<>();
 
     public TeaEffect(ResourceLocation id, JsonObject json) {
         super(id, Ingredient.fromJson(JsonHelpers.get(json, "ingredient")));
@@ -46,18 +46,19 @@ public class TeaEffect extends ItemDefinition {
 
     public TeaEffect(ResourceLocation id, FriendlyByteBuf buffer) {
         super(id, Ingredient.fromNetwork(buffer));
-        this.mobEffects = buffer.readList(buf ->
+        List<MobEffectInstance> list = buffer.readList(buf ->
                 new MobEffectInstance(
                         MobEffect.byId(buf.readVarInt()),
                         buf.readVarInt(),
                         buf.readVarInt()
                 )
         );
+        this.mobEffects.addAll(list);
     }
 
     public void encode(FriendlyByteBuf buffer) {
         this.ingredient.toNetwork(buffer);
-        buffer.writeCollection(this.mobEffects, (buf, effect) -> {
+        buffer.writeCollection(this.getEffects(), (buf, effect) -> {
             buf.writeVarInt(MobEffect.getId(effect.getEffect()));
             buf.writeVarInt(effect.getDuration());
             buf.writeVarInt(effect.getAmplifier());
@@ -79,7 +80,11 @@ public class TeaEffect extends ItemDefinition {
     }
 
     public List<MobEffectInstance> getEffects() {
-        return new ArrayList<>(this.mobEffects);
+        List<MobEffectInstance> list = new ArrayList<>();
+        for (MobEffectInstance effect: this.mobEffects) {
+            list.add(new MobEffectInstance(effect));
+        }
+        return list;
     }
 
     public static class Packet extends DataManagerSyncPacket<TeaEffect> {
