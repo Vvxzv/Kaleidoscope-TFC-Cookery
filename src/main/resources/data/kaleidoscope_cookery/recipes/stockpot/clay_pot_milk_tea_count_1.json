@@ -1,0 +1,16 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"result": {
+		"item": "kaleidoscope_cookery:clay_pot_milk_tea",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "kaleidoscope_cookery:tea_bags"
+		}
+	],
+	"soup_base": "minecraft:milk",
+	"carrier": {
+		"item": "tfc:ceramic/vessel"
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "kaleidoscope_cookery:barley_tea_bag",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "ktfcc:tea/oolong"
+		},
+		{
+			"item": "ktfcc:tea/oolong"
+		},
+		{
+			"item": "ktfcc:tea/oolong"
+		},
+		{
+			"item": "ktfcc:tea/oolong"
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/barley_grain"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/barley_grain"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/barley_grain"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/barley_grain"
+			}
+		},
+		[
+			{
+				"item": "tfc:burlap_cloth"
+			},
+			{
+				"item": "tfc:wool_cloth"
+			},
+			{
+				"item": "tfc:silk_cloth"
+			}
+		]
+	]
+}

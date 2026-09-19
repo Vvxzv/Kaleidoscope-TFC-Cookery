@@ -37,13 +37,12 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.network.PacketDistributor;
-import net.vvxzv.ktfcc.common.block.entity.OilPotBlockEntity;
 import net.vvxzv.ktfcc.common.block.entity.StoveBlockEntity;
 import net.vvxzv.ktfcc.common.data.FoodEffect;
 import net.vvxzv.ktfcc.common.data.Oil;
 import net.vvxzv.ktfcc.common.data.Plate;
 import net.vvxzv.ktfcc.common.data.TeaEffect;
-import net.vvxzv.ktfcc.common.utils.Decaying;
+import net.vvxzv.ktfcc.common.utils.IDecaying;
 import net.vvxzv.ktfcc.compat.firmalife.FLEventHandler;
 import net.vvxzv.ktfcc.network.PacketHandler;
 
@@ -167,7 +166,7 @@ public class ForgeEventHandler {
                     BlockState newState = plateBlock.defaultBlockState();
                     level.setBlockAndUpdate(event.getPos(), newState.setValue(plateBlock.getServingsProperty(), 1));
                     BlockEntity blockEntity = level.getBlockEntity(event.getPos());
-                    if(blockEntity instanceof Decaying decaying) {
+                    if(blockEntity instanceof IDecaying decaying) {
                         decaying.setStack(stack);
                     }
                     stack.shrink(1);

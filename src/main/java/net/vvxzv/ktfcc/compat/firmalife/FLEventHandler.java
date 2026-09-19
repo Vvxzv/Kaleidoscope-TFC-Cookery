@@ -16,7 +16,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.vvxzv.ktfcc.common.utils.Decaying;
+import net.vvxzv.ktfcc.common.utils.IDecaying;
 import net.vvxzv.ktfcc.common.utils.FoodTraits;
 
 import java.util.Set;
@@ -44,7 +44,7 @@ public class FLEventHandler {
             if (cellarPositions != null) {
                 FoodTrait foodTrait = getCellarFoodTrait(level, pos);
                 cellarPositions.forEach(b -> {
-                    if(level.getBlockEntity(b) instanceof Decaying decay) {
+                    if(level.getBlockEntity(b) instanceof IDecaying decay) {
                         ItemStack stack = decay.getStack();
                         FoodCapability.applyTrait(stack, foodTrait);
                         decay.setStack(stack);
@@ -70,7 +70,7 @@ public class FLEventHandler {
     }
 
     public static void breakFoodBlock(BlockEvent.BreakEvent event) {
-        if(event.getLevel().getBlockEntity(event.getPos()) instanceof Decaying decay) {
+        if(event.getLevel().getBlockEntity(event.getPos()) instanceof IDecaying decay) {
             ItemStack stack = decay.getStack();
             FoodCapability.removeTrait(stack, FoodTraits.CELLAR_PRESERVED);
             FoodCapability.removeTrait(stack, FoodTraits.CELLAR_PRESERVED_2);

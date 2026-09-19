@@ -3,6 +3,7 @@
 	"entries": [
 		"ktfcc:pig",
 		"ktfcc:cabbage",
+		"ktfcc:straw",
 		"ktfcc:dark_cuisine",
 		"ktfcc:suspicious_stir_fry",
 		"ktfcc:slime_ball_meal",
@@ -12,7 +13,6 @@
 		"ktfcc:chorus_fried_egg",
 		"ktfcc:golden_salad",
 		"ktfcc:spicy_chicken",
-		"ktfcc:yakitori",
 		"ktfcc:pan_seared_knight_steak",
 		"ktfcc:stargazy_pie",
 		"ktfcc:sweet_and_sour_ender_pearls",
@@ -43,6 +43,6 @@
 		"ktfcc:warped_fungus_pot_soup",
 		"ktfcc:crimson_fungus_pot_soup",
 		"ktfcc:buddha_jumps_over_the_wall",
-		"ktfcc:straw"
+		"ktfcc:clay_pot_milk_tea"
 	]
 }

@@ -1,0 +1,55 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aba",
+		"cdc",
+		"aca"
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:paper"
+		},
+		"b": [
+			{
+				"item": "minecraft:chain"
+			},
+			{
+				"item": "tfc:metal/chain/bismuth_bronze"
+			},
+			{
+				"item": "tfc:metal/chain/black_bronze"
+			},
+			{
+				"item": "tfc:metal/chain/bronze"
+			},
+			{
+				"item": "tfc:metal/chain/copper"
+			},
+			{
+				"item": "tfc:metal/chain/wrought_iron"
+			},
+			{
+				"item": "tfc:metal/chain/steel"
+			},
+			{
+				"item": "tfc:metal/chain/black_steel"
+			},
+			{
+				"item": "tfc:metal/chain/blue_steel"
+			},
+			{
+				"item": "tfc:metal/chain/red_steel"
+			}
+		],
+		"c": {
+			"item": "minecraft:red_dye"
+		},
+		"d": {
+			"item": "tfc:candle"
+		}
+	},
+	"result": {
+		"item": "kaleidoscope_cookery:red_lantern",
+		"count": 1
+	}
+}

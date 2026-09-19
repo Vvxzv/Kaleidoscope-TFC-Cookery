@@ -2,7 +2,7 @@ package net.vvxzv.ktfcc.common.utils;
 
 import net.minecraft.world.item.ItemStack;
 
-public interface Decaying {
+public interface IDecaying {
 
     boolean isRotten();
 

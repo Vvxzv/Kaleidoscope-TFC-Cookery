@@ -90,7 +90,7 @@ public class FoodBiteOneByTwoBlockMixin extends FoodBiteBlock implements EntityB
     }
 
     @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+    public void onRemove(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull BlockState newState, boolean isMoving) {
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof DecayingFoodBlockEntity decaying) {
             if(state.getValue(bites) == 0 && state.getValue(POSITION) == RIGHT){

@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:clay_pot_milk_tea"
+	},
+	"decay_modifier": 1,
+	"hunger": 4,
+	"saturation": 2,
+	"water": 40,
+	"dairy": 2.5
+}

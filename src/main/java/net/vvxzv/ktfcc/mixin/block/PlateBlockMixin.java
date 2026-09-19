@@ -23,7 +23,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.vvxzv.ktfcc.common.block.entity.DecayingFoodBlockEntity;
 import net.vvxzv.ktfcc.common.data.Plate;
-import net.vvxzv.ktfcc.common.utils.Decaying;
+import net.vvxzv.ktfcc.common.utils.IDecaying;
 import net.vvxzv.ktfcc.common.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -65,7 +65,7 @@ public class PlateBlockMixin extends HorizontalDirectionalBlock implements Entit
         }
 
         BlockEntity blockEntity = level.getBlockEntity(pos);
-        if(!(blockEntity instanceof Decaying decaying)) {
+        if(!(blockEntity instanceof IDecaying decaying)) {
             return InteractionResult.PASS;
         }
 

@@ -1,0 +1,44 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "kaleidoscope_cookery:butter_tea_bag",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"tag": "ktfcc:tea_leaves"
+		},
+		{
+			"tag": "ktfcc:tea_leaves"
+		},
+		{
+			"tag": "ktfcc:tea_leaves"
+		},
+		{
+			"tag": "ktfcc:tea_leaves"
+		},
+		{
+			"tag": "ktfcc:tea_leaves"
+		},
+		{
+			"tag": "ktfcc:tea_leaves"
+		},
+		{
+			"tag": "ktfcc:tea_leaves"
+		},
+		{
+			"item": "kaleidoscope_cookery:oil"
+		},
+		[
+			{
+				"item": "tfc:burlap_cloth"
+			},
+			{
+				"item": "tfc:wool_cloth"
+			},
+			{
+				"item": "tfc:silk_cloth"
+			}
+		]
+	]
+}

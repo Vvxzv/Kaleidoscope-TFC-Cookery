@@ -6,7 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.vvxzv.ktfcc.KaleidoscopeTFCCookery;
-import net.vvxzv.ktfcc.common.utils.Decaying;
+import net.vvxzv.ktfcc.common.utils.IDecaying;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IBlockComponentProvider;
 import snownee.jade.api.ITooltip;
@@ -21,7 +21,7 @@ public enum DecayingBlockComponentProvider implements IBlockComponentProvider {
     @Override
     public void appendTooltip(ITooltip iTooltip, BlockAccessor blockAccessor, IPluginConfig iPluginConfig) {
         BlockEntity blockEntity = blockAccessor.getBlockEntity();
-        if (blockEntity instanceof Decaying decay) {
+        if (blockEntity instanceof IDecaying decay) {
             ItemStack stack = decay.getStack();
             if (!stack.isEmpty()) {
                 iTooltip.add(stack.getHoverName());
