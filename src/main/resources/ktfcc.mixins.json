@@ -10,6 +10,7 @@
     "ScarecrowEntityMixin",
     "SimpleSoupBaseMixin",
     "block.ChiliRistraBlockMixin",
+    "block.ClayPotMilkTeaBlockMixin",
     "block.EnamelBasinBlockMixin",
     "block.FoodBiteBlockMixin",
     "block.FoodBiteOneByTwoBlockMixin",
@@ -20,6 +21,7 @@
     "block.StackableFoodBlockMixin",
     "block.StoveBlockMixin",
     "block.StrungMushroomsBlockMixin",
+    "block.entity.BambooTrayBlockEntityMixin",
     "block.entity.ChoppingBoardBlockEntityMixin",
     "block.entity.FoodBiteThreeByThreeBlockEntityMixin",
     "block.entity.FruitBasketBlockEntityMixin",
@@ -33,7 +35,9 @@
     "compat.StockpotRecipeCategoryMixin",
     "compat.TeapotRecipeCategoryMixin",
     "effect.FlatulenceEventMixin",
+    "item.BambooTubeRiceBlockItemMixin",
     "item.BowlFoodBlockItemMixin",
+    "item.ClayPotMilkTeaItemMixin",
     "item.FoodWithEffectsItemMixin",
     "item.RecipeItemMixin",
     "item.SickleItemMixin",
@@ -43,7 +47,7 @@
   ],
   "client" : [
     "client.HamSlicesRenderMixin",
-    "client.ScarecrowHandLayerMixin"
+    "client.ScarecrowRenderMixin"
   ],
   "injectors" : {
     "defaultRequire" : 1

@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aba",
+		"cdc",
+		"aca"
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:paper"
+		},
+		"b": {
+			"tag": "c:chains"
+		},
+		"c": {
+			"item": "minecraft:red_dye"
+		},
+		"d": {
+			"item": "tfc:candle"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:red_lantern",
+		"count": 1
+	}
+}

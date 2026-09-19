@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" a ",
+		"aba",
+		" a "
+	],
+	"key": {
+		"a": {
+			"tag": "tfc:bamboo"
+		},
+		"b": {
+			"item": "minecraft:bamboo_trapdoor"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:bamboo_tray",
+		"count": 1
+	}
+}

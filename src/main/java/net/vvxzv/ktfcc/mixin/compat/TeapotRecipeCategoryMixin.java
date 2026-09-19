@@ -21,7 +21,7 @@ import java.util.List;
 @Mixin(TeapotRecipeCategory.class)
 public class TeapotRecipeCategoryMixin {
 
-    @Redirect(method = "setRecipe(Lmezz/jei/api/gui/builder/IRecipeLayoutBuilder;Lnet/minecraft/world/item/crafting/RecipeHolder;Lmezz/jei/api/recipe/IFocusGroup;)V", at = @At(value = "INVOKE", target = "Lmezz/jei/api/gui/builder/IRecipeSlotBuilder;addItemLike(Lnet/minecraft/world/level/ItemLike;)Lmezz/jei/api/gui/builder/IIngredientConsumer;"))
+    @Redirect(method = "setRecipe(Lmezz/jei/api/gui/builder/IRecipeLayoutBuilder;Lnet/minecraft/world/item/crafting/RecipeHolder;Lmezz/jei/api/recipe/IFocusGroup;)V", at = @At(value = "INVOKE", target = "Lmezz/jei/api/gui/builder/IRecipeSlotBuilder;addItemLike(Lnet/minecraft/world/level/ItemLike;)Lmezz/jei/api/gui/builder/IIngredientConsumer;", ordinal = 0))
     private IIngredientConsumer removeBucketStack(IRecipeSlotBuilder instance, ItemLike itemLike, IRecipeLayoutBuilder builder, RecipeHolder<TeapotRecipe> holder, IFocusGroup focuses) {
         Fluid fluid = BuiltInRegistries.FLUID.get(holder.value().teaFluid());
         FluidStack fluidStack = new FluidStack(fluid, 1000);

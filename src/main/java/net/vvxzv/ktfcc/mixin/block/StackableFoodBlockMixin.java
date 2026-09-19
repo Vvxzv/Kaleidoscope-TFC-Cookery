@@ -25,7 +25,7 @@ import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.vvxzv.ktfcc.common.block.entity.DecayingFoodBlockEntity;
-import net.vvxzv.ktfcc.common.utils.Decaying;
+import net.vvxzv.ktfcc.common.utils.IDecaying;
 import net.vvxzv.ktfcc.common.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -72,7 +72,7 @@ public abstract class StackableFoodBlockMixin extends HorizontalDirectionalBlock
         }
 
         BlockEntity blockEntity = level.getBlockEntity(pos);
-        if(!(blockEntity instanceof Decaying decaying)) {
+        if(!(blockEntity instanceof IDecaying decaying)) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
 

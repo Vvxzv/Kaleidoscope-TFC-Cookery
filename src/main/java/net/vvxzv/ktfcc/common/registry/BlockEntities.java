@@ -36,6 +36,7 @@ public class BlockEntities {
         Stream<Block> plateBlocks = BuiltInRegistries.BLOCK.stream().filter(block -> block instanceof PlateBlock);
         List<Block> blocks = new ArrayList<>(Stream.concat(foodBlocks, plateBlocks).toList());
         blocks.add(ModBlocks.BAMBOO_TUBE_RICE.get());
+        blocks.add(ModBlocks.CLAY_POT_MILK_TEA.get());
         return blocks.toArray(Block[]::new);
     }
 

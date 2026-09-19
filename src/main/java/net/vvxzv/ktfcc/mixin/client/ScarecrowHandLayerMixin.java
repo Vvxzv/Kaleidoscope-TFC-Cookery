@@ -26,29 +26,29 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ScarecrowHandLayer.class)
 public class ScarecrowHandLayerMixin {
 
-    @Final
-    @Shadow(remap = false)
-    private BlockRenderDispatcher blockRenderer;
-
-    @Inject(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/BlockItem;getBlock()Lnet/minecraft/world/level/block/Block;"))
-    protected void renderArmWithItem(LivingEntity entity, ItemStack stack, ItemDisplayContext context, HumanoidArm arm, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, CallbackInfo ci) {
-        if(stack.getItem() instanceof BlockItem blockItem){
-            if(blockItem.getBlock() instanceof LampBlock lampBlock){
-                poseStack.translate(-0.375, 0.375, -2.0);
-                poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
-                BlockState blockState = lampBlock.defaultBlockState();
-                poseStack.scale(0.75F, 0.75F, 0.75F);
-                FluidComponent fluidComponent = stack.get(TFCComponents.FLUID);
-                if(fluidComponent != null) {
-                    this.blockRenderer.renderSingleBlock(
-                            blockState.setValue(BlockStateProperties.LIT, true),
-                            poseStack,
-                            bufferSource,
-                            0xf000f0,
-                            OverlayTexture.NO_OVERLAY);
-                } else this.blockRenderer.renderSingleBlock(blockState, poseStack, bufferSource, 0xf00000, OverlayTexture.NO_OVERLAY);
-                poseStack.popPose();
-            }
-        }
-    }
+//    @Final
+//    @Shadow(remap = false)
+//    private BlockRenderDispatcher blockRenderer;
+//
+//    @Inject(method = "renderArmWithItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/BlockItem;getBlock()Lnet/minecraft/world/level/block/Block;"))
+//    protected void renderArmWithItem(LivingEntity entity, ItemStack stack, ItemDisplayContext context, HumanoidArm arm, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, CallbackInfo ci) {
+//        if(stack.getItem() instanceof BlockItem blockItem){
+//            if(blockItem.getBlock() instanceof LampBlock lampBlock){
+//                poseStack.translate(-0.375, 0.375, -2.0);
+//                poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
+//                BlockState blockState = lampBlock.defaultBlockState();
+//                poseStack.scale(0.75F, 0.75F, 0.75F);
+//                FluidComponent fluidComponent = stack.get(TFCComponents.FLUID);
+//                if(fluidComponent != null) {
+//                    this.blockRenderer.renderSingleBlock(
+//                            blockState.setValue(BlockStateProperties.LIT, true),
+//                            poseStack,
+//                            bufferSource,
+//                            0xf000f0,
+//                            OverlayTexture.NO_OVERLAY);
+//                } else this.blockRenderer.renderSingleBlock(blockState, poseStack, bufferSource, 0xf00000, OverlayTexture.NO_OVERLAY);
+//                poseStack.popPose();
+//            }
+//        }
+//    }
 }

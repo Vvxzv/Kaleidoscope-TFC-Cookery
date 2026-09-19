@@ -39,7 +39,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import net.vvxzv.ktfcc.common.block.entity.StoveBlockEntity;
 import net.vvxzv.ktfcc.common.data.DataManagers;
 import net.vvxzv.ktfcc.common.data.Plate;
-import net.vvxzv.ktfcc.common.utils.Decaying;
+import net.vvxzv.ktfcc.common.utils.IDecaying;
 import net.vvxzv.ktfcc.compat.firmalife.FLEventHandler;
 import net.vvxzv.ktfcc.network.DataManagerSyncPacket;
 
@@ -162,7 +162,7 @@ public class NeoForgeEventHandler {
                     BlockState newState = plateBlock.defaultBlockState();
                     level.setBlockAndUpdate(event.getPos(), newState.setValue(plateBlock.getServingsProperty(), 1));
                     BlockEntity blockEntity = level.getBlockEntity(event.getPos());
-                    if(blockEntity instanceof Decaying decaying) {
+                    if(blockEntity instanceof IDecaying decaying) {
                         decaying.setStack(stack);
                     }
                     stack.shrink(1);

@@ -1,0 +1,44 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "kaleidoscope_cookery:biluochun_tea_bag",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "ktfcc:tea/biluochun"
+		},
+		{
+			"item": "ktfcc:tea/biluochun"
+		},
+		{
+			"item": "ktfcc:tea/biluochun"
+		},
+		{
+			"item": "ktfcc:tea/biluochun"
+		},
+		{
+			"item": "ktfcc:tea/biluochun"
+		},
+		{
+			"item": "ktfcc:tea/biluochun"
+		},
+		{
+			"item": "ktfcc:tea/biluochun"
+		},
+		{
+			"item": "ktfcc:tea/biluochun"
+		},
+		[
+			{
+				"item": "tfc:burlap_cloth"
+			},
+			{
+				"item": "tfc:wool_cloth"
+			},
+			{
+				"item": "tfc:silk_cloth"
+			}
+		]
+	]
+}

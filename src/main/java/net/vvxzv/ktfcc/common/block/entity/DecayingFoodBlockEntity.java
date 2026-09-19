@@ -5,9 +5,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.vvxzv.ktfcc.common.registry.BlockEntities;
-import net.vvxzv.ktfcc.common.utils.Decaying;
+import net.vvxzv.ktfcc.common.utils.IDecaying;
 
-public class DecayingFoodBlockEntity extends DecayingBlockEntity implements Decaying {
+public class DecayingFoodBlockEntity extends DecayingBlockEntity implements IDecaying {
     public DecayingFoodBlockEntity(BlockPos pos, BlockState state) {
         this(BlockEntities.DECAYING.get(), pos, state);
     }

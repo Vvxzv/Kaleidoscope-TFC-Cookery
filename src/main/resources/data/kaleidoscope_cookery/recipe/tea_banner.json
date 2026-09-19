@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ab",
+		"c "
+	],
+	"key": {
+		"a": {
+			"tag": "tfc:sewing_light_cloth"
+		},
+		"b": {
+			"item": "minecraft:red_dye"
+		},
+		"c": {
+			"tag": "c:rods/wooden"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:tea_banner",
+		"count": 1
+	}
+}

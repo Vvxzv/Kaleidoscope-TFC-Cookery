@@ -1,0 +1,12 @@
+{
+	"type": "kaleidoscope_cookery:bamboo_tray",
+	"duration": 900,
+	"ingredient": {
+		"item": "ktfcc:tea_leaves/biluochun"
+	},
+	"result": {
+		"id": "ktfcc:tea/black",
+		"count": 1
+	},
+	"subtype": "drying"
+}

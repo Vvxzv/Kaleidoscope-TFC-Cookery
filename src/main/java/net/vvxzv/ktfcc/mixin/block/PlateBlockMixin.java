@@ -5,7 +5,6 @@ import net.dries007.tfc.common.component.TFCComponents;
 import net.dries007.tfc.common.component.food.FoodCapability;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -14,10 +13,8 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -33,14 +30,13 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.vvxzv.ktfcc.common.block.entity.DecayingFoodBlockEntity;
 import net.vvxzv.ktfcc.common.data.Plate;
-import net.vvxzv.ktfcc.common.utils.Decaying;
+import net.vvxzv.ktfcc.common.utils.IDecaying;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.*;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 
 @Mixin(PlateBlock.class)
 public abstract class PlateBlockMixin extends HorizontalDirectionalBlock implements EntityBlock {
@@ -73,7 +69,7 @@ public abstract class PlateBlockMixin extends HorizontalDirectionalBlock impleme
         }
 
         BlockEntity blockEntity = level.getBlockEntity(pos);
-        if(!(blockEntity instanceof Decaying decaying)) {
+        if(!(blockEntity instanceof IDecaying decaying)) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
 

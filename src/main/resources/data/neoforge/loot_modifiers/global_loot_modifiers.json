@@ -3,6 +3,7 @@
 	"entries": [
 		"ktfcc:pig",
 		"ktfcc:cabbage",
+		"ktfcc:straw",
 		"ktfcc:dark_cuisine",
 		"ktfcc:suspicious_stir_fry",
 		"ktfcc:slime_ball_meal",
@@ -33,6 +34,7 @@
 		"ktfcc:oil_splashed_fish",
 		"ktfcc:cold_cut_ham_slices",
 		"ktfcc:tundra_style_sashimi",
+		"ktfcc:clay_pot_milk_tea",
 		"ktfcc:brown_mushroom_pot_soup",
 		"ktfcc:red_mushroom_pot_soup",
 		"ktfcc:warped_fungus_pot_soup",
@@ -41,7 +43,6 @@
 		"ktfcc:nether_style_sashimi",
 		"ktfcc:end_style_sashimi",
 		"ktfcc:desert_style_sashimi",
-		"ktfcc:cold_style_sashimi",
-		"ktfcc:straw"
+		"ktfcc:cold_style_sashimi"
 	]
 }

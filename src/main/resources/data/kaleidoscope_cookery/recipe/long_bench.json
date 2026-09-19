@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aaa",
+		"bcb"
+	],
+	"key": {
+		"a": {
+			"tag": "tfc:lumber"
+		},
+		"b": {
+			"tag": "c:fences/wooden"
+		},
+		"c": {
+			"tag": "c:rods/wooden"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:long_bench",
+		"count": 1
+	}
+}

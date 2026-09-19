@@ -1,7 +1,6 @@
 package net.vvxzv.ktfcc.compat.firmalife;
 
 import com.eerussianguy.firmalife.common.blocks.FLBlocks;
-import com.eerussianguy.firmalife.common.items.FLFoodTraits;
 import com.eerussianguy.firmalife.common.util.Mechanics;
 import com.eerussianguy.firmalife.config.FLConfig;
 import net.dries007.tfc.common.component.food.FoodCapability;
@@ -18,7 +17,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import net.vvxzv.ktfcc.common.utils.Decaying;
+import net.vvxzv.ktfcc.common.utils.IDecaying;
 import net.vvxzv.ktfcc.common.utils.FoodTraits;
 
 import java.util.Set;
@@ -46,7 +45,7 @@ public class FLEventHandler {
             if (cellarPositions != null) {
                 Holder<FoodTrait> foodTrait = getCellarFoodTrait(level, pos);
                 cellarPositions.forEach(bPos -> {
-                    if(level.getBlockEntity(bPos) instanceof Decaying decay) {
+                    if(level.getBlockEntity(bPos) instanceof IDecaying decay) {
                         ItemStack stack = decay.getStack();
                         FoodCapability.applyTrait(stack, foodTrait);
                         decay.setStack(stack);
@@ -72,7 +71,7 @@ public class FLEventHandler {
     }
 
     public static void breakFoodBlock(BlockEvent.BreakEvent event) {
-        if(event.getLevel().getBlockEntity(event.getPos()) instanceof Decaying decay) {
+        if(event.getLevel().getBlockEntity(event.getPos()) instanceof IDecaying decay) {
             ItemStack stack = decay.getStack();
             FoodCapability.removeTrait(stack, FoodTraits.CELLAR_PRESERVED);
             FoodCapability.removeTrait(stack, FoodTraits.CELLAR_PRESERVED_2);

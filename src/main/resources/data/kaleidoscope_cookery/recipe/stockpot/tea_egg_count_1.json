@@ -1,0 +1,22 @@
+{
+	"type": "kaleidoscope_cookery:stockpot",
+	"ingredients": [
+		{
+			"tag": "ktfcc:tea_leaves"
+		},
+		{
+			"item": "minecraft:egg"
+		}
+	],
+	"result": {
+		"id": "kaleidoscope_cookery:tea_egg",
+		"count": 1,
+		"components": {
+			"tfc:food": {
+				"creation_date": 8323200
+			}
+		}
+	},
+	"soup_base": "minecraft:water",
+	"carrier": []
+}

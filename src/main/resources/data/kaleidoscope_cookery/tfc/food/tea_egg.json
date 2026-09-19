@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "kaleidoscope_cookery:tea_egg"
+	},
+	"decay_modifier": 1.25,
+	"hunger": 4,
+	"saturation": 1.2,
+	"protein": 1.2,
+	"dairy": 0.6
+}

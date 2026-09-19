@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"aba",
+		"bbb",
+		"aba"
+	],
+	"key": {
+		"a": {
+			"tag": "c:fences/wooden"
+		},
+		"b": {
+			"tag": "tfc:lumber"
+		}
+	},
+	"result": {
+		"id": "kaleidoscope_cookery:eight_immortals_table",
+		"count": 1
+	}
+}

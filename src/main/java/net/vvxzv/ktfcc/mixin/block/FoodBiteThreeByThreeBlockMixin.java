@@ -9,7 +9,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -21,7 +20,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
-import net.vvxzv.ktfcc.common.utils.Decaying;
+import net.vvxzv.ktfcc.common.utils.IDecaying;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -45,7 +44,7 @@ public class FoodBiteThreeByThreeBlockMixin extends FoodBiteBlock {
     @Inject(method = "useWithoutItem", at = @At("HEAD"), cancellable = true)
     private void use(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
         BlockEntity entity = level.getBlockEntity(pos);
-        if(entity instanceof Decaying decaying && decaying.isRotten()){
+        if(entity instanceof IDecaying decaying && decaying.isRotten()){
             player.displayClientMessage(Component.translatable("ktfcc.eat.rotten_block").withStyle(ChatFormatting.GRAY), true);
             cir.setReturnValue(InteractionResult.PASS);
         }
@@ -91,7 +90,7 @@ public class FoodBiteThreeByThreeBlockMixin extends FoodBiteBlock {
                         }
 
                         BlockEntity blockEntity = worldIn.getBlockEntity(searchPos);
-                        if (blockEntity instanceof Decaying decaying) {
+                        if (blockEntity instanceof IDecaying decaying) {
                             decaying.setStack(stack);
                         }
                     }
@@ -104,7 +103,7 @@ public class FoodBiteThreeByThreeBlockMixin extends FoodBiteBlock {
     @Override
     public void onRemove(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull BlockState newState, boolean isMoving) {
         BlockEntity entity = level.getBlockEntity(pos);
-        if (entity instanceof Decaying decaying) {
+        if (entity instanceof IDecaying decaying) {
             if(state.getValue(bites) == 0 && state.getValue(PART).isCenter()){
                 if (!Helpers.isBlock(state, newState.getBlock())) {
                     Helpers.spawnItem(level, pos, decaying.getStack());

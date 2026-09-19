@@ -1,0 +1,44 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "kaleidoscope_cookery:sakura_fubuki_tea_bag",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "ktfcc:tea/black"
+		},
+		{
+			"item": "ktfcc:tea/black"
+		},
+		{
+			"item": "ktfcc:tea/black"
+		},
+		{
+			"item": "ktfcc:tea/black"
+		},
+		{
+			"item": "ktfcc:tea/black"
+		},
+		{
+			"item": "ktfcc:tea/black"
+		},
+		{
+			"item": "ktfcc:tea/black"
+		},
+		{
+			"item": "ktfcc:tea/black"
+		},
+		[
+			{
+				"item": "tfc:burlap_cloth"
+			},
+			{
+				"item": "tfc:wool_cloth"
+			},
+			{
+				"item": "tfc:silk_cloth"
+			}
+		]
+	]
+}
