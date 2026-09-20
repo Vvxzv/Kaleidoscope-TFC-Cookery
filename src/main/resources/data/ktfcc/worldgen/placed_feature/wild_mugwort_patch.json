@@ -1,9 +1,9 @@
 {
-	"feature": "ktfcc:wild_tea_tree/oolong_patch",
+	"feature": "ktfcc:wild_mugwort_patch",
 	"placement": [
 		{
 			"type": "minecraft:rarity_filter",
-			"chance": 60
+			"chance": 50
 		},
 		{
 			"type": "minecraft:in_square"
@@ -13,11 +13,11 @@
 			"heightmap": "WORLD_SURFACE_WG"
 		},
 		{
-			"type": "tfc:climate",
-			"min_temperature": -8,
-			"max_temperature": 35,
-			"min_rainfall": 160,
-			"max_rainfall": 420,
+			"type" : "tfc:climate",
+			"min_temperature" : 0,
+			"max_temperature" : 35,
+			"min_rainfall" : 110,
+			"max_rainfall" : 460,
 			"min_forest": "edge",
 			"max_forest": "normal"
 		}
