@@ -10,8 +10,25 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:stick"
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "ktfcc:tea_tree/biluochun",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": "#tfc:tools/sharp"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:stick"
+            }
+          ]
         }
       ],
       "rolls": 1.0

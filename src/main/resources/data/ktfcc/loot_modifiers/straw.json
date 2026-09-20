@@ -19,7 +19,7 @@
     {
       "condition": "minecraft:match_tool",
       "predicate": {
-        "tag": "tfc:sharp_tools"
+        "items": "#tfc:tools/sharp"
       }
     }
   ],
