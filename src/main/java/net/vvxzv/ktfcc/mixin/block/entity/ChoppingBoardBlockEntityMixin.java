@@ -16,6 +16,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.List;
+
 @Mixin(ChoppingBoardBlockEntity.class)
 public abstract class ChoppingBoardBlockEntityMixin extends BaseBlockEntity {
 
@@ -27,14 +29,14 @@ public abstract class ChoppingBoardBlockEntityMixin extends BaseBlockEntity {
     private ItemStack currentCutStack;
 
     @Shadow(remap = false)
-    private ItemStack result;
+    private List<ItemStack> results;
 
     @Shadow(remap = false)
     protected abstract void resetBoardData();
 
     @Inject(method = "onCutItem", at = @At("HEAD"), cancellable = true, remap = false)
     private void returnRottenCutItem(Level level, LivingEntity user, ItemStack cutterItem, CallbackInfoReturnable<Boolean> cir) {
-        if(!this.result.isEmpty()){
+        if(!this.results.isEmpty()){
             IFood iFood = FoodCapability.get(this.currentCutStack);
             if(iFood != null && iFood.isRotten()){
                 ChoppingBoardBlockEntity.popResource(level, this.worldPosition, this.currentCutStack.copy());

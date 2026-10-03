@@ -58,12 +58,12 @@ public class MillstoneBlockEntityMixin extends BaseBlockEntity {
             cancellable = true,
             remap = false
     )
-    private void addQuernRecipeItem(Level level, ItemStack itemStack, CallbackInfoReturnable<Boolean> cir) {
+    private void addQuernRecipeItem(Level level, ItemStack putOnItem, CallbackInfoReturnable<Boolean> cir) {
         boolean value = cir.getReturnValue();
         if(!value){
-            ItemStackInventory inventory = new ItemStackInventory(itemStack);
+            ItemStackInventory inventory = new ItemStackInventory(putOnItem);
             boolean returnValue = this.tfcQuernCheck.getRecipeFor(inventory, level).map((recipe) -> {
-                this.input = itemStack.split(8);
+                this.input = putOnItem.split(8);
                 this.progress = Math.max(Math.round(this.rotSpeedTick), 1);
                 this.refresh();
                 level.playSound(null, this.worldPosition, SoundEvents.STONE_HIT, SoundSource.BLOCKS, 0.8F, level.random.nextFloat() * 0.2F + 0.9F);

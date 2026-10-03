@@ -187,7 +187,7 @@ dependencies {
     // firmalife
     implementation fg.deobf("curse.maven:firmalife-453394:7602336")
     //kaleidoscope-cookery
-    implementation fg.deobf("curse.maven:kaleidoscope-cookery-1309203:8910014")
+    implementation fg.deobf("curse.maven:kaleidoscope-cookery-1309203:9019240")
     // JEI
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jeiVersion}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jeiVersion}"))
