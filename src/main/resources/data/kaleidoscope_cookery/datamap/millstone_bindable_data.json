@@ -1,34 +1,31 @@
 {
   "tfc:mule": {
     "rot_speed_tick": 120,
-    "lift_angle": -3
+    "lift_angle": 0
   },
   "tfc:donkey": {
     "rot_speed_tick": 200,
-    "lift_angle": -5
+    "lift_angle": 0
   },
   "tfc:horse": {
     "rot_speed_tick": 500,
-    "lift_angle": 10
+    "lift_angle": 0
   },
   "tfc:alpaca": {
     "rot_speed_tick": 600,
-    "lift_angle": 8
+    "lift_angle": 0
   },
   "tfc:cow": {
     "rot_speed_tick": 800,
-    "lift_angle": 7,
-    "offset": [0.1, 0, 0]
+    "lift_angle": 0
   },
   "tfc:yak": {
     "rot_speed_tick": 800,
-    "lift_angle": 7,
-    "offset": [0.1, 0, 0]
+    "lift_angle": 0
   },
   "tfc:musk_ox": {
     "rot_speed_tick": 800,
-    "lift_angle": 7,
-    "offset": [0.1, 0, 0]
+    "lift_angle": 0
   },
   "tfc:sheep": {
     "rot_speed_tick": 1000,
@@ -36,6 +33,6 @@
   },
   "tfc:goat": {
     "rot_speed_tick": 1000,
-    "lift_angle": -5
+    "lift_angle": 0
   }
 }
