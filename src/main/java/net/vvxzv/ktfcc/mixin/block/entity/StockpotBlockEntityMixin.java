@@ -18,6 +18,7 @@ import net.dries007.tfc.common.component.food.IFood;
 import net.dries007.tfc.common.component.item.ItemListComponent;
 import net.dries007.tfc.common.items.FluidContainerItem;
 import net.dries007.tfc.common.items.TFCItems;
+import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
@@ -31,6 +32,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.vvxzv.ktfcc.Config;
 import net.vvxzv.ktfcc.KaleidoscopeTFCCookery;
 import net.vvxzv.ktfcc.common.utils.AllTags;
@@ -84,7 +87,9 @@ public abstract class StockpotBlockEntityMixin extends BaseBlockEntity {
         if(iFood != null && iFood.isRotten()){
             cir.setReturnValue(false);
         }
-        if(itemStack.getItem() instanceof FluidContainerItem){
+
+        IFluidHandler handler = itemStack.getCapability(Capabilities.FluidHandler.ITEM);
+        if(handler != null){
             cir.setReturnValue(false);
         }
     }

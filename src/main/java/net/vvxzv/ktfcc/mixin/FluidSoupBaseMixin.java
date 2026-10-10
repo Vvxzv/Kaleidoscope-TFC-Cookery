@@ -3,6 +3,7 @@ package net.vvxzv.ktfcc.mixin;
 import com.github.ysbbbbbb.kaleidoscopecookery.crafting.soupbase.FluidSoupBase;
 import net.dries007.tfc.common.items.FluidContainerItem;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -52,10 +53,14 @@ public abstract class FluidSoupBaseMixin {
     @Inject(method = "getReturnContainer", at = @At("RETURN"), cancellable = true)
     private void getReturnContainer(Level level, LivingEntity user, ItemStack soupBase, CallbackInfoReturnable<ItemStack> cir){
         Item item = soupBase.getItem();
-
-        if (item instanceof FluidContainerItem) {
-            cir.setReturnValue(new ItemStack(item));
-            return;
+        if(!(item instanceof BucketItem)) {
+            ItemStack fluidContainer = soupBase.copy();
+            IFluidHandler handler = fluidContainer.getCapability(Capabilities.FluidHandler.ITEM);
+            if(handler != null) {
+                handler.drain(1000, IFluidHandler.FluidAction.EXECUTE);
+                cir.setReturnValue(fluidContainer);
+                return;
+            }
         }
 
         cir.setReturnValue(new ItemStack(Items.BUCKET));
@@ -63,12 +68,12 @@ public abstract class FluidSoupBaseMixin {
 
     @Inject(method = "getReturnSoupBase", at = @At("RETURN"), cancellable = true)
     private void getReturnSoupBase(Level level, LivingEntity user, ItemStack container, CallbackInfoReturnable<ItemStack> cir){
-        if(container.getItem() instanceof FluidContainerItem) {
-            ItemStack filledContainer = container.copy();
-            IFluidHandler handler = filledContainer.getCapability(Capabilities.FluidHandler.ITEM);
+        ItemStack fluidContainer = container.copy();
+        if(!(fluidContainer.getItem() instanceof BucketItem)) {
+            IFluidHandler handler = fluidContainer.getCapability(Capabilities.FluidHandler.ITEM);
             if (handler != null){
                 handler.fill(new FluidStack(this.fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
-                cir.setReturnValue(filledContainer);
+                cir.setReturnValue(fluidContainer);
                 return;
             }
         }

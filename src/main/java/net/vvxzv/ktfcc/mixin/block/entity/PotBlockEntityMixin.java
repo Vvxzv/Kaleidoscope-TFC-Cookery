@@ -56,7 +56,7 @@ public abstract class PotBlockEntityMixin extends BaseBlockEntity {
     }
 
     @Inject(method = "addIngredient", at = @At("HEAD"), cancellable = true)
-    public void addIngredient(Level level, LivingEntity user, ItemStack itemStack, CallbackInfoReturnable<Boolean> cir) {
+    private void addIngredient(Level level, LivingEntity user, ItemStack itemStack, CallbackInfoReturnable<Boolean> cir) {
         IFood iFood = FoodCapability.get(itemStack);
         if(iFood != null && iFood.isRotten()){
             cir.setReturnValue(false);
