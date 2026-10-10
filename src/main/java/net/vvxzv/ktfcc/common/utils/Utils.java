@@ -65,12 +65,9 @@ public class Utils {
     public static boolean matchFluidStack(ItemStack stack, Fluid fluid, int amount) {
         IFluidHandlerItem handler = Helpers.getCapability(stack, Capabilities.FLUID_ITEM);
         if(handler != null) {
-            FluidStack fluidInItem = handler.drain(amount, IFluidHandler.FluidAction.SIMULATE);
-            if(fluidInItem.isEmpty()) {
-                FluidStack testFluid = new FluidStack(fluid, amount);
-                int filled = handler.fill(testFluid, IFluidHandler.FluidAction.SIMULATE);
-                return filled == amount;
-            }
+            FluidStack testFluid = new FluidStack(fluid, amount);
+            int filled = handler.fill(testFluid, IFluidHandler.FluidAction.SIMULATE);
+            return filled == amount;
         }
 
         return false;

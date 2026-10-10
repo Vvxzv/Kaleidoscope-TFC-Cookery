@@ -2,6 +2,7 @@
 	"values": [
 		"tfc:wooden_bucket",
 		"tfc:metal/bucket/red_steel",
-		"tfc:metal/bucket/blue_steel"
+		"tfc:metal/bucket/blue_steel",
+		"#tfc:barrels"
 	]
 }

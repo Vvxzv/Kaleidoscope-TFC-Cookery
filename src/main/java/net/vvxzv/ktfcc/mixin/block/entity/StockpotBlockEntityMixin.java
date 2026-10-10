@@ -10,12 +10,14 @@ import com.github.ysbbbbbb.kaleidoscopecookery.init.ModSoupBases;
 import com.github.ysbbbbbb.kaleidoscopecookery.util.ItemUtils;
 import com.mojang.datafixers.util.Either;
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.capabilities.Capabilities;
 import net.dries007.tfc.common.capabilities.food.DynamicBowlHandler;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.food.FoodData;
 import net.dries007.tfc.common.capabilities.food.IFood;
 import net.dries007.tfc.common.items.FluidContainerItem;
 import net.dries007.tfc.common.items.TFCItems;
+import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
@@ -29,6 +31,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import net.vvxzv.ktfcc.Config;
 import net.vvxzv.ktfcc.KaleidoscopeTFCCookery;
 import net.vvxzv.ktfcc.common.utils.AllTags;
@@ -84,7 +87,9 @@ public abstract class StockpotBlockEntityMixin extends BaseBlockEntity {
         if(iFood != null && iFood.isRotten()){
             cir.setReturnValue(false);
         }
-        if(itemStack.getItem() instanceof FluidContainerItem){
+
+        IFluidHandlerItem handler = Helpers.getCapability(itemStack, Capabilities.FLUID_ITEM);
+        if(handler != null){
             cir.setReturnValue(false);
         }
     }

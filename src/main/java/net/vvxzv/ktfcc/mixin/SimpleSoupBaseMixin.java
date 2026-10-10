@@ -7,6 +7,7 @@ import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -55,7 +56,7 @@ public class SimpleSoupBaseMixin {
         }
 
         Fluid fluid = BuiltInRegistries.FLUID.get(this.name);
-        cir.setReturnValue(Utils.isSameFluidInItem(stack, fluid, 100));
+        cir.setReturnValue(Utils.isSameFluidInItem(stack, fluid, 1000));
     }
 
     @Inject(method = "isContainer", at = @At("HEAD"), cancellable = true, remap = false)
@@ -72,10 +73,14 @@ public class SimpleSoupBaseMixin {
     @Inject(method = "getReturnContainer", at = @At("HEAD"), cancellable = true, remap = false)
     private void getReturnContainer(Level level, LivingEntity user, ItemStack soupBase, CallbackInfoReturnable<ItemStack> cir){
         Item item = soupBase.getItem();
-
-        if (item instanceof FluidContainerItem) {
-            cir.setReturnValue(new ItemStack(item));
-            return;
+        if(!(item instanceof BucketItem)) {
+            ItemStack fluidContainer = soupBase.copy();
+            IFluidHandler handler = Helpers.getCapability(fluidContainer, Capabilities.FLUID_ITEM);
+            if(handler != null) {
+                handler.drain(1000, IFluidHandler.FluidAction.EXECUTE);
+                cir.setReturnValue(fluidContainer);
+                return;
+            }
         }
 
         cir.setReturnValue(this.returnContainerFunction.apply(level, user, soupBase));
@@ -83,13 +88,13 @@ public class SimpleSoupBaseMixin {
 
     @Inject(method = "getReturnSoupBase", at = @At("HEAD"), cancellable = true, remap = false)
     private void getReturnSoupBase(Level level, LivingEntity user, ItemStack container, CallbackInfoReturnable<ItemStack> cir){
-        if(container.getItem() instanceof FluidContainerItem){
-            ItemStack filledContainer = container.copy();
-            IFluidHandlerItem itemHandler = Helpers.getCapability(filledContainer, Capabilities.FLUID_ITEM);
-            if (itemHandler != null){
+        ItemStack fluidContainer = container.copy();
+        if(!(fluidContainer.getItem() instanceof BucketItem)) {
+            IFluidHandler handler = Helpers.getCapability(fluidContainer, Capabilities.FLUID_ITEM);
+            if (handler != null){
                 Fluid fluid = BuiltInRegistries.FLUID.get(this.name);
-                itemHandler.fill(new FluidStack(fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
-                cir.setReturnValue(filledContainer);
+                handler.fill(new FluidStack(fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
+                cir.setReturnValue(fluidContainer);
                 return;
             }
         }

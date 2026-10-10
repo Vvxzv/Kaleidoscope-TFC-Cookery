@@ -7,6 +7,7 @@ import net.dries007.tfc.util.Helpers;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -41,7 +42,7 @@ public abstract class FluidSoupBaseMixin {
             return;
         }
 
-        cir.setReturnValue(Utils.isSameFluidInItem(stack, this.fluid, 100));
+        cir.setReturnValue(Utils.isSameFluidInItem(stack, this.fluid, 1000));
     }
 
     @Inject(method = "isContainer", at = @At("HEAD"), cancellable = true, remap = false)
@@ -62,9 +63,14 @@ public abstract class FluidSoupBaseMixin {
         }
 
         Item item = soupBase.getItem();
-        if (item instanceof FluidContainerItem) {
-            cir.setReturnValue(new ItemStack(item));
-            return;
+        if(!(item instanceof BucketItem)) {
+            ItemStack fluidContainer = soupBase.copy();
+            IFluidHandler handler = Helpers.getCapability(fluidContainer, Capabilities.FLUID_ITEM);
+            if(handler != null) {
+                handler.drain(1000, IFluidHandler.FluidAction.EXECUTE);
+                cir.setReturnValue(fluidContainer);
+                return;
+            }
         }
 
         cir.setReturnValue(new ItemStack(Items.BUCKET));
@@ -77,12 +83,12 @@ public abstract class FluidSoupBaseMixin {
             level.playSound(null, user.getX(), user.getY() + 0.5, user.getZ(), sound, SoundSource.BLOCKS, 1.0f, 1.0f);
         }
 
-        if(container.getItem() instanceof FluidContainerItem){
-            ItemStack filledContainer = container.copy();
-            IFluidHandlerItem itemHandler = Helpers.getCapability(filledContainer, Capabilities.FLUID_ITEM);
-            if (itemHandler != null){
-                itemHandler.fill(new FluidStack(this.fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
-                cir.setReturnValue(filledContainer);
+        ItemStack fluidContainer = container.copy();
+        if(!(fluidContainer.getItem() instanceof BucketItem)) {
+            IFluidHandler handler = Helpers.getCapability(fluidContainer, Capabilities.FLUID_ITEM);
+            if (handler != null) {
+                handler.fill(new FluidStack(this.fluid, 1000), IFluidHandler.FluidAction.EXECUTE);
+                cir.setReturnValue(fluidContainer);
                 return;
             }
         }
